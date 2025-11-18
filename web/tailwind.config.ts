@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// utility constants 
+// utility constants
 const remMulti = 0.0625  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
 const remMultiScaled = (0.0625 / 1.4)//1.312)
 
@@ -48,6 +48,11 @@ const config: Config = {
 				gray2: '#36454F',
 				gray1: '#2C2C2C',
 				gray3: '#1E1E1E',
+				error: '#FF0202',
+				success: '#228B22',
+				warn: '#FFAA01',
+				info: '#0D43FF',
+
 
 			},
 			fontFamily: {
@@ -133,7 +138,7 @@ const config: Config = {
 					letterSpacing: (0.4 * remMulti) + 'em',
 					fontWeight: '400',
 				}],
-				// TECHNICAL STYLES 
+				// TECHNICAL STYLES
 				'technical-large': [(16 * remMulti) + 'rem', {
 					lineHeight: (24 * remMulti) + 'rem',
 					letterSpacing: (0.5 * remMulti) + 'em',

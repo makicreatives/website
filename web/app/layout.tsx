@@ -31,6 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script async src="https://tally.so/widgets/embed.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
       </head>
       <body
         className={'antialiased bg-white dark:bg-gray3 text-primary0 dark:text-off-white overflow-x-hidden'}

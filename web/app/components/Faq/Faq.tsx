@@ -19,7 +19,7 @@ export function Faq({ faqs }: FaqProps) {
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <div>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                Brand new
+                Your questions answered!
               </p>
             </div>
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -51,15 +51,10 @@ export function Faq({ faqs }: FaqProps) {
               Frequently Asked Questions
             </h2>
             <p className="text-base text-gray-700 md:text-lg ">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+              These are the most common ones about how we work, our process from start to finish, and how we team up to help you reach your goals. We love making your customers happy—it builds great business and great friendships.
             </p>
           </div>
           <div className="space-y-4">
-            <FaqItem title="The quick, brown fox jumps over a lazy dog?">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
-            </FaqItem>
             {faqs.map(
               // (faq, index) => <li key={"f-" + index} className="p-8 bg-sec bg-accent2/40 hover:bg-accent1/40 hover:shadow-sm hover:transition-700">
               //     <p className="font-bold"><b>Q:</b>&nbsp; {faq.question} </p>

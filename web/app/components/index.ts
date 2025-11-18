@@ -5,3 +5,4 @@ export { VerticalTabs } from './VerticalTabs';
 export { WorkCard } from './WorkCard';
 export { MegaMenu } from './MegaMenu';
 export { Button } from './Button';
+export { Faq } from './Faq';

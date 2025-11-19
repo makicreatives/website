@@ -18,7 +18,7 @@ export default function Loading() {
         <div className="hidden md:block border-y-2 border-white border-l-2"></div>
       </main>
       <div className='border-b-2 border-white font-headlines text-white text-headline-small uppercase h-10 place-content-center'>
-        <div className="w-full inline-flex flex-nowrap space-x-4 overflow-hidden">
+        <div id='ani-left' className="w-full inline-flex flex-nowrap space-x-4 overflow-hidden">
           <div className=" animate-infinite-scroll space-x-4 flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none ">
             <p className=''>Loading</p>
             <p className=''>Loading</p>
@@ -38,6 +38,46 @@ export default function Loading() {
             <p className=''>Loading</p>
           </div>
           <div className=" animate-infinite-scroll space-x-4 flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none">
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+          </div>
+        </div>
+      </div>
+      <div className='border-b-2 border-white font-headlines text-white text-headline-small uppercase h-10 place-content-center'>
+        <div id='ani-right' className="w-full inline-flex flex-nowrap space-x-4 overflow-hidden">
+          <div className=" animate-infinite-scroll-reverse space-x-4 flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none ">
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+            <p className=''>Loading</p>
+          </div>
+          <div className=" animate-infinite-scroll-reverse space-x-4 flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none">
             <p className=''>Loading</p>
             <p className=''>Loading</p>
             <p className=''>Loading</p>

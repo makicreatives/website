@@ -1,6 +1,6 @@
 'use client'
-import { Footer, Header } from "./components";
-import FAQSection from "./about/sections/faq";
+import { Faq, Footer, MegaMenu } from "./components";
+import { faqs } from "./about/sections/faq";
 import Link from "next/link";
 import Image from 'next/image';
 import { Button } from "@carbon/react";
@@ -21,7 +21,8 @@ import taskAddIcon from '@/app/icons/ui/task-add.svg'
 export default function HomePage() {
   return (
     <>
-      <Header activeLink={"home"}></Header>
+
+      <MegaMenu activeLink={"home"}></MegaMenu>
       <div className="">
         <main className="min-h-screen">
           <section id="hero" className={""}>
@@ -55,7 +56,14 @@ export default function HomePage() {
               </div>
             </div>
             <hr className="border-black dark:border-off-white1B" />
-            <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki Creative Studio</h1>
+            <div className="flex flex-nowrap overflow-clip">
+            <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase  mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            </div>
             <hr className="border-black dark:border-off-white1B" />
             <div className={"flex justify-center my-12 "}>
               <div className="flex flex-wrap justify-center items-center px-8 ">
@@ -226,7 +234,7 @@ export default function HomePage() {
           <section id="benefits" className={"pt-12"}>
             <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200/30 via-accent3/30 to-primary1B/10 to-90% backdrop-blur-3xl">
               <h2 className="h2 font-display text-secondary font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mt-12 space-y-8">
-                <span className="text-xl font-headlines font-medium">Should you have us,— for your design partner ?</span>     
+                <span className="text-xl font-headlines font-medium">Should you have us,— for your design partner ?</span>
                 <p className="">Here&apos;s what you&apos;ll get </p>
 
               </h2>
@@ -336,7 +344,8 @@ export default function HomePage() {
             <hr className="border-black dark:border-off-white1B" />
           </section>
         </main>
-        <FAQSection></FAQSection>
+        {/* <FAQSection></FAQSection> */}
+        <Faq faqs={faqs}></Faq>
 
       </div>
       <Footer />

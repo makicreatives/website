@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // import styles from './MegaMenu.css';
 import Image from 'next/image'
@@ -15,10 +15,53 @@ export interface MegaMenuProps {
 }
 
 
-export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 'bg-primary' }: MegaMenuProps) {
+export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 'bg-primary' }: Readonly<MegaMenuProps>) {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (!(e.target as Element).closest('[data-collapse-toggle]') &&
+        !(e.target as Element).closest('#mega-menu-full-dropdown')?.classList.remove("hidden")) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isOpen]);
+
+  // Toggle function used by the button (via data attribute)
+  useEffect(() => {
+    const button = document.querySelector('[data-collapse-toggle="mega-menu-full"]');
+    if (!button) return;
+
+    // const panel = document.querySelector('#mega-menu-full-dropdown')
+
+    const toggle = () => setIsOpen(prev => !prev);
+
+    // panel?.classList.add("hidden")
+    button.addEventListener('click', toggle);
+    return () => button.removeEventListener('click', toggle);
+  }, []);
+
+  // Optional: nice delay on mouse leave (for desktop hover too)
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setIsOpen(false), 500);
+  };
+
 
   const preLinkStyling: string = "block py-2 px-3 text-heading hover:text-primary1B  hover:bg-neutral-secondary-soft md:hover:bg-transparent  md:hover:text-primary1B md:p-0";
-
   const activeLinkStyling: string = preLinkStyling + 'border-b-4 border-primary text-primary1B font-headlines text-headline-small font-bold';
   const linkStyling: string = preLinkStyling + 'hover:text-primary1B hover:duration-150';
 
@@ -31,7 +74,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
       </Link>
       <button data-collapse-toggle="mega-menu-full" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
-        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" /></svg>
+        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14" /></svg>
       </button>
       <div id="mega-menu-full" className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
         <ul className="flex flex-col mt-4 align-middle font-bold md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase place-content-center">
@@ -47,7 +90,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
 
 
           <li className="place-content-center">
-            <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" className="flex items-center justify-between w-full py-2 px-3 text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0 uppercase">
+            <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" className="flex items-center justify-between w-full py-2 px-3 text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0 uppercase" onClick={() => setIsOpen(!isOpen)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
               Services
               <svg className="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" /></svg>
             </button>
@@ -82,7 +125,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
       </div>
 
     </div>
-    <section id="mega-menu-full-dropdown" className="mt-1 bg-neutral-primary-soft border-default shadow-xs border-y">
+    <section id="mega-menu-full-dropdown" className={"mt-1 bg-neutral-primary-soft border-default shadow-xs border-y transition-all" + (!isOpen && " hidden")} onFocus={handleMouseEnter} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
       <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-heading sm:grid-cols-2 md:grid-cols-3 md:px-6">
         <ul aria-labelledby="mega-menu-full-dropdown-button">
           <li>

@@ -1,5 +1,5 @@
 'use client'
-import { Header, Footer, VerticalTabs } from "@/app/components";
+import { MegaMenu, Footer, VerticalTabs } from "@/app/components";
 // import Image from 'next/image';
 // import Link from "next/link";
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
   const search = searchParams.get('active');
 
   return <>
-    <Header activeLink='about'></Header>
+    <MegaMenu activeLink='about'></MegaMenu>
     <VerticalTabs tabs={contentTabs} activeTabTitle={search ?? ''}></VerticalTabs>
     <Footer></Footer>
   </>;

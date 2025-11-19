@@ -1,4 +1,4 @@
-import { Header, Footer } from "@/app/components";
+import { MegaMenu, Footer } from "@/app/components";
 import Image from 'next/image';
 import Link from "next/link";
 
@@ -71,7 +71,7 @@ export default async function Page({ params, }: Readonly<{ params: Promise<{ slu
 
 
   return <>
-    <Header activeLink='about'></Header>
+    <MegaMenu activeLink='about'></MegaMenu>
     <main>
       <section id="midPanel" className="flex-1 flex flex-col md:border-r-2  border-black dark:border-off-white">
         <div className="flex place-content-center h-12 md:h-16 border-b-2 border-black dark:border-off-white">

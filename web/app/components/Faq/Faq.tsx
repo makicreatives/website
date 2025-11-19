@@ -13,7 +13,7 @@ export interface FaqProps {
   faqs: FAQ[];
 }
 
-export function Faq({ faqs }: FaqProps) {
+export function Faq({ faqs }: Readonly<FaqProps>) {
   return (
     <section className="p-8 bg-accent1/40 ">
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
@@ -91,7 +91,7 @@ export const FaqItem = ({ title, children }: FaqItemProps) => {
         type="button"
         aria-label="Open item"
         title="Open item"
-        className="flex items-center justify-between w-full p-4 focus:outline-none"
+        className="flex items-center justify-between w-full p-4 focus:outline-none hover:cursor-pointer hover:text-secondaryRegal-800"
         onClick={() => setIsOpen(!isOpen)}
       >
         <p className="text-lg font-medium">{title}</p>

@@ -16,6 +16,7 @@ const config: Config = {
 
 			animation: {
 				'infinite-scroll': 'infinite-scroll 25s linear infinite',
+				'infinite-scroll-reverse': 'reverse-infinite-scroll 25s linear infinite',
 			},
 			keyframes: {
 				'infinite-scroll': {

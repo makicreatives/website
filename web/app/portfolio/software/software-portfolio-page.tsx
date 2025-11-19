@@ -1,6 +1,6 @@
 'use client'
 
-import { Header, Footer, ProjectCard } from "@/app/components";
+import { MegaMenu, Footer, ProjectCard } from "@/app/components";
 import Image from 'next/image';
 import designProjects from '@/app/projects/design.json';
 import softwareProjects from '@/app/projects/software.json';
@@ -52,9 +52,9 @@ export default function SoftwarePortfolioPage() {
   softwareTags.forEach(tag => softwareProjectsTags.push(tag));
 
   return <>
-    <Header activeLink="portfolio"
+    <MegaMenu activeLink="portfolio"
     // hTopColor="bg-[#22478C]" hBottomColor="bg-[#002466]"
-    ></Header>
+    ></MegaMenu>
     <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
       <div id="" className="w-full inline-flex flex-nowrap overflow-hidden space-x-4 ">
         <div className="flex items-center justify-center md:justify-start animate-infinite-scroll">

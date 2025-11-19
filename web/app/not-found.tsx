@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { Footer, Header } from "./components";
+import { Footer, MegaMenu } from "./components";
 import { Button } from "@carbon/react";
 import Image from 'next/image';
 
@@ -9,7 +9,7 @@ import scissorsIcon from '@/app/icons/ui/scissors.svg'
 export default function NotFound() {
   return (
     <>
-      <Header activeLink={"404"} hTopColor="bg-gray2" hBottomColor="bg-gray1" ></Header>
+      <MegaMenu activeLink={"404"} hTopColor="bg-gray2" hBottomColor="bg-gray1" ></MegaMenu>
       <main className="md:min-h-screen md:grid grid-cols-4">
         <div className="hidden md:block md:w-auto"></div>
         <div className="col-span-2 flex flex-col md:border-2 border-x-black dark:border-x-off-white border-dashed h-full">

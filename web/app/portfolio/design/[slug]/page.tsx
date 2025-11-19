@@ -1,5 +1,5 @@
 import designProjects from '@/app/projects/design.json'
-import { Header, Footer } from "@/app/components";
+import { MegaMenu, Footer } from "@/app/components";
 import Image from 'next/image';
 import Link from "next/link";
 
@@ -77,7 +77,7 @@ export default async function Page({ params, }: Readonly<{ params: Promise<{ slu
 
 
     return <>
-        <Header activeLink="portfolio"></Header>
+        <MegaMenu activeLink="portfolio"></MegaMenu>
         <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
             <div id="" className="w-full inline-flex flex-nowrap overflow-hidden space-x-4 ">
                 <div className="flex items-center justify-center md:justify-start animate-infinite-scroll">

@@ -1,5 +1,5 @@
 'use client'
-import { Header, Footer } from "@/app/components";
+import { MegaMenu, Footer } from "@/app/components";
 // import Image from 'next/image';
 import Link from "next/link";
 import { Button } from "@carbon/react";
@@ -96,7 +96,7 @@ export default function LetsWorkPage() {
   ];
 
   return <>
-    <Header activeLink='lets-work'></Header>
+    <MegaMenu activeLink='lets-work'></MegaMenu>
 
     <main className="min-h-screen flex flex-col md:flex-row">
       <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r  border-black dark:border-off-white">
@@ -150,7 +150,7 @@ export default function LetsWorkPage() {
           <div id="servicesContent2" className="grid grid-cols-1 md:grid-cols-2">
 
             {availableServicesB.map((serve, index) => <WorkCard key={"serveA" + index} imageUrl={serve.imageUrl} title={serve.title} description={serve.description} startLink={serve.startLink} exploreLink={serve.exploreLink}></WorkCard>)}
-          </div>          
+          </div>
           <hr className="border-black/30 dark:border-off-white1B" />
           <div id="ctaContent" className="p-8 py-16 md:grid grid-cols-3">
             <div className="col-span-2 lg:px-44">

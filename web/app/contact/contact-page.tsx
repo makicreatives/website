@@ -1,5 +1,5 @@
 'use client'
-import { Header, Footer } from "@/app/components";
+import { MegaMenu, Footer } from "@/app/components";
 import { Button, Form, TextArea, TextInput } from "@carbon/react";
 import Image from 'next/image';
 import Link from "next/link";
@@ -21,7 +21,7 @@ export default function ContactPage() {
 
 
   return <>
-    <Header activeLink="contact"></Header>
+    <MegaMenu activeLink="contact"></MegaMenu>
 
     <main className="min-h-screen flex flex-col md:flex-row">
       <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">

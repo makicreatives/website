@@ -180,6 +180,7 @@
   --color-secondary-900: #800080;
   --color-secondary-950: #620063;
 
+  --color-secondaryRegal: #4a0e4e;
   --color-secondaryRegal-50: #fcf5fe;
   --color-secondaryRegal-100: #f9ebfc;
   --color-secondaryRegal-200: #f2d5f9;
@@ -264,6 +265,7 @@
   --color-accent4B-900: #842218;
   --color-accent4B-950: #480d07;
 
+  --color-offWhite #f7f7f7;
   --color-offWhite-50: #f7f7f7;
   --color-offWhite-100: #ededed;
   --color-offWhite-200: #d9d9d9;
@@ -276,6 +278,7 @@
   --color-offWhite-900: #545454;
   --color-offWhite-950: #363636;
 
+  --color-offWhite1B: #f9f7f5;
   --color-offWhite1B-50: #f9f7f5;
   --color-offWhite1B-100: #efeae5;
   --color-offWhite1B-200: #ded4ca;
@@ -288,6 +291,7 @@
   --color-offWhite1B-900: #54403a;
   --color-offWhite1B-950: #2c201e;
 
+  --color-textDark: #ffffff;
   --color-textDark-50: #ffffff;
   --color-textDark-100: #efefef;
   --color-textDark-200: #dcdcdc;

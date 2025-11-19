@@ -7,12 +7,12 @@ import subMark from '@/app/icons/submark.svg'
 
 export default function Loading() {
   // Or a custom loading skeleton component
-  return <>
-    <div className='bg-black h-screen w-full place-content-center py-12'>
+  return <div className='bg-black h-screen w-full place-content-center py-12'>
       <main className="grid grid-cols-1 md:grid-cols-4 h-64">
         <div className="hidden md:block border-y-2 border-white "></div>
-        <div className={'flex p-4 md:p-0 items-center justify-center border-y-2 border-white md:border-l-2'}>
-          <Image src={subMark} alt='logo mark' className='h-28 p-1' />
+        <div className={'flex p-4 md:py-0 items-center justify-center border-y-2 border-white md:border-l-2'}>
+          {/* <Image src={subMark} alt='logo mark' className='h-28 p-1' /> */}
+          <h1 className="h2 font-headline font-bold text-white text-5xl my-4 md:my-8 pl-8 uppercase  mx-auto">Maki Creative Studio</h1>
         </div>
         <div className="hidden md:block border-y-2 border-white border-l-2"></div>
         <div className="hidden md:block border-y-2 border-white border-l-2"></div>
@@ -58,7 +58,6 @@ export default function Loading() {
         </div>
       </div>
     </div>
-  </>
 }
 
 // export function SvgSpinnersClock(props: SVGProps<SVGSVGElement>) {

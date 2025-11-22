@@ -111,6 +111,12 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
   const activeLinkStyling: string = preLinkStyling + 'border-b-4 border-primary text-primary1B font-headlines text-headline-small font-bold';
   const linkStyling: string = preLinkStyling + 'hover:text-primary1B hover:duration-150';
 
+  const megaMenuStyling = {
+    card: "block p-3 rounded-xs hover:bg-primary1B-700 hover:text-offWhite",
+    cardHead: "block p-3 rounded-xs hover:bg-primary0 hover:text-white",
+    titleCard: "flex justify-between font-semibold ",
+    titleHead: " flex justify-between  text-heading font-bold font-heading uppercase  text-display-small",
+  }
 
   return <nav className="bg-primary0 text-white dark:text-off-white border-default">
     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">

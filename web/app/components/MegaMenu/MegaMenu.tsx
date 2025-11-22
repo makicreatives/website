@@ -239,3 +239,57 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
     <div id='hBottom' className={['h-8 ', hBottomColor].join(' ')}></div>
   </nav>;
 }
+
+export interface MegaMenuCardProps {
+  type?: "regular" | "head",
+  link: string,
+  id: string,
+  title: string,
+  description: string,
+  styling: {
+    card: string,
+    title: string,
+  }
+
+}
+export function MegaMenuCard({ type = "regular", link, id, title, description, styling }: Readonly<MegaMenuCardProps>) {
+  /* Cleans link to remove the / at the end to avoid having a bad url
+  */
+  const cleanLink = (url: string): string => {
+    const urlLength: number = url.length;
+    if (url[urlLength - 1] === "/") {
+      const newUrl = url.substring(0, (urlLength - 1));
+      return cleanLink(newUrl);
+    }
+    return url;
+  }
+
+
+  switch (type) {
+    case "head":
+      return <li>
+        <Link href={`${cleanLink(link)}/#${id}`} className={styling.card}>
+          <div className={styling.title}>
+            <span>{title}</span>
+            <span>
+              <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>
+            </span>
+          </div>+
+          <span className="text-sm text-body">{description}</span>
+        </Link>
+      </li>;
+
+    case "regular":
+      return <li>
+        <Link href={`${cleanLink(link)}/#${id}`} className={styling.card} >
+          <div className={styling.title}>
+            <span>{title}</span>
+            <span>
+              <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+            </span>
+          </div>
+          <span className="text-sm text-body">{description}</span>
+        </Link>
+      </li>;
+  }
+}

@@ -195,7 +195,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
           <li className="place-content-center">
             <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" className={["flex items-center justify-between w-full py-2 px-3 text-heading border-b border-light md:w-auto hover:bg-secondary-100 md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0 uppercase", (activeLink === 'services' ? activeLinkStyling : '')].join(' ')} onClick={() => setIsOpen(!isOpen)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
               Services
-              <svg className="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" /></svg>
+              <svg className="w-4 h-4 ms-1.5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"> {/* <!-- Icon from Carbon by IBM - undefined --> */} <path fill="currentColor" d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z" /></svg>
             </button>
           </li>
           <li className="place-content-center">

@@ -3,25 +3,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // import styles from './MegaMenu.css';
-import Image from 'next/image'
-import primaryLogo from '@/app/icons/primaryLogo.svg'
 import Link from 'next/link';
 import { Button } from '@/app/components/';
 
 export interface MegaMenuProps {
   hTopColor?: string;
   hBottomColor?: string;
-  activeLink: 'home' | 'portfolio' | 'pricing' | 'resources' | 'lets-work' | 'contact' | 'about' | '404'
+  activeLink: 'home' | 'portfolio' | 'services' | 'pricing' | 'resources' | 'lets-work' | 'contact' | 'about' | '404'
 }
 
-export type MegaMenuCard = {
+export type MegaMenuCardData = {
   id: string,
   title: string,
   description: string,
 }
 export type MegaMenuCardSection = {
-  head: MegaMenuCard,
-  entries: MegaMenuCard[],
+  head: MegaMenuCardData,
+  entries: MegaMenuCardData[],
 }
 export type MegaMenuCardList = {
   [K in string]: MegaMenuCardSection;
@@ -36,29 +34,88 @@ interface ServicesMegaMenuCardList extends MegaMenuCardList {
 const servicesMegaMenu: ServicesMegaMenuCardList = {
   design: {
     head: {
-      id: '',
-      title: '',
-      description: ''
+      id: 'design',
+      title: 'Design Services',
+      description: "We design and make it ready, you produce."
     },
-    entries: []
+    entries: [
+      {
+        id: 'brand-identity',
+        title: 'Brand Identity Design',
+        description: "Let's give your business a face that truly gives to your customers"
+      },
+      {
+        id: 'packaging',
+        title: 'Packaging design',
+        description: 'Set the right assets in place for your marketing message'
+      },
+      {
+        id: 'digital-ads',
+        title: 'Digital Ads',
+        description: "Connect with third-party tools that you're already using."
+      },
+      {
+        id: 'marketing-assets',
+        title: 'Digital Marketing Assets',
+        description: 'Set the right assets in place for your marketing message'
+      },
+      {
+        id: 'stationery',
+        title: 'Stationery Design',
+        description: 'Calenders, office stationery, envelopes, pens etc.'
+      },
+      {
+        id: 'print',
+        title: 'Print Designs',
+        description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you."
+      }
+    ]
   },
   production: {
     head: {
-      id: '',
-      title: '',
-      description: ''
+      id: 'production',
+      title: 'Production Services',
+      description: "Connect with third-party tools that you're already using."
     },
-    entries: []
+    entries: [
+      {
+        id: 'web',
+        title: 'Web Design',
+        description: 'From engaging homepages to conversion-focused layouts that turn visitors into customers.'
+      },
+      {
+        id: 'product',
+        title: 'Product UI/UX Design',
+        description: "User-friendly interfaces that keep your customers coming back for more.Make every interaction count."
+      },
+    ]
   },
   marketing: {
     head: {
-      id: '',
-      title: '',
-      description: ''
+      id: 'marketing',
+      title: 'Marketing Services',
+      description: "Connect with third-party tools that you're already using."
     },
-    entries: []
+    entries: [
+      {
+        id: 'seo',
+        title: 'SEO',
+        description: "We build SEO right into your website, helping your business climb search rankings the right way.Get found by the right people."
+      },
+      {
+        id: 'landing-pages',
+        title: 'Landing pages',
+        description: "Turn clicks into customers with landing pages that convert.Clear, compelling, and crafted for your specific audience."
+      },
+      {
+        id: 'social-media',
+        title: 'Social Media Assets',
+        description: "Let's give your business a presence that gains reach."
+      }
+    ]
   }
 };
+const servicesLink: string = "/services/";
 
 
 export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 'bg-primary' }: Readonly<MegaMenuProps>) {
@@ -87,11 +144,8 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
     const button = document.querySelector('[data-collapse-toggle="mega-menu-full"]');
     if (!button) return;
 
-    // const panel = document.querySelector('#mega-menu-full-dropdown')
-
     const toggle = () => setIsOpen(prev => !prev);
 
-    // panel?.classList.add("hidden")
     button.addEventListener('click', toggle);
     return () => button.removeEventListener('click', toggle);
   }, []);
@@ -107,7 +161,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
   };
 
 
-  const preLinkStyling: string = "block py-2 px-3 text-heading hover:text-primary1B  hover:bg-neutral-secondary-soft md:hover:bg-transparent  md:hover:text-primary1B md:p-0";
+  const preLinkStyling: string = "block py-2 px-3 text-heading hover:text-primary1B  hover:bg-secondary-100 md:hover:bg-transparent  md:hover:text-primary1B md:p-0";
   const activeLinkStyling: string = preLinkStyling + 'border-b-4 border-primary text-primary1B font-headlines text-headline-small font-bold';
   const linkStyling: string = preLinkStyling + 'hover:text-primary1B hover:duration-150';
 
@@ -124,25 +178,22 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
         <img src={"/images/site/logoicon.png"} className="h-12 inline-flex" alt="Maki Creative Studio Logo" />
         <span className="self-center text-xl font-semibold whitespace-nowrap text-heading">Maki Creative Studio</span>
       </Link>
-      <button data-collapse-toggle="mega-menu-full" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
+      <button data-collapse-toggle="mega-menu-full" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-100 hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
         <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14" /></svg>
       </button>
       <div id="mega-menu-full" className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
         <ul className="flex flex-col mt-4 align-middle font-bold md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase place-content-center">
           {/* <li>
-            <Link href="#" className="block py-2 px-3 text-heading hover:text-primary1B border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0" aria-current="page">Home</Link>
+            <Link href="#" className="block py-2 px-3 text-heading hover:text-primary1B border-b border-light hover:bg-secondary-100 md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0" aria-current="page">Home</Link>
           </li> */}
 
-          <li className='place-content-center'><Link href={'/'} className={[linkStyling, (activeLink === 'home' ? activeLinkStyling : '')].join(' ')}>Home</Link></li>
-
-          {/* <li><Link href={'/lets-work/'} className={[linkStyling, (activeLink === 'lets-work' ? activeLinkStyling : '')].join(' ')}>Let&apos;s&nbsp;Work</Link></li> */}
-
-
-
+          <li className='place-content-center'>
+            <Link href={'/'} className={[linkStyling, (activeLink === 'home' ? activeLinkStyling : '')].join(' ')}>Home</Link>
+          </li>
 
           <li className="place-content-center">
-            <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" className="flex items-center justify-between w-full py-2 px-3 text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0 uppercase" onClick={() => setIsOpen(!isOpen)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+            <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" className={["flex items-center justify-between w-full py-2 px-3 text-heading border-b border-light md:w-auto hover:bg-secondary-100 md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0 uppercase", (activeLink === 'services' ? activeLinkStyling : '')].join(' ')} onClick={() => setIsOpen(!isOpen)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
               Services
               <svg className="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" /></svg>
             </button>
@@ -153,12 +204,9 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
           <li className="place-content-center">
             <Link href={'/pricing'} className={[linkStyling, (activeLink === 'pricing' ? activeLinkStyling : '')].join(' ')}>Pricing</Link>
           </li>
-          <li className="place-content-center">
+          <li className="place-content-center hidden lg:block">
             <Link href={'/resources'} className={[linkStyling, (activeLink === 'resources' ? activeLinkStyling : '')].join(' ')}>Resources</Link>
           </li>
-          {/* <li className="place-content-center">
-            <Link href={'/about'} className="block py-2 px-3 text-heading hover:text-primary1B border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0">About</Link>
-          </li> */}
           <li className="">
             {/* BOOK A DEMO */}
             <Link href={'/lets-work'} >
@@ -237,6 +285,9 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
           }
         </ul>
       </div>
+      <div className="md:hidden block">
+        Mobile list here
+      </div>
     </section>
     <div id='hTop' className={['h-8 ', hTopColor].join(' ')}></div>
     <div id='hBottom' className={['h-8 ', hBottomColor].join(' ')}></div>
@@ -277,7 +328,7 @@ export function MegaMenuCard({ type = "regular", link, id, title, description, s
             <span>
               <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>
             </span>
-          </div>+
+          </div>
           <span className="text-sm text-body">{description}</span>
         </Link>
       </li>;

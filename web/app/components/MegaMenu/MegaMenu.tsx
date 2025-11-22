@@ -285,8 +285,83 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
           }
         </ul>
       </div>
-      <div className="md:hidden block">
-        Mobile list here
+      <div id='mobile-menu' className="md:hidden block">
+        <ul className="font-headlines uppercase p-2">
+          <li className='border-b'>
+            <Link href={`/`} className={megaMenuStyling.cardHead}>
+              <div className={megaMenuStyling.titleCard}>
+                <span>{"Home"}</span>
+                <span>
+                  <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                </span>
+              </div>
+              {/* <span className="text-sm text-body">{description}</span> */}
+            </Link>
+          </li>
+          <li className='border-b'>
+            <Link href={`/services`} className={megaMenuStyling.cardHead}>
+              <div className={megaMenuStyling.titleCard}>
+                <span>{"Services"}</span>
+                <span>
+                  <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                </span>
+              </div>
+              {/* <span className="text-sm text-body">{description}</span> */}
+            </Link>
+          </li>
+          <li className='border-b'>
+            <Link href={`/services`} className={megaMenuStyling.cardHead}>
+              <div className={megaMenuStyling.titleCard}>
+                <span>{"Services"}</span>
+                <span>
+                  <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                </span>
+              </div>
+              {/* <span className="text-sm text-body">{description}</span> */}
+            </Link>
+          </li>
+          <li className='border-b'>
+            <Link href={`/services`} className={megaMenuStyling.cardHead}>
+              <div className={megaMenuStyling.titleCard}>
+                <span>{"Services"}</span>
+                <span>
+                  <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                </span>
+              </div>
+              {/* <span className="text-sm text-body">{description}</span> */}
+            </Link>
+          </li>
+          <li className='border-b'>
+            <Link href={`/services`} className={megaMenuStyling.cardHead}>
+              <div className={megaMenuStyling.titleCard}>
+                <span>{"Services"}</span>
+                <span>
+                  <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                </span>
+              </div>
+              {/* <span className="text-sm text-body">{description}</span> */}
+            </Link>
+          </li>
+          <li className='border-b'>
+            <Link href={`/services`} className={megaMenuStyling.cardHead}>
+              <div className={megaMenuStyling.titleCard}>
+                <span>{"Services"}</span>
+                <span>
+                  <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                </span>
+              </div>
+              {/* <span className="text-sm text-body">{description}</span> */}
+            </Link>
+          </li>
+
+
+
+
+          <li><Link href={'/portfolio/'} className={[linkStyling, (activeLink === 'portfolio' ? activeLinkStyling : '')].join(' ')}>Portfolio</Link></li>
+          <li><Link href={'/lets-work/'} className={[linkStyling, (activeLink === 'lets-work' ? activeLinkStyling : '')].join(' ')}>Let&apos;s&nbsp;Work</Link></li>
+          <li><Link href={'/contact/'} className={[linkStyling, (activeLink == 'contact' ? activeLinkStyling : '')].join(' ')}>Contact</Link></li>
+          <li><Link href={'/about/'} className={[linkStyling, (activeLink == 'about' ? activeLinkStyling : '')].join(' ')}>About</Link></li>
+        </ul>
       </div>
     </section>
     <div id='hTop' className={['h-8 ', hTopColor].join(' ')}></div>
@@ -346,4 +421,26 @@ export function MegaMenuCard({ type = "regular", link, id, title, description, s
         </Link>
       </li>;
   }
+}
+
+export interface MobileMenuCardProps {
+  link: string,
+  title: string,
+  styling: {
+    card: string,
+    title: string,
+  }
+}
+
+export function MobileMenuCard({ link, title, styling }: Readonly<MobileMenuCardProps>) {
+  return <li className='border-b'>
+    <Link href={link} className={styling.card}>
+      <div className={styling.title}>
+        <span>{title}</span>
+        <span>
+          <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+        </span>
+      </div>
+    </Link>
+  </li>
 }

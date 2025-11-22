@@ -14,6 +14,52 @@ export interface MegaMenuProps {
   activeLink: 'home' | 'portfolio' | 'pricing' | 'resources' | 'lets-work' | 'contact' | 'about' | '404'
 }
 
+export type MegaMenuCard = {
+  id: string,
+  title: string,
+  description: string,
+}
+export type MegaMenuCardSection = {
+  head: MegaMenuCard,
+  entries: MegaMenuCard[],
+}
+export type MegaMenuCardList = {
+  [K in string]: MegaMenuCardSection;
+}
+
+
+interface ServicesMegaMenuCardList extends MegaMenuCardList {
+  design: MegaMenuCardSection,
+  production: MegaMenuCardSection,
+  marketing: MegaMenuCardSection,
+}
+const servicesMegaMenu: ServicesMegaMenuCardList = {
+  design: {
+    head: {
+      id: '',
+      title: '',
+      description: ''
+    },
+    entries: []
+  },
+  production: {
+    head: {
+      id: '',
+      title: '',
+      description: ''
+    },
+    entries: []
+  },
+  marketing: {
+    head: {
+      id: '',
+      title: '',
+      description: ''
+    },
+    entries: []
+  }
+};
+
 
 export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 'bg-primary' }: Readonly<MegaMenuProps>) {
 

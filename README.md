@@ -1,5 +1,5 @@
 ># Website
-The studio's main website 
+The studio's main website
 
 
 using nextjs-cloudflare boilerplate:
@@ -11,7 +11,7 @@ using nextjs-cloudflare boilerplate:
 |--|--|--|
 |**design**| design resources|[README](./design/README.md)|
 |**docs**| site documentation | [README](./docs/README.md)|
-|**web**| code for the site | [README](./web/README.md)| 
+|**web**| code for the site | [README](./web/README.md)|
 
 <br/>
 <br/>
@@ -27,7 +27,7 @@ using nextjs-cloudflare boilerplate:
     /                       ( Home )
     /[portfolio]              ( portfolio )
     |    |
-    |    +----/Design  
+    |    +----/Design
     |    |       |
     |    |       +---- web
     |    |       +---- landing-page
@@ -41,14 +41,16 @@ using nextjs-cloudflare boilerplate:
     |    |       +---- stationery
     |    |
     |    +----/Software
+    /[services]               ( services provided )
+    /[resources]              ( blogs and design offers )
     /[lets-work]              ( work booking )
     /[contact]                ( contact page )
     /[about]                  ( about )
     |    |
     |    +----[/privacy]
     |    |
-    |    +----[/terms&conditions]   
-    |     
+    |    +----[/terms&conditions]
+    |
     /{privacy}               (privacy)
     /{terms&conditions}      (terms)
     /{form}

@@ -1,5 +1,6 @@
-import React from 'react';
+// import React from 'react';
+// import {MegaMenu} from '../MegaMenu';
 
-import {MegaMenu} from '../MegaMenu';
+import { describe } from "node:test";
 
 describe('<MegaMenu />', () => {});

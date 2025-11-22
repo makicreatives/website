@@ -1,9 +1,8 @@
 'use client'
 import React from 'react';
 // import type { SVGProps } from 'react';
-import Image from 'next/image';
-
-import subMark from '@/app/icons/submark.svg'
+// import Image from 'next/image';
+// import subMark from '@/app/icons/submark.svg'
 
 export default function Loading() {
   // Or a custom loading skeleton component

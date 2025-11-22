@@ -1,5 +1,7 @@
-import React from 'react';
+// import React from 'react';
 
-import {Faq} from '../Faq';
+import { describe } from "node:test";
+
+// import {Faq} from '../Faq';
 
 describe('<Faq />', () => {});

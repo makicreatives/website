@@ -171,67 +171,64 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
       </div>
 
     </div>
-    <section id="mega-menu-full-dropdown" className={"mt-1 bg-neutral-primary-soft border-default shadow-xs border-y transition-all" + (!isOpen && " hidden")} onFocus={handleMouseEnter} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-      <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-heading sm:grid-cols-2 md:grid-cols-3 md:px-6">
-        <ul aria-labelledby="mega-menu-full-dropdown-button">
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Online Stores</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Segmentation</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Marketing CRM</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
+    <section id="mega-menu-full-dropdown" className={"mt-1 text-textLight bg-offWhite border-default shadow-xs border-y transition-all" + (!isOpen && " hidden")} onFocus={handleMouseEnter} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+      <div className="hidden md:grid max-w-screen-xl px-4 py-5 mx-auto text-heading sm:grid-cols-2 md:grid-cols-3 md:px-6">
+        <ul aria-label='design-services' aria-labelledby="mega-menu-full-dropdown-button">
+          {
+            (() => {
+              const designSvc = servicesMegaMenu.design;
+              return [
+                <MegaMenuCard type='head' link={servicesLink} key={designSvc.head.id} id={designSvc.head.id} title={designSvc.head.title} description={designSvc.head.description} styling={{
+                  card: megaMenuStyling.cardHead,
+                  title: megaMenuStyling.titleHead
+                }} />,
+                designSvc.entries.map((entry) => {
+                  return <MegaMenuCard link={servicesLink} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
+                    card: megaMenuStyling.card,
+                    title: megaMenuStyling.titleCard
+                  }}></MegaMenuCard>
+                }),
+              ]
+            })()
+          }
         </ul>
-        <ul>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Online Stores</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Segmentation</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Marketing CRM</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
+        <ul aria-label='production-services'>
+          {
+            (() => {
+              const productionSvc = servicesMegaMenu.production;
+              return [
+                <MegaMenuCard type='head' link={servicesLink} key={productionSvc.head.id} id={productionSvc.head.id} title={productionSvc.head.title} description={productionSvc.head.description} styling={{
+                  card: megaMenuStyling.cardHead,
+                  title: megaMenuStyling.titleHead
+                }} />,
+                productionSvc.entries.map((entry) => {
+                  return <MegaMenuCard link={servicesLink} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
+                    card: megaMenuStyling.card,
+                    title: megaMenuStyling.titleCard
+                  }}></MegaMenuCard>
+                }),
+              ]
+            })()
+          }
         </ul>
-        <ul className="hidden md:block">
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Audience Management</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Creative Tools</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
-              <div className="font-semibold">Marketing Automation</div>
-              <span className="text-sm text-body">Connect with third-party tools that you're already using.</span>
-            </Link>
-          </li>
+        <ul aria-label='marketing-services' className="">
+          {
+            (() => {
+              const marketingSvc = servicesMegaMenu.marketing;
+              return [
+                <MegaMenuCard type='head' link={servicesLink} key={marketingSvc.head.id} id={marketingSvc.head.id} title={marketingSvc.head.title} description={marketingSvc.head.description} styling={{
+                  card: megaMenuStyling.cardHead,
+                  title: megaMenuStyling.titleHead
+                }} />,
+                marketingSvc.entries.map((entry) => {
+                  return <MegaMenuCard link={servicesLink} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
+                    card: megaMenuStyling.card,
+                    title: megaMenuStyling.titleCard
+                  }}></MegaMenuCard>
+                }),
+              ]
+            })()
+          }
         </ul>
       </div>
     </section>

@@ -1,9 +1,9 @@
 'use client'
-import { Faq, Footer, MegaMenu } from "./components";
+import { Button, Faq, Footer, MegaMenu } from "./components";
 import { faqs } from "./about/sections/faq";
 import Link from "next/link";
 import Image from 'next/image';
-import { Button } from "@carbon/react";
+// import { Button } from "@carbon/react";
 export const runtime = "edge";
 
 
@@ -39,11 +39,11 @@ export default function HomePage() {
                       </p>
                       <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
                         <Link href={'/portfolio'}>
-                          <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">See our work
+                          <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">See our work
                           </Button>
                         </Link>
                         <Link href={'/lets-work'} >
-                          <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Let&apos;s work on your vision
+                          <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">Tell us your vision
                           </Button>
                         </Link>
                       </div>

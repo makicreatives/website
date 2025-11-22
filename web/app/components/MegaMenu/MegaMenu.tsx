@@ -160,6 +160,56 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
     timeoutRef.current = setTimeout(() => setIsOpen(false), 500);
   };
 
+  type MenuLink = {
+    link: string,
+    title: string,
+    page: MegaMenuProps['activeLink'],//string,
+    cta?: boolean,
+  };
+  const menuLinks: MenuLink[] = [
+    {
+      link: '/',
+      title: 'Home',
+      page: 'home'
+    },
+    {
+      link: '/services',
+      title: 'Services',
+      page: 'services'
+    },
+    {
+      link: '/portfolio',
+      title: 'Portfolio',
+      page: 'portfolio'
+    },
+    {
+      link: '/pricing',
+      title: 'Pricing',
+      page: 'pricing'
+    },
+    {
+      link: '/lets-work',
+      title: 'Book a Call',
+      page: 'lets-work',
+      cta: true,
+    },
+    {
+      link: '/resources',
+      title: 'Resources',
+      page: 'resources'
+    },
+    {
+      link: '/contact',
+      title: 'Contact',
+      page: 'contact'
+    },
+    {
+      link: '/about',
+      title: 'About',
+      page: 'about'
+    },
+  ];
+
 
   const preLinkStyling: string = "block py-2 px-3 text-heading hover:text-primary1B  hover:bg-secondary-100 md:hover:bg-transparent  md:hover:text-primary1B md:p-0";
   const activeLinkStyling: string = preLinkStyling + 'border-b-4 border-primary text-primary1B font-headlines text-headline-small font-bold';
@@ -184,9 +234,6 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
       </button>
       <div id="mega-menu-full" className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
         <ul className="flex flex-col mt-4 align-middle font-bold md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase place-content-center">
-          {/* <li>
-            <Link href="#" className="block py-2 px-3 text-heading hover:text-primary1B border-b border-light hover:bg-secondary-100 md:hover:bg-transparent md:border-0 md:hover:text-primary1B md:p-0" aria-current="page">Home</Link>
-          </li> */}
 
           <li className='place-content-center'>
             <Link href={'/'} className={[linkStyling, (activeLink === 'home' ? activeLinkStyling : '')].join(' ')}>Home</Link>

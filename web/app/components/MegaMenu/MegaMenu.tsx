@@ -426,6 +426,9 @@ export function MegaMenuCard({ type = "regular", link, id, title, description, s
 export interface MobileMenuCardProps {
   link: string,
   title: string,
+  page: MegaMenuProps['activeLink'],
+  activeLink: MegaMenuProps['activeLink'],
+  cta?: boolean,
   styling: {
     card: string,
     title: string,
@@ -436,7 +439,10 @@ export function MobileMenuCard({ link, title, styling }: Readonly<MobileMenuCard
   return <li className='border-b'>
     <Link href={link} className={styling.card}>
       <div className={styling.title}>
-        <span>{title}</span>
+        <span className={["", (activeLink === page ? "text-primary1B-500 font-bold" : '')].join(' ')}>
+          {title}
+          <b className={cta ? "ms-1.5 font-display font-bold text-title-medium animate-[ping_1.5s_infinite] ease-in" : "hidden"}>*</b>
+          </span>
         <span>
           <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
         </span>

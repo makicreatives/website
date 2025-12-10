@@ -3,3 +3,7 @@ export { default as FeaturesSection } from './features';
 export { default as ProcessSection } from './process';
 export { default as BenefitsSection } from './benefits';
 export { default as TestimonialsSection } from './testimonials';
+export { default as LogosSection } from './logos';
+export { default as StatsSection } from './stats';
+export { default as CaseStudiesSection } from './case-studies'
+export { default as CTASection } from './cta';

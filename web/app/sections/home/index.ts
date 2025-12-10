@@ -7,3 +7,4 @@ export { default as LogosSection } from './logos';
 export { default as StatsSection } from './stats';
 export { default as CaseStudiesSection } from './case-studies'
 export { default as CTASection } from './cta';
+export { default as QuickCTASection } from './quick-cta';

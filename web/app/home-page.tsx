@@ -2,7 +2,8 @@
 import { Faq, Footer, MegaMenu } from "./components";
 import { faqs } from "./about/sections/faq";
 export const runtime = "edge";
-import { BenefitsSection, FeaturesSection, HeroSection, ProcessSection, TestimonialsSection } from "@/app/sections/home";
+import { BenefitsSection, CTASection, FeaturesSection, HeroSection, LogosSection, PortfolioSection, ProcessSection, QuickCTASection, StatsSection, TestimonialsSection } from "@/app/sections/home";
+import OurWorkSection from "./sections/home/our-work";
 
 
 export default function HomePage() {
@@ -13,10 +14,16 @@ export default function HomePage() {
       <div className="">
         <main className="min-h-screen">
           <HeroSection></HeroSection>
-          <FeaturesSection></FeaturesSection>
-          <ProcessSection></ProcessSection>
+          <LogosSection></LogosSection>
+          <QuickCTASection></QuickCTASection>
+          <StatsSection></StatsSection>
+          <OurWorkSection></OurWorkSection>
           <BenefitsSection></BenefitsSection>
+          <FeaturesSection></FeaturesSection>
+          <PortfolioSection></PortfolioSection>
           <TestimonialsSection></TestimonialsSection>
+          <ProcessSection></ProcessSection>
+          <CTASection></CTASection>
         </main>
         {/* <FAQSection></FAQSection> */}
         <Faq faqs={faqs}></Faq>

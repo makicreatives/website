@@ -6,3 +6,4 @@ export { WorkCard } from './WorkCard';
 export { MegaMenu } from './MegaMenu';
 export { Button } from './Button';
 export { Faq } from './Faq';
+export { Pill } from './Pill';

@@ -50,11 +50,22 @@ export default function StatsSection() {
     ]
 
     return <section id="stats">
+        <div className="p-8 flex items-center">
+            <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mx-auto">
+                
+                <p className="">The numbers behind the work</p>
+                <p className="text-lg font-headlines leading-tight  font-medium">
+                    We've partnered with businesses at every stage 
+                    —from early startups to established brands. <br />
+                    Here's what that looks like in practice.
+                </p>
 
+            </h2>
+        </div>
         <div className="p-8 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
             {
                 agencyStatistics.map((stat, index) => {
-                    return <div key={"statId-" + index} className="bg-offWhite">
+                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow-sm hover:shadow-primary-400 hover:bg-primary-50 transition-all">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl mb-4 md:mb-8 space-y-8">
                             <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
                                 {stat.title}

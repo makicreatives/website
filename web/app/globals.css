@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap');  */
+
 @import 'tailwindcss';
 
 @config '../tailwind.config.ts';
@@ -13,12 +14,9 @@
 }
 
 @layer utilities {
-  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,700;1,100;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap'); */
 
   /* SANS: PLUS JAKARTA SANS */
-  @font-face {
+  /* @font-face {
     font-family: 'Plus Jakarta Sans';
     src: url('./fonts/PlusJakartaSansVF.ttf') format('truetype');
     font-weight: normal;
@@ -30,10 +28,10 @@
     src: url('./fonts/PlusJakartaSansItalicVF.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
-  }
+  } */
 
   /* SERIF: MERRIWEATHER */
-  @font-face {
+  /* @font-face {
     font-family: 'Merriweather';
     src: url('./fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
     font-weight: bolder;
@@ -87,10 +85,10 @@
     src: url('./fonts/Merriweather/Merriweather-LightItalic.ttf') format('truetype');
     font-weight: lighter;
     font-style: italic;
-  }
+  } */
 
   /* MONO: JET BRAINS MONO */
-  @font-face {
+  /* @font-face {
     font-family: 'JetBrains Mono';
     src: url('./fonts/JetBrainsMonoVF.ttf') format('truetype');
     font-weight: normal;
@@ -102,7 +100,7 @@
     src: url('./fonts/JetBrainsMonoItalicVF.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
-  }
+  } */
 
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -416,4 +414,12 @@
 
 
 
+}
+
+@theme {
+    --font-display: "Merriweather", sans-serif;
+    --font-sans: "Plus Jakarta Sans", sans-serif;
+    --font-serif: "Merriweather", serif;
+    --font-mono: "JetBrains Mono", monospace;
+    --font-hand: "Caveat", "sans-serif";
 }

@@ -1,6 +1,6 @@
 import { Button } from "@/app/components";
 import Link from "next/link";
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function HeroSection() {
     return <section id="hero" className={""}>
@@ -9,7 +9,7 @@ export default function HeroSection() {
                 <div className="bg-black md:bg-gray-300 bg-cover bg-[url(/images/site/perfect-hero.png)] h-full w-full overflow-hidden">
                     <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                         <div className=" text-off-white1B">
-                            <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they do</p>
+                            <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they doTrusted by brands who love what they do</p>
                             <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you
                                 confidence with your customers</h2>
                             <p className="mb-4 hidden">
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
             <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
         </div>
-        <hr className="border-black dark:border-off-white1B" />
+        {/* <hr className="border-black dark:border-off-white1B" />
         <div className={"flex justify-center my-12 "}>
             <div className="flex flex-wrap justify-center items-center px-8 ">
                 <span className="relative h-28 w-24 ">
@@ -56,7 +56,7 @@ export default function HeroSection() {
                     </span>
                 </div>
             </div>
-        </div>
-        <hr className="border-black dark:border-off-white1B mb-12" />
+        </div> */}
+        <hr className="border-black dark:border-off-white1B" />
     </section>
 }

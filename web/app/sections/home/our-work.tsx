@@ -75,7 +75,7 @@ export default function OurWorkSection() {
                 <p className="text-lg font-headlines leading-tight  font-medium">
                     We partner with businesses to create design systems that scale. <br />
                     From brand foundations to digital products
-                    —here's what we've built.
+                    —here&apos;s what we&apos;ve built.
                 </p>
 
             </h2>

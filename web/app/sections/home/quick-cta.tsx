@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function QuickCTASection() {
     return <section id="quick-cta">
-        <div className="p-8 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="p-8 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2">
             <div className="space-y-4 my-auto">
                 <h2 className="h2 font-display font-medium  text-display-medium md:text-display-large mb-4 md:mb-8 space-y-8">
                     <span className="p-1 px-2 mb-2 flex text-xl font-headlines font-medium  text-offWhite bg-primary0">
@@ -28,7 +28,7 @@ export default function QuickCTASection() {
                     </Link>
                 </div>
             </div>
-            <div>
+            <div className="order-1 lg:order-2">
                 <div className="bg-primary0  h-[30vw] w-full">
                     <div>
 

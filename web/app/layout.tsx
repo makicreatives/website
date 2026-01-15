@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script async src="https://tally.so/widgets/embed.js"></script>
-
+        <script defer src="https://umami.mevinsystems.cloud/script.js" data-website-id="0a9bdae6-02d4-4267-aa3b-bceaf56b1a3a"></script>
       </head>
       <body
         className={'antialiased bg-white dark:bg-gray3 text-primary0 dark:text-off-white overflow-x-hidden'}

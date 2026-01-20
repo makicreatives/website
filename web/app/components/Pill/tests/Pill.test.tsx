@@ -1,5 +1,7 @@
-import React from 'react';
+// import React from 'react';
 
-import {Pill} from '../Pill';
+import { describe } from "node:test";
+
+// import {Pill} from '../Pill';
 
 describe('<Pill />', () => {});

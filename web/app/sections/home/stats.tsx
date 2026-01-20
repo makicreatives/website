@@ -55,9 +55,9 @@ export default function StatsSection() {
                 
                 <p className="">The numbers behind the work</p>
                 <p className="text-lg font-headlines leading-tight  font-medium">
-                    We've partnered with businesses at every stage 
+                    We&apos;ve partnered with businesses at every stage 
                     —from early startups to established brands. <br />
-                    Here's what that looks like in practice.
+                    Here&apos;s what that looks like in practice.
                 </p>
 
             </h2>

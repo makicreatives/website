@@ -15,7 +15,7 @@ export default function QuickCTASection() {
                     </p>
                 </h2>
                 <p className=" leading-relaxed">
-                    <Pill>Remote-first collaboration.</Pill> Work with us from anywhere. We're available when you need us, without the overhead of an in-house team.
+                    <Pill>Remote-first collaboration.</Pill> Work with us from anywhere. We&apos;re available when you need us, without the overhead of an in-house team.
                     <Pill>A&nbsp;true&nbsp;partnership.</Pill> We become an extension of your team. You focus on strategy and growth—we handle the execution. 
                     <Pill>Consistent&nbsp;delivery.</Pill> Reliable turnarounds that fit your timeline. No surprises, no delays.
                     <Pill>Built&nbsp;to&nbsp;scale.</Pill> Your design system grows with your business. From early stage to enterprise, we adapt to your needs.

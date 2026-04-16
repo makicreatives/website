@@ -36,82 +36,118 @@ const servicesMegaMenu: ServicesMegaMenuCardList = {
     head: {
       id: 'design',
       title: 'Design Services',
-      description: "We design and make it ready, you produce."
+      description: "We design everything you need. You handle the rest."
     },
     entries: [
       {
         id: 'brand-identity',
         title: 'Brand Identity Design',
-        description: "Let's give your business a face that truly gives to your customers"
+        description: "We create a strong, professional look for your business that your customers instantly trust and remember."
       },
       {
         id: 'packaging',
-        title: 'Packaging design',
-        description: 'Set the right assets in place for your marketing message'
-      },
-      {
-        id: 'digital-ads',
-        title: 'Digital Ads',
-        description: "Connect with third-party tools that you're already using."
-      },
-      {
-        id: 'marketing-assets',
-        title: 'Digital Marketing Assets',
-        description: 'Set the right assets in place for your marketing message'
+        title: 'Packaging Design',
+        description: "Eye-catching packaging that makes your product stand out on the shelf and tells your brand story."
       },
       {
         id: 'stationery',
         title: 'Stationery Design',
-        description: 'Calenders, office stationery, envelopes, pens etc.'
+        description: "Business cards, letterheads, envelopes, and other professional touchpoints that strengthen your brand."
       },
       {
         id: 'print',
-        title: 'Print Designs',
-        description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you."
+        title: 'Print & Merch Design',
+        description: "T-shirts, caps, banners, and merchandise that keep your brand looking sharp everywhere it appears."
+      },
+      {
+        id: 'trade-show',
+        title: 'Trade Show & Event Booth Design',
+        description: "Stand out on the show floor with professional booth designs that attract visitors and represent your brand well."
+      },
+      {
+        id: 'brochures',
+        title: 'Brochures & Sales Sheets',
+        description: "Professional brochures and one-pagers that help you explain your offer and close more deals."
       }
     ]
   },
-  production: {
+    production: {
     head: {
       id: 'production',
-      title: 'Production Services',
-      description: "Connect with third-party tools that you're already using."
+      title: 'Digital Production',
+      description: "Designed and built. Ready to go live."
     },
     entries: [
       {
         id: 'web',
-        title: 'Web Design',
-        description: 'From engaging homepages to conversion-focused layouts that turn visitors into customers.'
+        title: 'Website Design',
+        description: "From a clean homepage to a full site. Built to look good and turn visitors into customers."
       },
       {
         id: 'product',
         title: 'Product UI/UX Design',
-        description: "User-friendly interfaces that keep your customers coming back for more.Make every interaction count."
+        description: "Interfaces your users actually enjoy. Simple, smooth, and built to keep them coming back."
+      },
+      {
+        id: 'landing-pages',
+        title: 'Landing Page Design',
+        description: "One page. One goal. Built to convert the traffic you're already sending somewhere."
+      },      
+      {
+        id: 'pitch-decks',
+        title: 'Pitch Deck Design',
+        description: "Clean, persuasive pitch decks that help you win investors and clients."
+      },
+      {
+        id: 'presentations',
+        title: 'Presentation Design',
+        description: "Polished, engaging presentations that keep your audience focused and impressed."
+      },
+      {
+        id: 'ebooks-reports',
+        title: 'Ebooks & Report Design',
+        description: "Beautiful, easy-to-read ebooks and reports that position you as an expert."
+      },      
+      {
+        id: 'infographics',
+        title: 'Infographic Design',
+        description: "Turn complex information into clear, beautiful visuals that people actually understand and share."
       },
     ]
   },
   marketing: {
     head: {
       id: 'marketing',
-      title: 'Marketing Services',
-      description: "Connect with third-party tools that you're already using."
+      title: 'Marketing Support',
+      description: "Get seen. Get clicks. Get customers."
     },
     entries: [
       {
-        id: 'seo',
-        title: 'SEO',
-        description: "We build SEO right into your website, helping your business climb search rankings the right way.Get found by the right people."
-      },
-      {
-        id: 'landing-pages',
-        title: 'Landing pages',
-        description: "Turn clicks into customers with landing pages that convert.Clear, compelling, and crafted for your specific audience."
+        id: 'marketing-assets',
+        title: 'Marketing Assets',
+        description: "Banners, graphics, brochures — every touchpoint looking sharp and on-brand."
       },
       {
         id: 'social-media',
         title: 'Social Media Assets',
-        description: "Let's give your business a presence that gains reach."
+        description: "Posts, covers, story templates. Show up on every platform looking like you mean business."
+      },
+      {
+        id: 'email-templates',
+        title: 'Email Marketing Templates',
+        description: "Clean email designs that look good in every inbox. No coding needed on your end."
+      },
+      {
+        id: 'lead-magnets',
+        title: 'Lead Magnet Design',
+        description: "A free resource people actually want. Designed to pull the right clients in."
+      },
+      {
+        id: 'seo',
+        title: 'Website SEO',
+        description: "We build SEO into your site from the start. So the right people find you — without paying for every click."
       }
+
     ]
   }
 };

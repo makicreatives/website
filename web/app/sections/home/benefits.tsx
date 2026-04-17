@@ -7,12 +7,16 @@ import turnaroundIcon from '@/app/icons/ui/turnaround.svg'
 import futureDesignsIcon from '@/app/icons/ui/future-designs.svg'
 
 export default function BenefitsSection() {
-    return <section id="benefits" className={"pt-12"}>
+    return <section id="benefits" className={""}>
         <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200/30 via-accent3/30 to-primary1B/10 to-90% backdrop-blur-3xl">
-            <h2 className="h2 font-display text-secondary font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mt-12 space-y-8">
-                <span className="text-xl font-headlines font-medium">Should you have us,— for your design partner ?</span>
-                <p className="">Here&apos;s what you&apos;ll get </p>
+            <h2 className="h2 font-display font-medium  text-display-medium md:text-display-large mb-4 md:mb-8 mt-12 space-y-8">
+                    <span className="p-1 px-2 mb-2 flex text-xl font-headlines font-medium  text-offWhite bg-primary0">
+                        Should you have us,— for your design partner ?
+                    </span>
+                    <p className="leading-tight">
+                        Here&apos;s what you&apos;ll get
 
+                    </p>
             </h2>
             <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 <div className="bg-off-white1B p-8 flex flex-col justify-between">

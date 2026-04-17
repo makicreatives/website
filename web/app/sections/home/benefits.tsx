@@ -90,6 +90,6 @@ export default function BenefitsSection() {
                 </div>
             </div>
         </div>
-        <hr className="border-black dark:border-off-white1B" />
+        <hr className="hidden border-black dark:border-off-white1B" />
     </section>;
 }

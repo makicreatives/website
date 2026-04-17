@@ -6,6 +6,39 @@ import partnershipIcon from '@/app/icons/ui/partnership.svg'
 import turnaroundIcon from '@/app/icons/ui/turnaround.svg'
 import futureDesignsIcon from '@/app/icons/ui/future-designs.svg'
 
+type AgencyBenefit = {
+title: string,
+description: string,
+imageUrl: string,
+iconUrl: string,
+}
+const agencyBenefits: AgencyBenefit[] = [
+    {
+        title: 'Flexible Collaboration',
+        description: "Work with us from anywhere, anytime. Our remote setup means we're always just a message away.",
+        imageUrl: '/images/site/collaboration-abstract.png',
+        iconUrl: shareKnowledgeIcon,
+    },
+    {
+        title: 'Partnership Approach',
+        description: 'We grow together. Get a dedicated design partner who understands your business goals and vision.',
+        imageUrl: '/images/site/partnership-abstract.png',
+        iconUrl: partnershipIcon,
+    },
+    {
+        title: 'Quick Turnaround',
+        description: 'We understand your speed. Get your designs when you need them, not weeks later.',
+        imageUrl: '/images/site/turnaround-abstract.png',
+        iconUrl: turnaroundIcon,
+    },
+    {
+        title: 'Future Proof designs',
+        description: 'Scalable solutions that grow with your business. No need to start from scratch as you expand.',
+        imageUrl: '/images/site/future-designs-abstract.png',
+        iconUrl: futureDesignsIcon,
+    }
+] ;
+
 export default function BenefitsSection() {
     return <section id="benefits" className={""}>
         <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200/30 via-accent3/30 to-primary1B/10 to-90% backdrop-blur-3xl">
@@ -19,50 +52,26 @@ export default function BenefitsSection() {
                     </p>
             </h2>
             <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                    <div>
-                        <p className="text-title-large mb-6">Flexible Collaboration</p>
-                        <p className="text-body-large font-body mb-4">Work with us from anywhere, anytime. Our remote setup means we&apos;re always just a message away.</p>
-                    </div>
-                    <div className="relative h-80 w-64 mx-auto ">
-                        <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/collaboration-abstract.png)] flex items-center justify-center h-full w-full">
-                            <Image src={shareKnowledgeIcon} width={320} alt='share knowledge icon' className={'h-24 opacity-80'} />
+                
+                {
+                    agencyBenefits.map((benefit, index) => {
+                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">   
+                        <div className="relative h-80 w-full">
+                            <div className="bg-gray-300 bg-cover flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${benefit.imageUrl})`}}>
+                                <Image src={benefit.iconUrl} width={320} alt={benefit.title + ' icon'} className={'h-24 opacity-80'} />
+                            </div> 
                         </div>
+                        <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
+                            <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
+                                {benefit.title}
+                            </span>
+                        </h2>                                             
+                        <p className=" leading-relaxed p-4 text-xl mb-4 md:mb-8 ">
+                            {benefit.description}
+                        </p>
                     </div>
-                </div>
-                <div className="bg-off-white1B p-8  flex flex-col justify-between">
-                    <div>
-                        <p className="text-title-large mb-6">Partnership Approach</p>
-                        <p className="text-body-large font-body mb-4">We grow together. Get a dedicated design partner who understands your business goals and vision.</p>
-                    </div>
-                    <div className="relative h-80 w-64 mx-auto ">
-                        <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/partnership-abstract.png)] flex items-center justify-center h-full w-full">
-                            <Image src={partnershipIcon} width={320} alt='partnership icon' className={'h-24 opacity-80'} />
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                    <div>
-                        <p className="text-title-large mb-6">Quick Turnaround</p>
-                        <p className="text-body-large font-body mb-4">We understand your speed. Get your designs when you need them, not weeks later.</p>
-                    </div>
-                    <div className="relative h-80 w-64 mx-auto ">
-                        <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/turnaround-abstract.png)] flex items-center justify-center h-full w-full">
-                            <Image src={turnaroundIcon} width={320} alt='turnaround icon' className={'h-24 opacity-80'} />
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                    <div>
-                        <p className="text-title-large mb-6">Future Proof designs</p>
-                        <p className="text-body-large font-body mb-4">Scalable solutions that grow with your business. No need to start from scratch as you expand.</p>
-                    </div>
-                    <div className="relative h-80 w-64 mx-auto ">
-                        <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/future-designs-abstract.png)] flex items-center justify-center h-full w-full">
-                            <Image src={futureDesignsIcon} width={320} alt='future designs icon' className={'h-24 opacity-80'} />
-                        </div>
-                    </div>
-                </div>
+                })
+            }
             </div>
         </div>
 

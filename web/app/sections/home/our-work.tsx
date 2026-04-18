@@ -11,61 +11,43 @@ export interface AgencyService {
 export default function OurWorkSection() {
 
     const agencyServices: AgencyService[] = [
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-        {
-            title: "Presentation Design",
-            imageUrl: "https://google.com/favicon.ico",
-            linkUrl: "/services/design",
-            tags: ["hello", "google"]
-        },
-    ]
+    {
+        title: "Brand Identity Design",
+        imageUrl: "https://google.com/favicon.ico", // "/images/services/brand-identity.png",
+        linkUrl: "/services/design#brand-identity",
+        tags: ["Branding", "Logo", "Visual Identity"]
+    },
+    {
+        title: "Website Design",
+        imageUrl: "https://google.com/favicon.ico", // "/images/services/web-design.png",
+        linkUrl: "/services/digital#web",
+        tags: ["Web", "UI/UX", "Conversion"]
+    },
+    {
+        title: "Pitch Deck Design",
+        imageUrl: "https://google.com/favicon.ico", //"/images/services/pitch-deck.png",
+        linkUrl: "/services/design#pitch-decks",
+        tags: ["Presentations", "Investor", "Sales"]
+    },
+    {
+        title: "Trade Show & Event Booth",
+        imageUrl:  "https://google.com/favicon.ico",// "/images/services/trade-show.png",
+        linkUrl: "/services/design#trade-show",
+        tags: ["Print", "Events", "Signage"]
+    },
+    {
+        title: "Social Media Assets",
+        imageUrl: "https://google.com/favicon.ico", // "/images/services/social-media.png",
+        linkUrl: "/services/marketing#social-media",
+        tags: ["Marketing", "Content", "Digital"]
+    },
+    {
+        title: "Ebooks & Report Design",
+        imageUrl: "https://google.com/favicon.ico", // "/images/services/ebooks-reports.png",
+        linkUrl: "/services/marketing#ebooks-reports",
+        tags: ["Content", "Lead Generation", "B2B"]
+    },
+]
     return <section id="our-work">
 
         <div className="p-8 container">

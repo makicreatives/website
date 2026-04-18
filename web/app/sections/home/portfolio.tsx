@@ -15,7 +15,7 @@ export default function PortfolioSection() {
     const portfolioProjects: AgencyProject[] = [
         {
             title: "Brand Identity Project",
-            mediaUrl: "/media/portfolio/brand-identity-1.gif",   // or .jpg / .webp
+            mediaUrl: "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",   // or .jpg / .webp
             bgImageUrl: '/images/site/seo-abstract.png', // "/media/portfolio/brand-identity-1-bg.jpg",
             linkUrl: "/portfolio/brand-identity-1",
             tags: ["Branding", "Logo Design", "Visual Identity"],
@@ -31,7 +31,7 @@ export default function PortfolioSection() {
         },
         {
             title: "Website Design Project",
-            mediaUrl: "/media/portfolio/website-1.jpg",
+            mediaUrl: "https://images.unsplash.com/photo-1568801838106-43cc2000b704?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bgImageUrl: "/media/portfolio/website-1-bg.jpg",
             linkUrl: "/portfolio/website-1",
             tags: ["Web Design", "UI/UX", "Responsive"],
@@ -39,7 +39,7 @@ export default function PortfolioSection() {
         },
         {
             title: "Pitch Deck Design Project",
-            mediaUrl: "/media/portfolio/pitch-deck-1.gif",
+            mediaUrl: "https://media1.tenor.com/m/CCWYpCgLmykAAAAC/happy-dance.gif",
             bgImageUrl: '/images/site/seo-abstract.png', // "/media/portfolio/pitch-deck-1-bg.jpg",
             linkUrl: "/portfolio/pitch-deck-1",
             tags: ["Pitch Deck", "Presentation", "Investor"],
@@ -96,8 +96,9 @@ export default function PortfolioSection() {
         },
         {
             title: "Infographic Series",
-            mediaUrl: "/media/portfolio/infographics-1.jpg",
-            bgImageUrl: "/media/portfolio/infographics-1-bg.jpg",
+            mediaUrl: "https://www.pexels.com/download/video/7936181/",
+            isVideo: true,
+            bgImageUrl: "https://images.unsplash.com/photo-1597244508835-605298ca838b?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             linkUrl: "/portfolio/infographics-1",
             tags: ["Infographics", "Data Visualization"],
             category: "production"

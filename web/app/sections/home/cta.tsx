@@ -4,7 +4,7 @@ export default function CTASection() {
     return <section id="cta">
         <div className={"bg-primary0 flex justify-center py-8"}>
             <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-center md:text-headline-large text-off-white1B bg-primary1B border border-black hover:text-black hover:transition-all duration-300 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm hover:cursor-pointer  focus:ring-4 focus:ring-primary1B leading-5 rounded-full">
-                Tell us your vision
+                Send us your brief
             </Link>
         </div>
         <div className="bg-primary0 pb-12 overflow-clip">

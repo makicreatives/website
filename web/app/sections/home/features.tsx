@@ -18,50 +18,44 @@ type AgencyFeature = {
 
 const agencyFeatures: AgencyFeature[] = [
     {
-        title: 'Web design',
-        subtitle: 'Websites that work as hard as you do.',
+        title: 'Look the part',
+        subtitle: 'First impressions are made before you speak.',
+        description: 'Brand identity, stationery, print and merch — everything that makes your business instantly recognizable.',
         linkUrl: '/services/design',
-        description: 'From engaging homepages to conversion-focused layouts that turn visitors into customers.',
+        imageUrl: '/images/site/brand-identity-abstract.png',
+        iconUrl: searchAdvIcon,
+    },
+    {
+        title: 'Show up everywhere',
+        subtitle: 'Consistent. On-brand. Hard to ignore.',
+        description: 'Social media assets, email templates, digital ads, and marketing graphics — built for every platform your customers are on.',
+        linkUrl: '/services/design',
+        imageUrl: '/images/site/marketing-assets-abstract.png',
+        iconUrl: devicesAppsIcon,
+    },
+    {
+        title: 'Win the room',
+        subtitle: 'Walk in ready. Leave with the deal.',
+        description: 'Pitch decks, presentations, trade show booths, and sales sheets — designed to make your case before you say a word.',
+        linkUrl: '/services/design',
+        imageUrl: '/images/site/pitch-abstract.png',
+        iconUrl: taskAddIcon,
+    },
+    {
+        title: 'Grow online',
+        subtitle: 'Your website should work while you sleep.',
+        description: 'Web design, landing pages, and SEO-friendly builds that turn the right visitors into paying customers.',
+        linkUrl: '/services/digital',
         imageUrl: '/images/site/web-design-abstract.png',
         iconUrl: webIcon,
     },
-        {
-        title: 'UI/UX design',
-        subtitle: 'Make every interaction count.',
-        description: 'User-friendly interfaces that keep your customers coming back for more.',        
-        linkUrl: '/services/design',
-        imageUrl: '/images/site/uiux-design-abstract.png',
-        iconUrl: devicesAppsIcon,
-    },
-        {
-        title: 'SEO',
-        subtitle: 'Get found by the right people.',
-        description: 'We build SEO right into your design, helping your business climb search rankings naturally.',        
-        linkUrl: '/services/design',
-        imageUrl: '/images/site/seo-abstract.png',
-        iconUrl: searchAdvIcon,
-    },
-        {
-        title: 'Landing Pages',
-        subtitle: 'Turn clicks into customers with landing pages that convert.',
-        description: 'Clear, compelling, and crafted for your specific audience.',        
-        linkUrl: '/services/design',
-        imageUrl: '/images/site/landing-pages-abstract.png',
+    {
+        title: 'Share what you know',
+        subtitle: 'Turn your expertise into content people trust.',
+        description: 'Ebooks, reports, infographics, and lead magnets — designed to attract the right clients and keep them coming back.',
+        linkUrl: '/services/marketing',
+        imageUrl: '/images/site/content-abstract.png',
         iconUrl: docSentimentIcon,
-    },
-        {
-        title: 'Additional Services',
-        subtitle: 'All your design needs under one roof, minus the complexity',
-        description: `
-            — Brand Identity Design <br />
-            — Social Media Graphics <br />
-            — Email Templates <br />
-            — Digital Marketing Assets <br />
-            — Print-Ready Designs <br />
-        `,        
-        linkUrl: '/services/design',
-        imageUrl: '/images/site/extra-services-abstract.png',
-        iconUrl: taskAddIcon,
     },
 ]
 

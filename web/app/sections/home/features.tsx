@@ -74,7 +74,7 @@ export default function FeaturesSection() {
 
             {
                 agencyFeatures.map((feature, index) => {
-                        return <Link key={"serviceCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                        return <Link key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                             <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                                 <div className='mb-2 h-80'>
                                     <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full"style={{ backgroundImage: `url(${feature.imageUrl})`}}>

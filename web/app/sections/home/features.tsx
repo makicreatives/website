@@ -100,5 +100,6 @@ export default function FeaturesSection() {
             }
 
         </div>
+        <hr className="border-black dark:border-off-white1B" />
     </section>
 }

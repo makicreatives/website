@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
+import groupShowIcon from '@/app/icons/ui/groupPresentation.svg'
+import bookIcon from '@/app/icons/ui/book.svg'
+import globeIcon from '@/app/icons/ui/globe.svg'
 import webIcon from '@/app/icons/ui/web.svg'
-import devicesAppsIcon from '@/app/icons/ui/devices-apps.svg'
-import docSentimentIcon from '@/app/icons/ui/doc-sentiment.svg'
-import searchAdvIcon from '@/app/icons/ui/search-advanced.svg'
-import taskAddIcon from '@/app/icons/ui/task-add.svg'
+import lookIcon from '@/app/icons/ui/accessibilityColor.svg'
 import Link from 'next/link';
 
 type AgencyFeature = {
@@ -22,31 +22,31 @@ const agencyFeatures: AgencyFeature[] = [
         subtitle: 'First impressions are made before you speak.',
         description: 'Brand identity, stationery, print and merch — everything that makes your business instantly recognizable.',
         linkUrl: '/services/design',
-        imageUrl: '/images/site/brand-identity-abstract.png',
-        iconUrl: searchAdvIcon,
+        imageUrl: '/images/site/seo-abstract.png',
+        iconUrl: lookIcon,
     },
     {
         title: 'Show up everywhere',
         subtitle: 'Consistent. On-brand. Hard to ignore.',
         description: 'Social media assets, email templates, digital ads, and marketing graphics — built for every platform your customers are on.',
         linkUrl: '/services/design',
-        imageUrl: '/images/site/marketing-assets-abstract.png',
-        iconUrl: devicesAppsIcon,
+        imageUrl: '/images/site/uiux-design-abstract.png',
+        iconUrl: globeIcon,
     },
     {
         title: 'Win the room',
         subtitle: 'Walk in ready. Leave with the deal.',
         description: 'Pitch decks, presentations, trade show booths, and sales sheets — designed to make your case before you say a word.',
         linkUrl: '/services/design',
-        imageUrl: '/images/site/pitch-abstract.png',
-        iconUrl: taskAddIcon,
+        imageUrl: '/images/site/landing-pages-abstract.png',
+        iconUrl: groupShowIcon,
     },
     {
         title: 'Grow online',
         subtitle: 'Your website should work while you sleep.',
         description: 'Web design, landing pages, and SEO-friendly builds that turn the right visitors into paying customers.',
         linkUrl: '/services/digital',
-        imageUrl: '/images/site/web-design-abstract.png',
+        imageUrl: '/images/site/extra-services-abstract.png',
         iconUrl: webIcon,
     },
     {
@@ -54,8 +54,8 @@ const agencyFeatures: AgencyFeature[] = [
         subtitle: 'Turn your expertise into content people trust.',
         description: 'Ebooks, reports, infographics, and lead magnets — designed to attract the right clients and keep them coming back.',
         linkUrl: '/services/marketing',
-        imageUrl: '/images/site/content-abstract.png',
-        iconUrl: docSentimentIcon,
+        imageUrl: '/images/site/web-design-abstract.png',
+        iconUrl: bookIcon,
     },
 ]
 

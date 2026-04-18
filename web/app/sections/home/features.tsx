@@ -5,82 +5,97 @@ import devicesAppsIcon from '@/app/icons/ui/devices-apps.svg'
 import docSentimentIcon from '@/app/icons/ui/doc-sentiment.svg'
 import searchAdvIcon from '@/app/icons/ui/search-advanced.svg'
 import taskAddIcon from '@/app/icons/ui/task-add.svg'
+import Link from 'next/link';
+
+type AgencyFeature = {
+    title: string,
+    subtitle: string,
+    description: string,    
+    linkUrl: string,
+    imageUrl: string,
+    iconUrl: string,
+}
+
+const agencyFeatures: AgencyFeature[] = [
+    {
+        title: 'Web design',
+        subtitle: 'Websites that work as hard as you do.',
+        linkUrl: '/services/design',
+        description: 'From engaging homepages to conversion-focused layouts that turn visitors into customers.',
+        imageUrl: '/images/site/web-design-abstract.png',
+        iconUrl: webIcon,
+    },
+        {
+        title: 'UI/UX design',
+        subtitle: 'Make every interaction count.',
+        description: 'User-friendly interfaces that keep your customers coming back for more.',        
+        linkUrl: '/services/design',
+        imageUrl: '/images/site/uiux-design-abstract.png',
+        iconUrl: devicesAppsIcon,
+    },
+        {
+        title: 'SEO',
+        subtitle: 'Get found by the right people.',
+        description: 'We build SEO right into your design, helping your business climb search rankings naturally.',        
+        linkUrl: '/services/design',
+        imageUrl: '/images/site/seo-abstract.png',
+        iconUrl: searchAdvIcon,
+    },
+        {
+        title: 'Landing Pages',
+        subtitle: 'Turn clicks into customers with landing pages that convert.',
+        description: 'Clear, compelling, and crafted for your specific audience.',        
+        linkUrl: '/services/design',
+        imageUrl: '/images/site/landing-pages-abstract.png',
+        iconUrl: docSentimentIcon,
+    },
+        {
+        title: 'Additional Services',
+        subtitle: 'All your design needs under one roof, minus the complexity',
+        description: `
+            — Brand Identity Design <br />
+            — Social Media Graphics <br />
+            — Email Templates <br />
+            — Digital Marketing Assets <br />
+            — Print-Ready Designs <br />
+        `,        
+        linkUrl: '/services/design',
+        imageUrl: '/images/site/extra-services-abstract.png',
+        iconUrl: taskAddIcon,
+    },
+]
 
 export default function FeaturesSection() {
     return <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/10"}>
         <h2 className="h2 font-display text-display-medium md:text-5xl text-primary mb-4 md:mb-8 p-8">It&apos;s the design services that grow —<br /> with your business</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 p-8">
-            <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                <div>
-                    <p className="text-title-large font-bold mb-2 uppercase">Web design</p>
-                    <p className="text-label-medium text-primary font-body mb-4 ">Websites that work as hard as you do.</p>
-                    <p className="text-body-medium font-body mb-4">From engaging homepages to conversion-focused layouts that turn visitors into customers.</p>
-                </div>
-                <div className="relative h-80 w-full mx-auto ">
-                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/web-design-abstract.png)] flex items-center justify-center h-full w-full">
-                        <Image src={webIcon} width={320} alt='web icon' className={'h-24 opacity-80'} />
-                    </div>
-                </div>
-            </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 p-8">
 
-            <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                <div>
-                    <p className="text-title-large font-bold mb-2 uppercase">UI/UX design</p>
-                    <p className="text-label-medium text-primary font-body mb-4 ">Make every interaction count.</p>
-                    <p className="text-body-medium font-body mb-4">User-friendly interfaces that keep your customers coming back for more.</p>
-                </div>
-                <div className="relative h-80 w-full mx-auto ">
-                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/uiux-design-abstract.png)] flex items-center justify-center h-full w-full">
-                        <Image src={devicesAppsIcon} width={320} alt='uI/ux icon' className={'h-24 opacity-80'} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                <div>
-                    <p className="text-title-large font-bold mb-2 uppercase">SEO</p>
-                    <p className="text-label-medium text-primary font-body mb-4 ">Get found by the right people.</p>
-                    <p className="text-body-medium font-body mb-4">We build SEO right into your design, helping your business climb search rankings naturally.</p>
-                </div>
-                <div className="relative h-80 w-full mx-auto ">
-                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/seo-abstract.png)] flex items-center justify-center h-full w-full">
-                        <Image src={searchAdvIcon} width={320} alt='search advanced icon' className={'h-24 opacity-80'} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                <div>
-                    <p className="text-title-large mb-2 font-bold uppercase">Landing Pages</p>
-                    <p className="text-label-medium text-primary font-body mb-4 ">Turn clicks into customers with landing pages that convert.</p>
-                    <p className="text-body-medium font-body mb-4">Clear, compelling, and crafted for your specific audience.</p>
-                </div>
-                <div className="relative h-80 w-full mx-auto ">
-                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full">
-                        <Image src={docSentimentIcon} width={320} alt='document sentiment icon' className={'h-24 opacity-80'} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="bg-off-white1B p-8 flex flex-col justify-between">
-                <div>
-                    <p className="text-title-large font-bold mb-2 uppercase">Additional Services</p>
-                    <p className="text-label-medium text-primary font-body mb-4 ">All your design needs under one roof,
-                        minus the complexity</p>
-                    <p className="text-body-medium font-body mb-4">
-                        — Brand Identity Design <br />
-                        — Social Media Graphics <br />
-                        — Email Templates <br />
-                        — Digital Marketing Assets <br />
-                        — Print-Ready Designs <br />
-                    </p>
-                </div>
-                <div className="relative h-80 w-full mx-auto ">
-                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/extra-services-abstract.png)] flex items-center justify-center h-full w-full">
-                        <Image src={taskAddIcon} width={320} alt='task add icon' className={'h-24 opacity-80'} />
-                    </div>
-                </div>
-            </div>
+            {
+                agencyFeatures.map((feature, index) => {
+                        return <Link key={"serviceCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                            <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
+                                <div className='mb-2 h-80'>
+                                    <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full"style={{ backgroundImage: `url(${feature.imageUrl})`}}>
+                                        <Image src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
+                                    </div>
+                                </div>
+                                <div className='p-8'>
+                                    <p className='mb-1 font-bold font-headlines text-headline-large uppercase'>
+                                        {feature.title}
+                                    </p>
+                                    <h2 className="h2 font-technical space-y-8 mb-2">
+                                        <span className="p-1 flex text-xs uppercase font-medium  text-offWhite ">
+                                            {feature.subtitle}
+                                        </span>
+                                    </h2>                                             
+                                    <p className=" leading-relaxed text-xl mb-4 md:mb-8 ">
+                                        {feature.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>;
+                    })
+            }
 
         </div>
     </section>

@@ -137,7 +137,7 @@ export default function PortfolioSection() {
                             <div className="flex-1">
 
                             </div>
-                            <div className="opacity-80 has-hover:opacity-100 has-hover:text-white transition-all text-off-white">
+                            <div className="opacity-50 has-hover:opacity-100 has-hover:text-white transition-all text-off-white1B">
                                 <p className="leading-tight  pt-4 px-4">
                                     
                                     <Pill color="info" >{category}</Pill>

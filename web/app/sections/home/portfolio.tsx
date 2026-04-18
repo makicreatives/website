@@ -155,7 +155,7 @@ export default function PortfolioSection() {
 
                 <p className="">Our Selected Work</p>
                 <p className="text-lg font-headlines leading-tight  font-medium">
-                    From bold brand identities to scroll-stopping ads — here&apos;s what we&apos;ve created lately.
+                    From bold brand identities to scroll-stopping digital — here&apos;s what we&apos;ve been building.
                 </p>
 
             </h2>

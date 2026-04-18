@@ -16,22 +16,24 @@ export default function QuickCTASection() {
                 </h2>
                 <p className=" leading-relaxed">
                     <Pill>Remote-first collaboration.</Pill> Work with us from anywhere. We&apos;re available when you need us, without the overhead of an in-house team.
-                    <Pill>A&nbsp;true&nbsp;partnership.</Pill> We become an extension of your team. You focus on strategy and growth—we handle the execution. 
+                    <Pill>A&nbsp;true&nbsp;partnership.</Pill> We become an extension of your team. You focus on strategy and growth—we handle the execution.
                     <Pill>Consistent&nbsp;delivery.</Pill> Reliable turnarounds that fit your timeline. No surprises, no delays.
                     <Pill>Built&nbsp;to&nbsp;scale.</Pill> Your design system grows with your business. From early stage to enterprise, we adapt to your needs.
                 </p>
                 <div>
                     <Link href={'/lets-work'} >
                         <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">
-                            Tell us your vision
+                            Get a quote
                         </Button>
                     </Link>
                 </div>
             </div>
             <div className="order-1 lg:order-2">
-                <div className="bg-primary0  h-[30vw] w-full">
-                    <div>
-
+                <div className="bg-primary0  h-80 lg:h-[30vw] w-full">
+                    <div className="video-container relative overflow-clip  h-full flex flex-col justify-between">
+                        <video id="bg-video" className="absolute top-[0%] left-[0%] object-cover min-w-full min-h-full w-auto h-auto -z-0" autoPlay muted loop playsInline controls>
+                            <source src={"https://www.pexels.com/download/video/36520697/"} type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>

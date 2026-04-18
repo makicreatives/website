@@ -77,32 +77,42 @@ export default function TestimonialsSection() {
         <div className="p-8 container grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {
                 agencyTestimonials.map((testimonial, index) => {
-                                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">   
-                                        <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
-                                            <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
-                                                {testimonial.role}
-                                            </span>
-                                        </h2>
-                                        <div className="relative h-80 w-full">
-                                            <div className="bg-primary0 bg-cover saturate-0 flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${testimonial.avatarUrl})`}}>
-                                            </div> 
-                                        </div>
-                                        <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
-                                            <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
-                                                {testimonial.name} @ {testimonial.company}
-                                            </span>
-                                        </h2>                                             
-                                        <p className=" leading-relaxed p-4 text-xl mb-4 md:mb-8 ">
-                                            {testimonial.quote}
-                                        </p>
-                                    </div>
-                                })
+                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">
+                        <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
+                            <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
+                                {testimonial.role}
+                            </span>
+                        </h2>
+                        <div className="relative h-80 w-full">
+                            <div className="bg-primary0 bg-cover saturate-0 flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${testimonial.avatarUrl})` }}>
+                            </div>
+                        </div>
+                        <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
+                            <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
+                                {testimonial.name} @ {testimonial.company}
+                            </span>
+                        </h2>
+                        <p className=" leading-relaxed p-4 text-xl mb-4 md:mb-8 ">
+                            {testimonial.quote}
+                        </p>
+                    </div>
+                })
             }
         </div>
-        <div className={"bg-black flex justify-center my-12"}>
-            <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-center text-headline-large bg-linear-to-r bg-opacity-[26] from-[#e79ae7] to-[#80e8ec] border border-black hover:text-gray1 hover:transition-500 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm">
-                lets discuss your vision
+        <div className={"bg-primary0 flex justify-center py-8"}>
+            <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-center md:text-headline-large text-off-white1B bg-primary1B border border-black hover:text-black hover:transition-all duration-300 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm hover:cursor-pointer  focus:ring-4 focus:ring-primary1B leading-5 rounded-full">
+                Tell us your vision
             </Link>
+        </div>
+        <div className="bg-primary0 pb-12 overflow-clip">
+            <div className="flex flex-nowrap  invert animate-infinite-scroll">
+                <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase  mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+                <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+                <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+                <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+                <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+                <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
+            </div>
         </div>
         {/* <hr className="border-black dark:border-off-white1B" /> */}
     </section>

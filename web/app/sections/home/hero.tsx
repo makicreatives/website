@@ -9,7 +9,7 @@ export default function HeroSection() {
                 <div className="bg-black md:bg-gray-300 bg-cover bg-[url(/images/site/perfect-hero.png)] h-full w-full overflow-hidden">
                     <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                         <div className=" text-off-white1B">
-                            <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they doTrusted by brands who love what they do</p>
+                            {/* <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they doTrusted by brands who love what they do</p> */}
                             <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you
                                 confidence with your customers</h2>
                             <p className="mb-4 hidden">
@@ -21,7 +21,7 @@ export default function HeroSection() {
                                     </Button>
                                 </Link>
                                 <Link href={'/lets-work'} >
-                                    <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">Tell us your vision
+                                    <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
                                     </Button>
                                 </Link>
                             </div>

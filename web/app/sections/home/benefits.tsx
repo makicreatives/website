@@ -5,6 +5,7 @@ import shareKnowledgeIcon from '@/app/icons/ui/share-knowledge.svg'
 import partnershipIcon from '@/app/icons/ui/partnership.svg'
 import turnaroundIcon from '@/app/icons/ui/turnaround.svg'
 import futureDesignsIcon from '@/app/icons/ui/future-designs.svg'
+import Link from 'next/link';
 
 type AgencyBenefit = {
 title: string,
@@ -76,12 +77,18 @@ export default function BenefitsSection() {
         </div>
 
         <hr className="border-black dark:border-off-white1B" />
-        <div className={"flex justify-center my-12"}>
-            <div className="flex flex-wrap justify-center items-center px-8">
+        <div className={"bg-black flex justify-center py-8"}>
+            <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-center md:text-headline-large text-off-white1B bg-primary1B border border-black hover:text-black hover:transition-all duration-300 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm hover:cursor-pointer  focus:ring-4 focus:ring-primary1B leading-5 rounded-full">
+                Tell us your vision
+            </Link>
+        </div>
+        <hr className="border-black dark:border-off-white1B" />
+        <div className={"flex justify-center py-12  bg-black"}>
+            <div className="flex flex-wrap justify-center items-center px-8 pb-4 ">
                 <span className="relative h-28 w-24 ">
-                    <Image src={"/images/site/paul-rand.png"} alt={"paul rand portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px]"></Image>
+                    <Image src={"/images/site/paul-rand.png"} alt={"paul rand portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px] "></Image>
                 </span>
-                <div className=" p-8">
+                <div className=" p-8 text-off-white">
                     <span className=" font-normal font-body leading-tight">&ldquo;<b>Design is the silent ambassador of your brand.</b>&rdquo;
                         <br />
                     </span>

@@ -23,7 +23,7 @@ export default function PortfolioSection() {
         },
         {
             title: "Packaging Design Project",
-            mediaUrl: "/media/portfolio/packaging-1.gif",
+            mediaUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bgImageUrl: "/media/portfolio/packaging-1-bg.jpg",
             linkUrl: "/portfolio/packaging-1",
             tags: ["Packaging", "Product Design", "3D Mockup"],
@@ -72,7 +72,7 @@ export default function PortfolioSection() {
         },
         {
             title: "Product UI/UX Design",
-            mediaUrl: "/media/portfolio/product-ui-1.gif",
+            mediaUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bgImageUrl: "/media/portfolio/product-ui-1-bg.jpg",
             linkUrl: "/portfolio/product-ui-1",
             tags: ["UI/UX", "Product Design", "App"],
@@ -88,7 +88,7 @@ export default function PortfolioSection() {
         },
         {
             title: "Social Media Asset Suite",
-            mediaUrl: "/media/portfolio/social-media-1.gif",
+            mediaUrl: "https://images.unsplash.com/photo-1494625927555-6ec4433b1571?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bgImageUrl: "/media/portfolio/social-media-1-bg.jpg",
             linkUrl: "/portfolio/social-media-1",
             tags: ["Social Media", "Content Creation", "Branding"],
@@ -104,13 +104,49 @@ export default function PortfolioSection() {
         },
         {
             title: "Full Brand Refresh Project",
-            mediaUrl: "/media/portfolio/brand-refresh-1.gif",
+            mediaUrl: "https://images.unsplash.com/photo-1494625927555-6ec4433b1571?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bgImageUrl: "/media/portfolio/brand-refresh-1-bg.jpg",
             linkUrl: "/portfolio/brand-refresh-1",
             tags: ["Rebranding", "Brand Strategy", "Identity"],
             category: "branding"
         }
     ];
+
+    const getMediaCard = (mediaUrl:string, isVideo:boolean, category: string, tags: string[]) => {
+        if(isVideo){
+            return <div className="video-container relative overflow-clip  h-80 md:h-96 flex flex-col justify-between">
+                            <video id="bg-video" className="absolute top-[0%] left-[0%] object-cover min-w-full min-h-full w-auto h-auto -z-0" autoPlay muted loop playsInline>
+                                <source src={mediaUrl} type="video/mp4" />
+                            </video>
+                            <div className="flex-1 ">
+
+                            </div>
+                            <div className="opacity-80 has-hover:opacity-100 has-hover:text-white transition-all text-off-white z-10">
+                                <p className="leading-tight  pt-4 px-4">
+                                    
+                                    <Pill color="info" >{category}</Pill>
+                                </p>
+                                <p className=" leading-relaxed p-4 text-sm">
+                                    {tags.join(', ')}
+                                </p>
+                            </div>
+                        </div>
+        }
+        return <div className="bg-cover  overflow-clip  h-80 md:h-96 flex flex-col justify-between"  style={{ backgroundImage: `url(${mediaUrl})` }}>
+                            <div className="flex-1">
+
+                            </div>
+                            <div className="opacity-80 has-hover:opacity-100 has-hover:text-white transition-all text-off-white">
+                                <p className="leading-tight  pt-4 px-4">
+                                    
+                                    <Pill color="info" >{category}</Pill>
+                                </p>
+                                <p className=" leading-relaxed p-4 text-sm">
+                                    {tags.join(', ')}
+                                </p>
+                            </div>
+                        </div>;
+    }
     return <section id="portfolio">
 
         <div className="p-8 flex items-center">
@@ -132,20 +168,13 @@ export default function PortfolioSection() {
                                 {project.title}
                             </span>
                         </h2>
-                        <div className="bg-accent1b overflow-clip  h-80 md:h-96 flex flex-col justify-between">
-                            <div className="flex-1 bg-primaryb">
-
-                            </div>
-                            <div className="opacity-80 text-off-white">
-                                <p className="leading-tight  pt-4 px-4">
-                                    
-                                    <Pill color="info" key={"categoryTagId-" + index}>{project.category}</Pill>
-                                </p>
-                                <p className=" leading-relaxed p-4 text-sm">
-                                    {project.tags.join(', ')}
-                                </p>
-                            </div>
-                        </div>
+                        {getMediaCard(
+                            project.mediaUrl,
+                            project.isVideo ?? false,
+                            project.category,
+                            project.tags,
+                        )
+                            }
                     </Link>
                 })
             }

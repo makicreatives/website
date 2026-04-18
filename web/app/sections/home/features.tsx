@@ -61,7 +61,15 @@ const agencyFeatures: AgencyFeature[] = [
 
 export default function FeaturesSection() {
     return <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/10"}>
-        <h2 className="h2 font-display text-display-medium md:text-5xl text-primary mb-4 md:mb-8 p-8">It&apos;s the design services that grow —<br /> with your business</h2>
+        <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8">
+
+            <p className="">One studio. Every design service  —<br /> your business needs.</p>
+            <p className="text-lg font-headlines leading-tight  font-medium pt-2 ps-8">
+                {/* We partner with businesses to create design systems that scale. <br /> */}
+                From brand foundations to digital products.
+            </p>
+
+        </h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 p-8">
 
             {

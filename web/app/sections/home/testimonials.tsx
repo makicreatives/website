@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
             </p>
         </h2>
 
-        <div className="p-8 container grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="p-8 container mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {
                 agencyTestimonials.map((testimonial, index) => {
                     return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">
@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
                                 {testimonial.name} @ {testimonial.company}
                             </span>
                         </h2>
-                        <p className=" leading-relaxed p-4 text-xl mb-4 md:mb-8 ">
+                        <p className=" leading-relaxed p-4 text-lg mb-4 md:mb-8 ">
                             {testimonial.quote}
                         </p>
                     </div>

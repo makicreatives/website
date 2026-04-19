@@ -315,12 +315,12 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
             (() => {
               const designSvc = servicesMegaMenu.design;
               return [
-                <MegaMenuCard type='head' link={servicesLink} key={designSvc.head.id} id={designSvc.head.id} title={designSvc.head.title} description={designSvc.head.description} styling={{
+                <MegaMenuCard type='head' headId={designSvc.head.id} link={servicesLink} key={designSvc.head.id} id={designSvc.head.id} title={designSvc.head.title} description={designSvc.head.description} styling={{
                   card: megaMenuStyling.cardHead,
                   title: megaMenuStyling.titleHead
                 }} />,
                 designSvc.entries.map((entry) => {
-                  return <MegaMenuCard link={servicesLink} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
+                  return <MegaMenuCard link={servicesLink} headId={designSvc.head.id} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
                     card: megaMenuStyling.card,
                     title: megaMenuStyling.titleCard
                   }}></MegaMenuCard>
@@ -334,12 +334,12 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
             (() => {
               const productionSvc = servicesMegaMenu.production;
               return [
-                <MegaMenuCard type='head' link={servicesLink} key={productionSvc.head.id} id={productionSvc.head.id} title={productionSvc.head.title} description={productionSvc.head.description} styling={{
+                <MegaMenuCard type='head' headId={productionSvc.head.id} link={servicesLink} key={productionSvc.head.id} id={productionSvc.head.id} title={productionSvc.head.title} description={productionSvc.head.description} styling={{
                   card: megaMenuStyling.cardHead,
                   title: megaMenuStyling.titleHead
                 }} />,
                 productionSvc.entries.map((entry) => {
-                  return <MegaMenuCard link={servicesLink} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
+                  return <MegaMenuCard link={servicesLink} headId={productionSvc.head.id} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
                     card: megaMenuStyling.card,
                     title: megaMenuStyling.titleCard
                   }}></MegaMenuCard>
@@ -353,12 +353,12 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
             (() => {
               const marketingSvc = servicesMegaMenu.marketing;
               return [
-                <MegaMenuCard type='head' link={servicesLink} key={marketingSvc.head.id} id={marketingSvc.head.id} title={marketingSvc.head.title} description={marketingSvc.head.description} styling={{
+                <MegaMenuCard type='head' headId={marketingSvc.head.id} link={servicesLink} key={marketingSvc.head.id} id={marketingSvc.head.id} title={marketingSvc.head.title} description={marketingSvc.head.description} styling={{
                   card: megaMenuStyling.cardHead,
                   title: megaMenuStyling.titleHead
                 }} />,
                 marketingSvc.entries.map((entry) => {
-                  return <MegaMenuCard link={servicesLink} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
+                  return <MegaMenuCard link={servicesLink} headId={marketingSvc.head.id} key={entry.id} id={entry.id} title={entry.title} description={entry.description} styling={{
                     card: megaMenuStyling.card,
                     title: megaMenuStyling.titleCard
                   }}></MegaMenuCard>
@@ -392,6 +392,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
 
 export interface MegaMenuCardProps {
   type?: "regular" | "head",
+  headId:string,
   link: string,
   id: string,
   title: string,
@@ -402,7 +403,7 @@ export interface MegaMenuCardProps {
   }
 
 }
-export function MegaMenuCard({ type = "regular", link, id, title, description, styling }: Readonly<MegaMenuCardProps>) {
+export function MegaMenuCard({ type = "regular",headId, link, id, title, description, styling }: Readonly<MegaMenuCardProps>) {
   /* Cleans link to remove the / at the end to avoid having a bad url
   */
   const cleanLink = (url: string): string => {
@@ -418,7 +419,7 @@ export function MegaMenuCard({ type = "regular", link, id, title, description, s
   switch (type) {
     case "head":
       return <li>
-        <Link href={`${cleanLink(link)}/#${id}`} className={styling.card}>
+        <Link href={`${cleanLink(link)}/${id}`} className={styling.card}>
           <div className={styling.title}>
             <span>{title}</span>
             <span>
@@ -431,7 +432,7 @@ export function MegaMenuCard({ type = "regular", link, id, title, description, s
 
     case "regular":
       return <li>
-        <Link href={`${cleanLink(link)}/#${id}`} className={styling.card} >
+        <Link href={`${cleanLink(link)}/${cleanLink(headId)}/#${id}`} className={styling.card} >
           <div className={styling.title}>
             <span>{title}</span>
             <span>

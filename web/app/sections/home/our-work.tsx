@@ -85,7 +85,7 @@ export default function OurWorkSection() {
                                 </p>
                                 <div className=" mb-2 flex flex-wrap gap-0.5 space-x-4 space-y-2 text-xl font-technical uppercase font-medium  text-offWhite">
                                     {service.tags.map((tag, index) => {
-                                        return <Pill color="primary" key={"serviceTagId-" + index}>{tag}</Pill>
+                                        return <Pill  key={"serviceTagId-" + index}>{tag}</Pill>
                                     })}
                                 </div>
                             </div>

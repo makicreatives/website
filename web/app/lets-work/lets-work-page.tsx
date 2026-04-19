@@ -121,10 +121,10 @@ export default function LetsWorkPage() {
 
                 <p className="">Great work starts here</p>
                 <p className="text-lg font-headlines leading-snug  font-medium">
-                  <p className="hidden md:inline">
+                  <div className="hidden md:inline">
                     We&apos;ve partnered with businesses at every stage
                     —from early startups to established brands. <br />
-                  </p>
+                  </div>
                   Fill in the form and we&apos;ll get back to you within 24 hours.
                 </p>
 

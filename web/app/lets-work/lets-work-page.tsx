@@ -101,38 +101,46 @@ export default function LetsWorkPage() {
     <main className="min-h-screen flex flex-col md:flex-row">
       <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r  border-black dark:border-off-white">
         <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-off-white place-content-center ">
-          {/* <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
-            <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button> */}
         </div>
         <div className="flex-1 flex place-content-center">
           <div className="md:hidden w-full inline-flex flex-nowrap overflow-hidden">
             <div className="flex items-center justify-center md:justify-start animate-infinite-scroll md:animate-none">
-              {/* <p className="font-display text-display-large m-auto md:-rotate-90 text-nowrap capitalize">{projectData[0]?.name ?? 'Our Portfolio'}</p> */}
             </div>
           </div>
-          {/* <p className="hidden md:block font-display text-display-large m-auto md:-rotate-90 text-nowrap capitalize">{projectData[0]?.name ?? 'Our Creative Playground'}</p> */}
         </div>
 
         <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-0 border-black dark:border-off-white place-content-center ">
-          {/* <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
-            <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button> */}
         </div>
       </section>
       <section id="midPanel" className="flex-1 flex flex-col">
         <div>
 
-          <div id="marketingContent" className="md:grid grid-cols-3 p-8 border-b md:border-b border-black dark:border-off-white">
-            <div className="col-span-2 lg:px-44">
-              <h1 className="font-display text-display-medium mb-4">Ready to Bring <br /> Your Vision to Life ?</h1>
-              <h3 className="font-headlines text-headline-medium mb-8">Great design is a journey, and we are excited to embark on it with you.</h3>
-              <Link href={'#!'}  >
-                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large hover:font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book a 15 minute call
-                </Button>
-              </Link>
+          <div id="marketingContent" className=" grid-cols-3 border-b md:border-b border-black dark:border-off-white">
+            <div className="p-8 flex items-center">
+              <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mx-auto">
 
+                <p className="">Great work starts here</p>
+                <p className="text-lg font-headlines leading-snug  font-medium">
+                  <p className="hidden md:inline">
+                    We&apos;ve partnered with businesses at every stage
+                    —from early startups to established brands. <br />
+                  </p>
+                  Fill in the form and we&apos;ll get back to you within 24 hours.
+                </p>
 
+              </h2>
             </div>
-            <div className="">
+            <hr className="border-black dark:border-off-white1B" />
+            <div className=" bg-off-white1B container mx-auto md:p-8 ">
+              <div className="relative h-[80dvh] overflow-auto md:rounded-2xl" >
+                <iframe
+                  title="contact-form"
+                  src="https://formbricks.mevinsystems.cloud/s/cmkxtbyeg0006pk01bnlfie15"
+                  // frameBorder="0"
+                  className="absolute left-0 top-0 w-full h-full border-0"
+                >
+                </iframe>
+              </div>
 
             </div>
 

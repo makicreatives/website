@@ -26,7 +26,7 @@ export default function HeroSection() {
 
                                         <p className="">Design that does the work</p>
                                         <p className="text-lg font-headlines leading-tight  font-medium">
-                                            Every asset your business needs to show up sharp <br />
+                                            Every asset your business needs to show up sharp <br className="hidden md:block" />
                                             — in print, on screen, and in the room.
                                         </p>
 

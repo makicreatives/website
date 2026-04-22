@@ -44,11 +44,9 @@ export default function StatsSection() {
         <div className="p-8 flex items-center">
             <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mx-auto">
 
-                <p className="">The numbers behind the work</p>
+                <p className="">Design work, by the numbers.</p>
                 <p className="text-lg font-headlines leading-tight  font-medium">
-                    We&apos;ve partnered with businesses at every stage
-                    —from early startups to established brands. <br />
-                    Here&apos;s what that looks like in practice.
+                    Brand identities, print, decks, and more — here&apos;s what two years of focused design output looks like.
                 </p>
 
             </h2>

@@ -7,18 +7,22 @@ export default function WhyUsSection() {
             <div className="order-2 lg:order-none space-y-4 my-auto">
                 <h2 className="h2 font-display font-medium  text-display-medium md:text-display-large mb-4 md:mb-8 space-y-8">
                     <span className="p-1 px-2 mb-2 flex text-xl font-headlines font-medium  text-offWhite bg-primary0">
-                        Your design team, on demand
+                        You get one designer who knows your brand inside out
                     </span>
                     <p className="leading-tight">
-                        Here&apos;s what working with us looks like
+                        Why work with us?
 
                     </p>
                 </h2>
                 <p className=" leading-relaxed">
-                    <Pill>Remote-first collaboration.</Pill> Work with us from anywhere. We&apos;re available when you need us, without the overhead of an in-house team.
+                    There&apos;s no briefing three different people. Just fast, <Pill>focused work</Pill> from someone who&apos;s invested in 
+                    <Pill> getting it right</Pill>. We work with B2B businesses that want design that will actually <Pill>move
+                    the needle</Pill> — not just something that looks good in a deck.
+
+                    {/* <Pill>Remote-first collaboration.</Pill> Work with us from anywhere. We&apos;re available when you need us, without the overhead of an in-house team.
                     <Pill>A&nbsp;true&nbsp;partnership.</Pill> We become an extension of your team. You focus on strategy and growth—we handle the execution.
                     <Pill>Consistent&nbsp;delivery.</Pill> Reliable turnarounds that fit your timeline. No surprises, no delays.
-                    <Pill>Built&nbsp;to&nbsp;scale.</Pill> Your design system grows with your business. From early stage to enterprise, we adapt to your needs.
+                    <Pill>Built&nbsp;to&nbsp;scale.</Pill> Your design system grows with your business. From early stage to enterprise, we adapt to your needs. */}
                 </p>
                 <div className="pb-8">
                     <Link href={'/lets-work'} >

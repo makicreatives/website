@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import devicesAppsIcon from '@/app/icons/ui/devices-apps.svg'
-import emailIcon from '@/app/icons/ui/mail.svg'
+import emailIcon from '@/app/icons/ui/email-new.svg'
 import taskAddIcon from '@/app/icons/ui/task-add.svg'
 import marketingIcon from '@/app/icons/ui/location-star.svg'
 import Link from 'next/link';

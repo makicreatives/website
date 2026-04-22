@@ -54,7 +54,7 @@ export default function FeaturesSection() {
     return <section id="features" className={"border-t border-t-black dark:border-t-off-white "}>
         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8">
 
-            <p className="">Digital experiences that work for your business</p>
+            <p className="leading-snug">Digital experiences —<br className="hidden md:block" /> that work for your business</p>
             <p className="text-lg font-headlines leading-tight  font-medium pt-2 ps-8">
                 {/* We partner with businesses to create design systems that scale. <br /> */}
                 Designed to look good and built to convert.

@@ -1,8 +1,7 @@
 import { Faq, Footer, MegaMenu } from "@/app/components";
 import { faqs } from "@/app/about/sections/faq";
-import { HeroSection } from "@/app/sections/services/production";
-import { LogosSection, TestimonialsSection, StatsSection } from "@/app/sections/home";
-
+import { FeaturesSection, HeroSection, PortfolioSection, WhyUsSection, StatsSection  } from "@/app/sections/services/production";
+import { LogosSection, TestimonialsSection} from "@/app/sections/home";
 
 
 export default function ProductionPage() {
@@ -10,9 +9,9 @@ export default function ProductionPage() {
         <MegaMenu activeLink='services'></MegaMenu>
         <HeroSection></HeroSection>
         <LogosSection></LogosSection> {/* -- social proof */}
-        -- why
-        -- portfolio
-        -- features
+        <WhyUsSection></WhyUsSection>  {/* -- why */}
+        <PortfolioSection></PortfolioSection>  {/* -- portfolio */}
+        <FeaturesSection></FeaturesSection>  {/* -- features */}
         <TestimonialsSection></TestimonialsSection> {/* -- testimonials */}
         <StatsSection></StatsSection> {/* -- stats */}
         <hr className="border-black dark:border-off-white1B" />

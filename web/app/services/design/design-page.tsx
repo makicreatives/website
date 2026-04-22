@@ -1,7 +1,8 @@
 import { Faq, Footer, MegaMenu } from "@/app/components";
 import { faqs } from "@/app/about/sections/faq";
-import { HeroSection } from "@/app/sections/services/design";
-import { LogosSection, StatsSection, TestimonialsSection } from "@/app/sections/home";
+import { FeaturesSection, HeroSection, StatsSection, PortfolioSection } from "@/app/sections/services/design";
+import { LogosSection,  TestimonialsSection } from "@/app/sections/home";
+import WhyUs from "@/app/sections/services/design/why-us";
 
 
 
@@ -10,9 +11,9 @@ export default function DesignPage() {
         <MegaMenu activeLink='services'></MegaMenu>
         <HeroSection></HeroSection>
         <LogosSection></LogosSection> {/* -- social proof */}
-        -- why
-        -- portfolio
-        -- features
+        <WhyUs></WhyUs>  {/* -- why */}
+        <PortfolioSection></PortfolioSection>  {/* -- portfolio */}
+        <FeaturesSection></FeaturesSection>  {/* -- features */}
         <TestimonialsSection></TestimonialsSection> {/* -- testimonials */}
         <StatsSection></StatsSection> {/* -- stats */}
         <hr className="border-black dark:border-off-white1B" />

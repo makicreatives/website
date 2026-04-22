@@ -36,7 +36,7 @@ export default function WhyUsSection() {
                 <div className="bg-primary0  h-80 lg:h-[30vw] w-full">
                     <div className="video-container relative overflow-clip  h-full flex flex-col justify-between">
                         <video id="bg-video" className="absolute top-[0%] left-[0%] object-cover min-w-full min-h-full w-auto h-auto -z-0" autoPlay muted loop playsInline controls>
-                            <source src={"https://www.pexels.com/download/video/36520697/"} type="video/mp4" />
+                            <source src={"https://www.pexels.com/download/video/35261833/"} type="video/mp4" />
                         </video>
                     </div>
                 </div>

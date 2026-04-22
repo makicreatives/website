@@ -1,17 +1,21 @@
 import { Faq, Footer, MegaMenu } from "@/app/components";
 import { faqs } from "@/app/about/sections/faq";
+import { LogosSection, TestimonialsSection, StatsSection, PortfolioSection, CTASection } from "@/app/sections/home";
+import { FeaturesSection, HeroSection, WhyUsSection } from "@/app/sections/services";
 
 
 
 export default function ServicesPage() {
     return <>
         <MegaMenu activeLink='services'></MegaMenu>
-        <section id="design" className="p-2 md:p-8"></section>
-        <hr className="border-black dark:border-off-white1B" />
-        <section id="production"  className="p-2 md:p-8"></section>
-        <hr className="border-black dark:border-off-white1B" />
-        <section id="marketing" className="p-2 md:p-8"></section>
-        <hr className="border-black dark:border-off-white1B" />
+        <HeroSection></HeroSection>
+        <LogosSection></LogosSection> {/* -- social proof */}
+        <WhyUsSection></WhyUsSection> {/* -- why */}
+        <PortfolioSection></PortfolioSection>{/* -- portfolio */}
+        <FeaturesSection></FeaturesSection>
+        <TestimonialsSection></TestimonialsSection> {/* -- testimonials */}
+        <StatsSection></StatsSection> {/* -- stats */}
+        <CTASection></CTASection>
         <Faq faqs={faqs}></Faq>
         <Footer></Footer>
     </>

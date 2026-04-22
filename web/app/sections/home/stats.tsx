@@ -1,6 +1,7 @@
 export interface AgencyStatistic {
     title: string,
     quantity: string,
+    suffix: string,
     description: string,
 }
 
@@ -9,53 +10,49 @@ export default function StatsSection() {
     const agencyStatistics: AgencyStatistic[] = [
         {
             title: "Average Turnaround",
-            quantity: "5 days",
-            description: "From brief to delivery. Consistent timelines that keep your projects moving"
+            quantity: "5",
+            suffix: "days",
+            description: "From brief to delivery. No chasing after delays — its all consistent timelines that keep your projects moving."
         },
         {
             title: "Client Retention",
-            quantity: "85%",
-            description: "Partners who return because the work delivers results, not just pixels"
+            quantity: "85",
+            suffix: "%",
+            description: "Most clients come back. They appreciate the good work."
         },
         {
-            title: "Years in business",
-            quantity: "2+",
-            description: "Trusted by brands who need reliable creative execution at scale"
+            title: "Years in Business",
+            quantity: "2",
+            suffix: "+",
+            description: "Young studio, Serious output. Every project gets treated like it's the one that matters most, Because It Is."
         },
         {
-            title: "Design Assets Created",
-            quantity: "300+",
-            description: "From landing pages to full brand systems—built for growth"
+            title: "Assets Delivered",
+            quantity: "300",
+            suffix: "+",
+            description: "Brand systems, pitch decks, websites, print — built across industries and delivered on time."
         },
-        // {
-        //     title: "Countries Served",
-        //     quantity: "15+",
-        //     description: "Remote-first collaboration with clients across time zones"
-        // },
         {
-            title: "Team Response Time",
-            quantity: "< 24hrs",
-            description: "Available when you need us. No waiting days for feedback or revisions"
+            title: "Response Time",
+            quantity: "< 24",
+            suffix: "hrs",
+            description: "You'll never wait days for an answer. Every brief, question, and revision gets a fast turnaround."
         },
-        // {
-        //     title: "",
-        //     quantity: "",
-        //     description: ""
-        // },
-        // {
-        //     title: "",
-        //     quantity: "",
-        //     description: ""
-        // },
+        {
+            title: "Happy Clients",
+            quantity: "15",
+            suffix: "+",
+            description: "Small number, high bar. Every client we've worked with has left with something they're proud of."
+        },
     ]
 
     return <section id="stats">
         <div className="p-8 flex items-center">
             <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mx-auto">
-                
+
                 <p className="">The numbers behind the work</p>
                 <p className="text-lg font-headlines leading-tight  font-medium">
-                    We&apos;ve partnered with businesses at every stage 
+                    We&apos;ve partnered with businesses at every stage
                     —from early startups to established brands. <br />
                     Here&apos;s what that looks like in practice.
                 </p>
@@ -71,7 +68,7 @@ export default function StatsSection() {
                                 {stat.title}
                             </span>
                             <p className="leading-tight px-4 text-primary">
-                                {stat.quantity}
+                                {stat.quantity} {stat.suffix}
 
                             </p>
                         </h2>

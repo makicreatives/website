@@ -46,7 +46,7 @@ export default function StatsSection() {
 
                 <p className="">Marketing output, by the numbers</p>
                 <p className="text-lg font-headlines leading-tight  font-medium">
-                    Assets built, platforms covered, and campaigns supported — here&apos;s the work behind the results.
+                    Assets built, platforms covered, and campaigns supported — <br className="hidden md:block" /> here&apos;s the work behind the results.
                 </p>
 
             </h2>

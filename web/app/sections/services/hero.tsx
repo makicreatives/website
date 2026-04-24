@@ -122,7 +122,7 @@ export default function HeroSection() {
                                         Connect more with your customers
                                     </p>
                                     <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
-                                        <Link href={'/portfolio'}>
+                                        <Link href={'/services/production'}>
                                                         <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">View Catalogue
                                                         </Button>
                                                     </Link>

@@ -36,7 +36,7 @@ export default function StatsSection() {
             title: "Response Time",
             quantity: "< 24",
             suffix: "hrs",
-            description: "Every brief and revision gets a fast, direct response. No account manager issues in between."
+            description: "Every brief and revision gets a fast, direct response. No account management issues in between."
         },
     ]
 

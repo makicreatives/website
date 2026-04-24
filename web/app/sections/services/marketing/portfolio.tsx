@@ -15,32 +15,32 @@ export default function PortfolioSection() {
     const portfolioProjects: AgencyProject[] = [
         {
             title: "Social Media Asset Suite",
-            mediaUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/31940527/pexels-photo-31940527.jpeg",
             linkUrl: "/portfolio/social-media-asset-suite",
             tags: ["Social Media", "Content", "Branding"],
             category: "marketing"
         },
         {
             title: "Industry Report Design",
-            mediaUrl: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1543286386-713bdd548da4?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/31940527/pexels-photo-31940527.jpeg",
             linkUrl: "/portfolio/industry-report-design",
             tags: ["Report", "Ebook", "Content Design"],
             category: "marketing"
         },
         {
             title: "Lead Magnet & Ebook Design",
-            mediaUrl: "https://images.unsplash.com/photo-1597244508835-605298ca838b?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1597244508835-605298ca838b?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1597244508835-605298ca838b?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/31940527/pexels-photo-31940527.jpeg",
             linkUrl: "/portfolio/lead-magnet-ebook",
             tags: ["Lead Magnet", "Ebook", "Content Design"],
             category: "marketing"
         },
         {
             title: "Email Campaign Template Suite",
-            mediaUrl: "https://images.unsplash.com/photo-1596526131083-e8c633064c68?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1596526131083-e8c633064c68?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1596526131083-e8c633064c68?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/31940527/pexels-photo-31940527.jpeg",
             linkUrl: "/portfolio/email-campaign-templates",
             tags: ["Email", "Templates", "Marketing"],
             category: "marketing"

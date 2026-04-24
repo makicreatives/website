@@ -15,48 +15,48 @@ export default function PortfolioSection() {
     const portfolioProjects: AgencyProject[] = [
         {
             title: "Full Brand Identity — Tech Startup",
-            mediaUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexe.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/29646955/pexels-photo-29646955.png",
             linkUrl: "/portfolio/brand-identity-tech-startup",
             tags: ["Brand Identity", "Logo", "Guidelines"],
             category: "branding"
         },
         {
             title: "Brand Refresh — Professional Services",
-            mediaUrl: "https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1636622433525-127afdf3662d?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/29646955/pexels-photo-29646955.png",
             linkUrl: "/portfolio/brand-refresh-professional-services",
             tags: ["Rebranding", "Identity", "Brand Strategy"],
             category: "branding"
         },
         {
             title: "Investor Pitch Deck",
-            mediaUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/29646955/pexels-photo-29646955.png",
             linkUrl: "/portfolio/investor-pitch-deck",
             tags: ["Pitch Deck", "Presentations", "Investor"],
             category: "design"
         },
         {
             title: "Trade Show Booth — Annual Expo",
-            mediaUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/29646955/pexels-photo-29646955.png",
             linkUrl: "/portfolio/trade-show-booth-expo",
             tags: ["Trade Show", "Print", "Events"],
             category: "design"
         },
         {
             title: "Packaging Design — Consumer Product",
-            mediaUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/29646955/pexels-photo-29646955.png",
             linkUrl: "/portfolio/packaging-design-consumer-product",
             tags: ["Packaging", "Print", "Brand Identity"],
             category: "branding"
         },
         {
             title: "Corporate Stationery Suite",
-            mediaUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/29646955/pexels-photo-29646955.png",
             linkUrl: "/portfolio/corporate-stationery-suite",
             tags: ["Stationery", "Print", "Branding"],
             category: "design"

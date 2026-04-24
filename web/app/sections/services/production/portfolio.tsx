@@ -12,35 +12,36 @@ export default function PortfolioSection() {
         tags: string[],
         category: string,
     };
-    const portfolioProjects: AgencyProject[] = [
+    const productionProjects: AgencyProject[] = [
         {
             title: "B2B Website Redesign",
-            mediaUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/3606871/pexels-photo-3606871.jpeg",
             linkUrl: "/portfolio/b2b-website-redesign",
             tags: ["Web Design", "UI/UX", "Conversion"],
             category: "digital"
         },
         {
             title: "SaaS Product UI Design",
-            mediaUrl: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://www.pexels.com/download/video/36520697/",
+            isVideo: true,
+            bgImageUrl: "https://images.pexels.com/photos/3606871/pexels-photo-3606871.jpeg",
             linkUrl: "/portfolio/saas-product-ui-design",
             tags: ["UI/UX", "Product Design", "SaaS"],
             category: "digital"
         },
         {
             title: "Campaign Landing Page",
-            mediaUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/3606871/pexels-photo-3606871.jpeg",
             linkUrl: "/portfolio/campaign-landing-page",
             tags: ["Landing Page", "Conversion", "Digital"],
             category: "digital"
         },
         {
             title: "Startup Website — From Scratch",
-            mediaUrl: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/3606871/pexels-photo-3606871.jpeg",
             linkUrl: "/portfolio/startup-website-build",
             tags: ["Web Design", "Startup", "UI/UX"],
             category: "digital"
@@ -96,7 +97,7 @@ export default function PortfolioSection() {
         </div>
         <div className="p-8 container mx-auto grid gap-2 md:grid-cols-2 lg:grid-cols-3">
             {
-                portfolioProjects.map((project, index) => {
+                productionProjects.map((project, index) => {
                     return <Link key={"statId-" + index} href={project.linkUrl} className="bg-offWhite bg-cover shadow-sm mb-2 hover:shadow-lg  hover:bg-primary-50 transition-all" style={{ backgroundImage: `url(${project.bgImageUrl})` }}>
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8" >
                             <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">

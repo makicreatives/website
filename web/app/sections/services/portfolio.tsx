@@ -16,24 +16,24 @@ export default function PortfolioSection() {
         // Branding — 3
         {
             title: "Full Brand Identity — Tech Startup",
-            mediaUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/brand-identity-tech-startup",
             tags: ["Brand Identity", "Logo", "Guidelines"],
             category: "branding"
         },
         {
             title: "Brand Refresh — Professional Services Firm",
-            mediaUrl: "https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1636622433525-127afdf3662d?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/brand-refresh-professional-services",
             tags: ["Rebranding", "Identity", "Brand Strategy"],
             category: "branding"
         },
         {
             title: "Packaging Design — Consumer Product",
-            mediaUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/packaging-design-consumer-product",
             tags: ["Packaging", "Print", "Brand Identity"],
             category: "branding"
@@ -42,24 +42,24 @@ export default function PortfolioSection() {
         // Design — 3
         {
             title: "Investor Pitch Deck",
-            mediaUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/investor-pitch-deck",
             tags: ["Pitch Deck", "Presentations", "Investor"],
             category: "design"
         },
         {
             title: "Trade Show Booth — Annual Expo",
-            mediaUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/trade-show-booth-expo",
             tags: ["Trade Show", "Print", "Events"],
             category: "design"
         },
         {
             title: "Corporate Stationery Suite",
-            mediaUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/corporate-stationery-suite",
             tags: ["Stationery", "Print", "Branding"],
             category: "design"
@@ -68,24 +68,24 @@ export default function PortfolioSection() {
         // Digital — 3
         {
             title: "B2B Website Redesign",
-            mediaUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/b2b-website-redesign",
             tags: ["Web Design", "UI/UX", "Conversion"],
             category: "digital"
         },
         {
             title: "SaaS Product UI Design",
-            mediaUrl: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/saas-product-ui-design",
             tags: ["UI/UX", "Product Design", "SaaS"],
             category: "digital"
         },
         {
             title: "Campaign Landing Page",
-            mediaUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/campaign-landing-page",
             tags: ["Landing Page", "Conversion", "Digital"],
             category: "digital"
@@ -94,24 +94,24 @@ export default function PortfolioSection() {
         // Marketing — 3
         {
             title: "Social Media Asset Suite",
-            mediaUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/social-media-asset-suite",
             tags: ["Social Media", "Content", "Branding"],
             category: "marketing"
         },
         {
             title: "Industry Report Design",
-            mediaUrl: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1543286386-713bdd548da4?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/industry-report-design",
             tags: ["Report", "Ebook", "Content Design"],
             category: "marketing"
         },
         {
             title: "Lead Magnet & Ebook Design",
-            mediaUrl: "https://images.unsplash.com/photo-1597244508835-605298ca838b?w=800&auto=format&fit=crop",
-            bgImageUrl: "https://images.unsplash.com/photo-1597244508835-605298ca838b?w=1200&auto=format&fit=crop",
+            mediaUrl: "https://pexels.com/photo-1597244508835-605298ca838b?w=800&auto=format&fit=crop",
+            bgImageUrl: "https://images.pexels.com/photos/36815599/pexels-photo-36815599.jpeg",
             linkUrl: "/portfolio/lead-magnet-ebook",
             tags: ["Lead Magnet", "Ebook", "Content Design"],
             category: "marketing"

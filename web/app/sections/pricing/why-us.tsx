@@ -10,7 +10,7 @@ export default function WhyUsSection() {
                         Here you work directly with the same designer from brief to delivery.
                     </span>
                     <p className="leading-tight">
-                        Why businesses choose us.
+                        Why businesses choose us
                     </p>
                 </h2>
                 <p className=" leading-relaxed">

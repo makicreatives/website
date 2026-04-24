@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from 'next/image';
 
 
-import emailIcon from '@/app/icons/ui/email-new.svg'
-import taskAddIcon from '@/app/icons/ui/task-add.svg'
+import retainerIcon from '@/app/icons/ui/turnaround.svg'
+import byBriefIcon from '@/app/icons/ui/partnership.svg'
+import { Pill } from "@/app/components";
 
 export default function ProductOfferingSection() {
     type PricingTier = {
@@ -36,7 +37,7 @@ export default function ProductOfferingSection() {
             turnaround: "2-3 business days per request",
             cta: "Get Started",
             ctaUrl: "/form",
-            iconUrl: emailIcon,
+            iconUrl: retainerIcon,
             isRecommended: true,
             perks: [
                 "Unlimited design requests",
@@ -61,7 +62,7 @@ export default function ProductOfferingSection() {
             turnaround: "5-7 business days depending on scope",
             cta: "Send Your Brief",
             ctaUrl: "/form",
-            iconUrl: taskAddIcon,
+            iconUrl: byBriefIcon,
             isRecommended: false,
             perks: [
                 "Fixed project scope",
@@ -85,26 +86,27 @@ export default function ProductOfferingSection() {
             </p>
 
         </h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 p-8">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 container mx-auto p-1 pb-8 md:p-8 ">
 
             {
                 pricingTiers.map((tier, index) => {
                     return <Link key={"featureCardId" + index} href={tier.ctaUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
+                            {tier.isRecommended ? <span className=" flex items-center rounded-2xxl bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">*</b>&nbsp;Most Popular</span> : ""}
                             <div className='mb-2 h-80'>
                                 <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${'tier.imageUrl'})` }}>
                                     <Image src={tier.iconUrl} width={320} className='h-24 opacity-50' alt={tier.title + " service card"} />
                                 </div>
                             </div>
                             <div className='p-8'>
-                                <p className='mb-1 font-bold font-headlines text-headline-large uppercase'>
-                                    {tier.title}
+                                <p className='mb-1 font-bold font-headlines text-headline-large uppercase flex flex-wrap justify-between items-center'>
+                                    <span>{tier.title}</span> <Pill><span> {tier.startingFrom ? "From " : ""} US$ {tier.price.toLocaleString().toString()}</span></Pill>
                                 </p>
-                                <h2 className="h2 font-technical space-y-8 mb-2">
-                                    <span className="p-1 flex text-xs uppercase font-medium  text-offWhite ">
+                                <h2 className="h2 font-technical space-y-8 my-4">
+                                    <span className="p-1 flex text-lg uppercase font-medium ">
                                         <ul className="">
                                             {tier.perks.map((perk, i) => {
-                                                return <li key={[tier.id, i].join("-")}>{perk}</li>
+                                                return <li className="li" key={[tier.id, i].join("-")}>— {perk}</li>
                                             })}
                                         </ul>
                                     </span>

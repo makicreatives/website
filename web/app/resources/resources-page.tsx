@@ -22,24 +22,21 @@ export default function ResourcesPage() {
 
                     <div id="panelContent" className={"flex-1 "}>
                         <div className="relative h-[70vh] md:h-[90vh] w-full ">
-                            <div className="bg-black md:bg-gray-300 bg-cover bg-[url(https://images.pexels.com/photos/29646955/pexels-photo-29646955.png)] h-full w-full overflow-hidden">
-                                <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
+                            <div className="bg-black md:bg-gray-300 bg-cover bg-[url(https://images.pexels.com/photos/18620006/pexels-photo-18620006.jpeg)] h-full w-full overflow-hidden">
+                                <div className="w-full h-full bg-black/70  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                                     <div className=" text-off-white1B">
                                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 ">
 
-                                            <p className="">Design that does the work</p>
+                                            <p className="">Learn about good design</p>
                                             <p className="text-lg font-headlines leading-tight  font-medium">
-                                                Every asset your business needs to show up sharp <br className="hidden md:block" />
-                                                — in print, on screen, and in the room.
+                                                Practical guides on branding, digital design, and marketing assets <br className="hidden md:block" />
+                                                — written so you can make good decisions for your business.
                                             </p>
 
                                         </h2>
-                                        <p className="mb-4 hidden">
-                                            Connect more with your customers
-                                        </p>
                                         <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
                                             <Link href={'/resources/guides'}>
-                                                <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">View Resource
+                                                <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">Browse Guides
                                                 </Button>
                                             </Link>
                                             {/* <Link href={'/lets-work'} >
@@ -48,7 +45,7 @@ export default function ResourcesPage() {
                                         </Link> */}
                                         </div>
                                         <p className="text-body-medium">
-                                            <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Where B2B brands come to look the part
+                                            <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Free resources. No signup required.
                                         </p>
                                     </div>
                                 </div>
@@ -73,24 +70,21 @@ export default function ResourcesPage() {
 
                     <div id="panelContent" className={"flex-1 "}>
                         <div className="relative h-[70vh] md:h-[90vh] w-full ">
-                            <div className="bg-black md:bg-gray-300 bg-cover bg-[url(https://images.pexels.com/photos/3606871/pexels-photo-3606871.jpeg)] h-full w-full overflow-hidden">
+                            <div className="bg-black md:bg-gray-300 bg-cover bg-[url(https://images.pexels.com/photos/16600057/pexels-photo-16600057.jpeg)] h-full w-full overflow-hidden">
                                 <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                                     <div className=" text-off-white1B">
                                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 ">
 
-                                            <p className="">Built to perform online</p>
+                                            <p className="">Design thinking. Business results.</p>
                                             <p className="text-lg font-headlines leading-tight  font-medium">
-                                                Websites, landing pages, and digital experiences <br className="hidden md:block" />
-                                                — that turn the right visitors into customers.
+                                                Industry news, studio updates, and design insights <br className="hidden md:block" />
+                                                — written for businesses, read by creatives.
                                             </p>
 
                                         </h2>
-                                        <p className="mb-4 hidden">
-                                            Connect more with your customers
-                                        </p>
                                         <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
                                             <Link href={'/resources/blog'}>
-                                                <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">View Resource
+                                                <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"> Read Latest
                                                 </Button>
                                             </Link>
                                             {/* <Link href={'/lets-work'} >
@@ -99,7 +93,7 @@ export default function ResourcesPage() {
                                         </Link> */}
                                         </div>
                                         <p className="text-body-medium">
-                                            <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;We make B2B brands look like they mean business.
+                                            <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Really good, enjoyable reads.
                                         </p>
                                     </div>
                                 </div>

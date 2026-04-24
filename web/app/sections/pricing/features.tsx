@@ -78,7 +78,7 @@ export default function FeaturesSection() {
             </p>
 
         </h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 p-8">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 p-8 container mx-auto">
 
             {
                 agencyFeatures.map((feature, index) => {

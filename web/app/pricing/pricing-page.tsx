@@ -1,7 +1,7 @@
 import { Faq, Footer, MegaMenu } from "@/app/components";
 import { faqs } from "@/app/about/sections/faq";
 import { CTASection, LogosSection, TestimonialsSection } from "@/app/sections/home";
-import { HeroSection } from "@/app/sections/pricing";
+import { HeroSection, WhyUsSection } from "@/app/sections/pricing";
 
 export default function PricingPage() {
 
@@ -9,10 +9,10 @@ export default function PricingPage() {
         <MegaMenu activeLink='pricing'></MegaMenu>
         <HeroSection></HeroSection> {/* -- Hero */}
         <LogosSection></LogosSection>
-        -- Features
         -- Product Offering
+        -- Features
         <TestimonialsSection></TestimonialsSection> {/* -- Testimonials */}
-        -- Why Us
+        <WhyUsSection></WhyUsSection>  {/* -- Why Us */}
         <CTASection></CTASection>
         <hr className="border-black dark:border-off-white1B" />
         <Faq faqs={faqs}></Faq>

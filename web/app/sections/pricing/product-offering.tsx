@@ -90,6 +90,9 @@ export default function ProductOfferingSection() {
 
         </h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 container mx-auto p-1 pb-8 md:p-8 ">
+            <div className="">
+
+            </div>
 
             {
                 pricingTiers.map((tier, index) => {

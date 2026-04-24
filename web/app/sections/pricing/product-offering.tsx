@@ -19,6 +19,7 @@ export default function ProductOfferingSection() {
         turnaround: string,
         cta: string,
         ctaUrl: string,
+        imageUrl:string,
         iconUrl: string,
         isRecommended: boolean,
         perks: string[],
@@ -36,8 +37,9 @@ export default function ProductOfferingSection() {
             description: "One active request at a time. Submit as many requests as you need — we work through them one by one, fast and focused. Pause or cancel anytime.",
             turnaround: "2-3 business days per request",
             cta: "Get Started",
-            ctaUrl: "/form",
+            ctaUrl: "/lets-work/retainer",
             iconUrl: retainerIcon,
+            imageUrl:"https://images.pexels.com/photos/17363205/pexels-photo-17363205.jpeg",
             isRecommended: true,
             perks: [
                 "Unlimited design requests",
@@ -61,8 +63,9 @@ export default function ProductOfferingSection() {
             description: "Tell us what you need. We scope it, price it, and deliver it. One project, start to finish, with a clear timeline and no surprises.",
             turnaround: "5-7 business days depending on scope",
             cta: "Send Your Brief",
-            ctaUrl: "/form",
-            iconUrl: byBriefIcon,
+            ctaUrl: "/lets-work",
+            iconUrl: byBriefIcon,            
+            imageUrl: "https://images.pexels.com/photos/17079290/pexels-photo-17079290.jpeg",
             isRecommended: false,
             perks: [
                 "Fixed project scope",
@@ -94,13 +97,16 @@ export default function ProductOfferingSection() {
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             {tier.isRecommended ? <span className=" flex items-center rounded-2xxl bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">*</b>&nbsp;Most Popular</span> : ""}
                             <div className='mb-2 h-80'>
-                                <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${'tier.imageUrl'})` }}>
+                                <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${tier.imageUrl})` }}>
                                     <Image src={tier.iconUrl} width={320} className='h-24 opacity-50' alt={tier.title + " service card"} />
                                 </div>
                             </div>
-                            <div className='p-8'>
+                            <div className='p-8 flex flex-col'>
                                 <p className='mb-1 font-bold font-headlines text-headline-large uppercase flex flex-wrap justify-between items-center'>
                                     <span>{tier.title}</span> <Pill><span> {tier.startingFrom ? "From " : ""} US$ {tier.price.toLocaleString().toString()}</span></Pill>
+                                </p>
+                                <p className=" leading-relaxed text-xl mb-4 md:mb-8 ">
+                                    {tier.description}
                                 </p>
                                 <h2 className="h2 font-technical space-y-8 my-4">
                                     <span className="p-1 flex text-lg uppercase font-medium ">
@@ -111,9 +117,14 @@ export default function ProductOfferingSection() {
                                         </ul>
                                     </span>
                                 </h2>
-                                <p className=" leading-relaxed text-xl mb-4 md:mb-8 ">
-                                    {tier.description}
-                                </p>
+                                <div className='flex'>
+                                    <Link href={tier.ctaUrl} className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
+                                        <span>{tier.cta}</span>
+                                        <span>
+                                            <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                                        </span>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </Link>;

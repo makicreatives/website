@@ -7,7 +7,7 @@ export default function ResourcesPage() {
     return <>
         <MegaMenu activeLink='resources'></MegaMenu>
         <section id="hero" className={""}>
-            <main id="design-services" className=" flex flex-col md:flex-row">
+            <main id="design-guides" className=" flex flex-col md:flex-row">
                 <section id="leftBar" className="flex invert md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-[90vh] md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">
                     <div className="flex-1 flex place-content-center">
                         <div className="md:hidden w-full inline-flex flex-nowrap overflow-hidden">
@@ -55,7 +55,7 @@ export default function ResourcesPage() {
                 </section>
             </main>
 
-            <main className=" flex flex-col md:flex-row">
+            <main id="design-blogs" className=" flex flex-col md:flex-row">
                 <section id="leftBar" className="flex invert md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-[90vh] md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">
                     <div className="flex-1 flex place-content-center">
                         <div className="md:hidden w-full inline-flex flex-nowrap overflow-hidden">

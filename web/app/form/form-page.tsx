@@ -75,7 +75,18 @@ export default function FormPage() {
             <h1 className="mx-auto h2 font-display text-display-medium font-medium ">{getTitle(search)}</h1>
           </div>
           <div id="emptyDiv" className="h-12 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
-          <iframe title="booking form" src="https://tally.so/embed/3x47B5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" className="min-h-screen w-full md:w-[70vw] lg:w-[50vw] p-8 mx-auto bg-off-white1B border-x-2 border-dashed border-x-black/40 dark:border-off-white" allowFullScreen />
+          <div className=" bg-off-white1B container mx-auto md:p-8 ">
+              <div className="relative h-[80dvh] overflow-auto md:rounded-2xl" >
+                <iframe
+                  title="contact-form"
+                  src="https://formbricks.mevinsystems.cloud/s/cmkxtbyeg0006pk01bnlfie15"
+                  // frameBorder="0"
+                  className="absolute left-0 top-0 w-full h-full border-0"
+                >
+                </iframe>
+              </div>
+
+            </div>
           <hr className="border-black dark:border-off-white1B" />
           <div id="emptyDiv" className="h-12 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
 

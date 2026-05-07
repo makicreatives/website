@@ -1,5 +1,5 @@
 import { faqs } from "@/app/about/sections/faq";
-import { MegaMenu, Faq, Footer, WorkCard } from "@/app/components";
+import { MegaMenu, Faq, Footer, WorkCard, Pill } from "@/app/components";
 import { WorkCardProps } from "@/app/components/WorkCard";
 // import Link from "next/link";
 
@@ -104,12 +104,12 @@ export default function GuidesPage() {
             <section id="midPanel" className="flex-1 flex flex-col">
                 <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 p-4 py-4 md:mb-8 md:py-8 mx-auto">
 
-                    <p className="mb-2">Design thinking. Business results.</p>
+                    <p className="mb-2">Learn what good design does</p>
                     <p className="text-lg font-headlines leading-snug  font-medium">
                         <p className="hidden md:inline">
-                            Industry insights, studio updates, and design perspectives <br className="hidden md:block" />
-                            — written for businesses that take their brand seriously, <br className="hidden md:block" />
-                            — read by creatives who move the needle
+                            Practical guides on branding, digital design, and marketing assets<br className="hidden md:block" /> 
+                            — written so you can make smarter decisions for your business,<br className="hidden md:block" /> 
+                            — meant to be loved by creatives who move the needle.
                         </p>
                     </p>
 
@@ -120,10 +120,10 @@ export default function GuidesPage() {
                     <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
-                            <p className="italic mb-2">Trending</p>
+                            <p className="italic mb-2">Most useful <span className="text-display-small bg-primary1B font-mono"> <Pill>right now</Pill> </span> .</p>
                             <p className="text-lg font-headlines leading-snug  font-medium">
                                 <p className="hidden md:inline">
-                                    Worth reading first
+                                    Start here if you&apos;re not sure where to begin.
                                 </p>
                                 — Start here
                             </p>
@@ -142,10 +142,10 @@ export default function GuidesPage() {
                     <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
-                            <p className="italic mb-2">All Articles</p>
+                            <p className="italic mb-2">All Guides</p>
                             <p className="text-lg font-headlines leading-snug  font-medium">
                                 <p className="hidden md:inline">
-                                    Everything we&apos;ve published — browse at your own pace.<br />
+                                    Free resources for businesses that want to understand design — not just buying design.<br />
                                 </p>
                                 {/* Fill in the form and we&apos;ll get back to you within 24 hours. */}
                             </p>

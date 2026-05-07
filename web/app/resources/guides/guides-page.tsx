@@ -11,7 +11,7 @@ type Guide = {
 
     category: "design" | "branding" | "business" | "studio",
     tags: string[],
-    readTime: string
+    readTimeMins: number,
     publishedAt: string,
     isFeatured?: boolean
 }
@@ -26,7 +26,7 @@ const agencyGuides: Guide[] = [
         tags: ['design', 'business', 'team'],
         publishedAt: '11/12/2024',
         isFeatured: true,
-        readTime: "5min"
+        readTimeMins: 5,
     },
     {
         title: "What a Brand Identity Actually Includes — And What It Doesn't",
@@ -37,7 +37,7 @@ const agencyGuides: Guide[] = [
         tags: ['branding', 'identity', 'logo'],
         publishedAt: '19/4/2026',
         isFeatured: false,
-        readTime: "4min"
+        readTimeMins: 4
     },
     {
         title: "Why Your Website Isn't Converting — A Design Perspective",
@@ -48,7 +48,7 @@ const agencyGuides: Guide[] = [
         tags: [],
         publishedAt: '21/8/2025',
         isFeatured: false,
-        readTime: "2min"
+        readTimeMins: 2
     },
     {
         title: "The B2B Business Guide to Looking Professional on a Budget",
@@ -59,7 +59,7 @@ const agencyGuides: Guide[] = [
         tags: [],
         publishedAt: '12/6/2025',
         isFeatured: false,
-        readTime: "5min"
+        readTimeMins: 5
     },
     {
         title: "Pitch Deck Design — What Investors Actually Want to See",
@@ -70,7 +70,7 @@ const agencyGuides: Guide[] = [
         tags: [],
         publishedAt: '11/10/2024',
         isFeatured: false,
-        readTime: "4min"
+        readTimeMins: 4
     },
     {
         title: "Print Design 101 — What You Need Before You Send Files to the Printer",
@@ -81,7 +81,7 @@ const agencyGuides: Guide[] = [
         tags: [],
         publishedAt: '1/1/2026',
         isFeatured: false,
-        readTime: "3min"
+        readTimeMins: 3
     },
     {
         title: "How to Build a Lead Magnet That Actually Attracts the Right Clients",
@@ -92,7 +92,7 @@ const agencyGuides: Guide[] = [
         tags: ['marketing', 'design'],
         publishedAt: '16/10/2024',
         isFeatured: true,
-        readTime: "4min"
+        readTimeMins: 4
     },
     {
         title: "Social Media Design — Why Consistency Matters More Than Creativity",
@@ -103,7 +103,7 @@ const agencyGuides: Guide[] = [
         tags: [],
         publishedAt: '24/2/2026',
         isFeatured: false,
-        readTime: "5min"
+        readTimeMins: 5
     },
 ];
 
@@ -134,7 +134,7 @@ export default function GuidesPage() {
                 </div>
                 <div className='flex'>
                     <p className="text-offWhite py-2">
-                        <Pill>{guide.readTime}</Pill>
+                        <Pill>{guide.readTimeMins + "min"}</Pill>
                     </p>
                 </div>
             </span>

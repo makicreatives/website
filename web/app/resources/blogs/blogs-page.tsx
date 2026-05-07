@@ -1,95 +1,154 @@
 import { faqs } from "@/app/about/sections/faq";
-import { MegaMenu, Faq, Footer, WorkCard } from "@/app/components";
-import { WorkCardProps } from "@/app/components/WorkCard";
-// import Link from "next/link";
+import { MegaMenu, Faq, Footer, Pill } from "@/app/components";
+// import { WorkCardProps } from "@/app/components/WorkCard";
+import Link from "next/link";
 
+type Blog = {
+    title: string,
+    slug: string,
+    imageUrl: string,
+    summary: string,
+    category: "design" | "branding" | "marketing" | "business" | "studio",
+    readTimeMins: number,
+    publishedAt: string,
+    author: string,
+    authorAvatarUrl?: string,
+    isFeatured?: boolean,
+    tags?: string[],
+}
 
-const availableServicesA: WorkCardProps[] = [
+const agencyBlogs: Blog[] = [
     {
-        imageUrl: "/images/site/web-design-abstract.png",
-        title: "Web design",
-        description: "From engaging homepages to conversion-focused layouts that turn visitors into customers.",
-        startLink: "/form?q=web",
-        exploreLink: "/portfolio/design?q=web"
+        title: "Why Solo Design Studios Are Winning B2B Clients From Big Agencies",
+        slug: "solo-studios-winning-b2b-clients",
+        imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
+        summary: "Businesses are moving away from bloated agency retainers. Here's why a focused solo studio often delivers better work, faster — and what that means for you.",
+        category: "business",
+        readTimeMins: 5,
+        publishedAt: "",        
+        author: "Mc Samuel",
+        isFeatured: true,
+        authorAvatarUrl: "https://avatars.githubusercontent.com/u/66551316?v=4",
     },
     {
-        imageUrl: "/images/site/landing-pages-abstract.png",
-        title: "Landing pages",
-        description: "Turn clicks into customers with landing pages that convert.Clear, compelling, and crafted for your specific audience.",
-        startLink: "/form?q=landing-page",
-        exploreLink: "/portfolio/design?q=landing"
+        title: "The Design Trends B2B Brands Should Actually Pay Attention to in 2025",
+        slug: "b2b-design-trends-2025",
+        imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
+        summary: "Not every trend is worth chasing. Here are the ones that actually affect how B2B buyers perceive your brand — and which ones to ignore.",
+        category: "design",
+        readTimeMins: 6,
+        publishedAt: "",
+        author: "Sweet Potato"
     },
     {
-        imageUrl: "/images/site/uiux-design-abstract.png",
-        title: "UI/UX design",
-        description: "User-friendly interfaces that keep your customers coming back for more.Make every interaction count.",
-        startLink: "/form?q=ui_ux",
-        exploreLink: "/portfolio/design?q=ui_ux"
+        title: "What We Learned Designing a Full Brand Identity in 5 Days",
+        slug: "brand-identity-in-5-days",
+        imageUrl: "https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=800&auto=format&fit=crop",
+        summary: "Speed doesn't have to mean shortcuts. Here's how we approached a full brand identity project on a tight timeline — and what we'd do differently.",
+        category: "branding",
+        readTimeMins: 4,
+        publishedAt: "",
+        author: "Alison Burgers",
+        isFeatured: true,
     },
     {
-        imageUrl: "/images/site/seo-abstract.png",
-        title: "SEO",
-        description: "We build SEO right into your website, helping your business climb search rankings the right way.Get found by the right people.",
-        startLink: "/form?q=seo",
-        exploreLink: "/portfolio/design?q=seo"
+        title: "Good Design Is a Business Decision — Not Just an Aesthetic One",
+        slug: "design-is-a-business-decision",
+        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+        summary: "Every design choice affects how your customers trust, perceive, and buy from you. Here's why design belongs in the boardroom, not just the marketing team.",
+        category: "design",
+        readTimeMins: 3,
+        publishedAt: "",
+        author: "Clarkson Bro"
     },
     {
-        imageUrl: "/images/site/turnaround-abstract.png",
-        title: "Brand Identity design",
-        description: "Let's give your business a face that truly gives to your customers",
-        startLink: "/form?q=branding",
-        exploreLink: "/portfolio/design?q=branding"
+        title: "The Productized Design Model — How It Works and Why We Use It",
+        slug: "productized-design-model-explained",
+        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+        summary: "Flat monthly pricing, one request at a time, pause anytime — here's why we chose the productized model and how it benefits the businesses we work with.",
+        category: "studio",
+        readTimeMins: 5,
+        publishedAt: "",
+        author: "Van Damme"
     },
     {
-        imageUrl: "/images/site/collaboration-abstract.png",
-        title: "Digital marketing assets",
-        description: "Set the right assets in place for your marketing message",
-        startLink: "/form?q=marketing",
-        exploreLink: "/portfolio/design?q=marketing"
-    },
-];
-const availableServicesB: WorkCardProps[] = [
-
-    {
-        imageUrl: "/images/site/extra-services-abstract.png",
-        title: "Social Media Assets",
-        description: "Let's give your business a presence that gains reach.",
-        startLink: "/form?q=social",
-        exploreLink: "/portfolio/design?q=social"
+        title: "5 Signs Your Brand Has Outgrown Its Current Design",
+        slug: "signs-your-brand-needs-a-refresh",
+        imageUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop",
+        summary: "Brands grow. Sometimes the design doesn't keep up. Here are the clearest signs it's time for a refresh — and what to do about it.",
+        category: "business",
+        readTimeMins: 2,
+        publishedAt: "",
+        author: "Claude Jean"
     },
     {
-        imageUrl: "/images/site/landing-pages-abstract.png",
-        title: "Copywriting",
-        description: "our copy makes sure you get the message to the right people with the right tone.",
-        startLink: "/form?q=copywriting",
-        exploreLink: "/portfolio/copywriting"
+        title: "How to Get the Most Out of a Design Retainer",
+        slug: "how-to-use-a-design-retainer",
+        imageUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop",
+        summary: "A retainer is only as good as how you use it. Here's how to structure your requests, manage turnarounds, and get maximum value every month.",
+        category: "studio",
+        readTimeMins: 5,
+        publishedAt: "",
+        author: "Mc Samuel",
+        isFeatured: true,
+        authorAvatarUrl: "https://gitlab.com/uploads/-/system/user/avatar/26929659/avatar.png",
     },
-    // {
-    //     imageUrl: "/images/site/waves-abstract.png",
-    //     title: "Print Designs",
-    //     description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you",
-    //     startLink: "/form?q=print",
-    //     exploreLink: "/portfolio/design?q=print"
-    // },
-    // {
-    //     imageUrl: "/images/site/future-designs-abstract.png",
-    //     title: "Stationery design",
-    //     description: "Calenders, office stationery, envelopes, pens etc.",
-    //     startLink: "/form?q=stationery",
-    //     exploreLink: "/portfolio/design?q=stationery"
-    // },
-
-];
-
+    {
+        title: "What Makes a Trade Show Booth Actually Work",
+        slug: "trade-show-booth-design-that-works",
+        imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
+        summary: "Most trade show booths blend into the background. Here's what separates the ones that stop foot traffic from the ones people walk past.",
+        category: "design",
+        readTimeMins: 4,
+        publishedAt: "",
+        author: "Clarkson Bro"
+    },
+]
 
 
 export default function BlogsPage() {
-    // type Blog = {
-    //     title: string,
-    //     url: string,
-    //     imageUrl: string,
-    //     paragraph: string,
-    // }
+
+    const slugToUrl = (slug: string) => "/resources/blogs/" + slug;
+    const getBlogCard = function (blog: Blog, index: number): JSX.Element {
+        return <Link href={slugToUrl(blog.slug)} key={"featuredBlog" + index} id={blog.slug} className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white  hover:text-white bg-offWhite1B hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all duration-300 h-full"}>
+            <div className='space-y-1'>
+                <div className="bg-primary0">
+                    {/* <hr className="border-black dark:border-off-white1B" /> */}
+                    <div className="container flex space-x-4 items-center">
+                        <img src={blog.authorAvatarUrl ?? "/images/site/logoicon.png"} alt={ blog.author + "avatar"} className="h-8 w-8 object-cover bg-primary0  saturate-0" />
+                        <p className="uppercase font-mono text-off-white">{blog.author}</p>
+                    </div>
+                </div>
+                <div className='relative bg-gray-300'>
+                    <img src={blog.imageUrl} alt={blog.title + " banner"} className="object-cover h-64 w-full" />
+                </div>
+
+
+                <h4 className='font-headlines text-headline-small uppercase my-2 font-bold'>{blog.title}</h4>
+                <p className="pb-1">{blog.category ? <Pill>{blog.category}</Pill> : ""}</p>
+                <p className='mb-4 font-body text-body-large'>{blog.summary}
+                </p>
+
+            </div>
+            <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
+                <div className='flex'>
+                    <div className='pl-2 flex text-primary1B border-b border-b-primary sm:border-b-primary1B font-headlines font-medium text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
+                        <span>Read Full Blog</span>
+                        <span>
+                            <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
+                        </span>
+                    </div>
+                </div>
+                <div className='flex'>
+                    <p className="text-offWhite py-2">
+                        <Pill>{blog.readTimeMins + "min"}</Pill>
+                    </p>
+                </div>
+            </span>
+
+
+        </Link>;
+    }
 
     return <>
         <MegaMenu activeLink='resources'></MegaMenu>
@@ -139,7 +198,18 @@ export default function BlogsPage() {
                     <hr className="border-black dark:border-off-white1B" />
                     <div id="servicesContent2" className="grid grid-cols-1 md:grid-cols-2 mb-8 md:mb-14">
 
-                        {availableServicesB.map((serve, index) => <WorkCard key={"serveA" + index} imageUrl={serve.imageUrl} title={serve.title} description={serve.description} startLink={serve.startLink} exploreLink={serve.exploreLink}></WorkCard>)}
+                        {
+                            agencyBlogs.map((blog, index) => {
+                                if (blog.isFeatured) {
+                                    return getBlogCard(blog, index)
+                                }
+                                else {
+                                    return '';
+                                }
+                            }
+                            )
+                        }
+
                     </div>
                     <hr className="border-black dark:border-off-white1B" />
 
@@ -159,9 +229,11 @@ export default function BlogsPage() {
                         </h2>
                     </div>
                     <hr className="border-black dark:border-off-white1B" />
-                    <div id="servicesContent1" className="grid grid-cols-1 md:grid-cols-3">
+                    <div id="all-blogs" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
-                        {availableServicesA.map((serve, index) => <WorkCard key={"serveA" + index} imageUrl={serve.imageUrl} title={serve.title} description={serve.description} startLink={serve.startLink} exploreLink={serve.exploreLink}></WorkCard>)}
+                        {
+                            agencyBlogs.map((blog, index) => getBlogCard(blog, index))
+                        }
                     </div>
                 </section>
                 <hr className="border-black dark:border-off-white1B" />

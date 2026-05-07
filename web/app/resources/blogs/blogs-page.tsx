@@ -64,20 +64,20 @@ const availableServicesB: WorkCardProps[] = [
         startLink: "/form?q=copywriting",
         exploreLink: "/portfolio/copywriting"
     },
-    {
-        imageUrl: "/images/site/waves-abstract.png",
-        title: "Print Designs",
-        description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you",
-        startLink: "/form?q=print",
-        exploreLink: "/portfolio/design?q=print"
-    },
-    {
-        imageUrl: "/images/site/future-designs-abstract.png",
-        title: "Stationery design",
-        description: "Calenders, office stationery, envelopes, pens etc.",
-        startLink: "/form?q=stationery",
-        exploreLink: "/portfolio/design?q=stationery"
-    },
+    // {
+    //     imageUrl: "/images/site/waves-abstract.png",
+    //     title: "Print Designs",
+    //     description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you",
+    //     startLink: "/form?q=print",
+    //     exploreLink: "/portfolio/design?q=print"
+    // },
+    // {
+    //     imageUrl: "/images/site/future-designs-abstract.png",
+    //     title: "Stationery design",
+    //     description: "Calenders, office stationery, envelopes, pens etc.",
+    //     startLink: "/form?q=stationery",
+    //     exploreLink: "/portfolio/design?q=stationery"
+    // },
 
 ];
 
@@ -110,13 +110,13 @@ export default function BlogsPage() {
             <section id="midPanel" className="flex-1 flex flex-col">
                 <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 p-4 py-4 md:mb-8 md:py-8 mx-auto">
 
-                    <p className="">Great work starts here</p>
+                    <p className="mb-2">Design thinking. Business results.</p>
                     <p className="text-lg font-headlines leading-snug  font-medium">
                         <p className="hidden md:inline">
-                            We&apos;ve partnered with businesses at every stage
-                            —from early startups to established brands. <br />
+                            Industry insights, studio updates, and design perspectives <br className="hidden md:block" />
+                            — written for businesses that take their brand seriously, <br className="hidden md:block" />
+                            — read by creatives who move the needle
                         </p>
-                        Fill in the form and we&apos;ll get back to you within 24 hours.
                     </p>
 
                 </h2>
@@ -126,13 +126,12 @@ export default function BlogsPage() {
                     <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
-                            <p className="italic">Trending</p>
+                            <p className="italic mb-2">Trending</p>
                             <p className="text-lg font-headlines leading-snug  font-medium">
                                 <p className="hidden md:inline">
-                                    We&apos;ve partnered with businesses at every stage
-                                    —from early startups to established brands. <br />
+                                    Worth reading first
                                 </p>
-                                Fill in the form and we&apos;ll get back to you within 24 hours.
+                                — Start here
                             </p>
 
                         </h2>
@@ -149,13 +148,12 @@ export default function BlogsPage() {
                     <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
-                            <p className="italic">All blogs</p>
+                            <p className="italic mb-2">All Articles</p>
                             <p className="text-lg font-headlines leading-snug  font-medium">
                                 <p className="hidden md:inline">
-                                    We&apos;ve partnered with businesses at every stage
-                                    —from early startups to established brands. <br />
+                                    Everything we&apos;ve published — browse at your own pace.<br />
                                 </p>
-                                Fill in the form and we&apos;ll get back to you within 24 hours.
+                                {/* Fill in the form and we&apos;ll get back to you within 24 hours. */}
                             </p>
 
                         </h2>

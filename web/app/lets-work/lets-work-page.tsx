@@ -165,7 +165,7 @@ export default function LetsWorkPage() {
               <h2 className="font-display text-display-medium mb-4">Not sure what you need? <br />No worries! <br /></h2>
               <h3 className="font-headlines text-headline-medium mb-8">Tell us and we can figure it out together.</h3>
               <Link href={'/contact'} >
-                <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">Send an email
+                <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none ">Send an email
                 </Button>
               </Link>
             </div>

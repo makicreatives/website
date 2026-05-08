@@ -35,7 +35,7 @@ export default function HeroSection() {
                                 </Link>
                             </div>
                             <p className="text-body-medium">
-                                <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Empowering brands worldwide
+                                <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;We get back to every brief within 24 hours.
                             </p>
                         </div>
                     </div>

@@ -25,8 +25,8 @@ const agencyBlogs: Blog[] = [
         summary: "Businesses are moving away from bloated agency retainers. Here's why a focused solo studio often delivers better work, faster — and what that means for you.",
         category: "business",
         readTimeMins: 5,
-        publishedAt: "",        
-        author: "Mc Samuel",
+        publishedAt: "12/11/2024",
+        author: "Mc Samuel Shoko",
         isFeatured: true,
         authorAvatarUrl: "https://avatars.githubusercontent.com/u/66551316?v=4",
     },
@@ -37,7 +37,7 @@ const agencyBlogs: Blog[] = [
         summary: "Not every trend is worth chasing. Here are the ones that actually affect how B2B buyers perceive your brand — and which ones to ignore.",
         category: "design",
         readTimeMins: 6,
-        publishedAt: "",
+        publishedAt: "2/19/2025",
         author: "Sweet Potato"
     },
     {
@@ -47,9 +47,9 @@ const agencyBlogs: Blog[] = [
         summary: "Speed doesn't have to mean shortcuts. Here's how we approached a full brand identity project on a tight timeline — and what we'd do differently.",
         category: "branding",
         readTimeMins: 4,
-        publishedAt: "",
+        publishedAt: "11/21/2025",
         author: "Alison Burgers",
-        isFeatured: true,
+        isFeatured: false,
     },
     {
         title: "Good Design Is a Business Decision — Not Just an Aesthetic One",
@@ -58,7 +58,7 @@ const agencyBlogs: Blog[] = [
         summary: "Every design choice affects how your customers trust, perceive, and buy from you. Here's why design belongs in the boardroom, not just the marketing team.",
         category: "design",
         readTimeMins: 3,
-        publishedAt: "",
+        publishedAt: "2/11/2026",
         author: "Clarkson Bro"
     },
     {
@@ -68,7 +68,7 @@ const agencyBlogs: Blog[] = [
         summary: "Flat monthly pricing, one request at a time, pause anytime — here's why we chose the productized model and how it benefits the businesses we work with.",
         category: "studio",
         readTimeMins: 5,
-        publishedAt: "",
+        publishedAt: "5/08/2026",
         author: "Van Damme"
     },
     {
@@ -78,7 +78,7 @@ const agencyBlogs: Blog[] = [
         summary: "Brands grow. Sometimes the design doesn't keep up. Here are the clearest signs it's time for a refresh — and what to do about it.",
         category: "business",
         readTimeMins: 2,
-        publishedAt: "",
+        publishedAt: "8/28/2025",
         author: "Claude Jean"
     },
     {
@@ -88,8 +88,8 @@ const agencyBlogs: Blog[] = [
         summary: "A retainer is only as good as how you use it. Here's how to structure your requests, manage turnarounds, and get maximum value every month.",
         category: "studio",
         readTimeMins: 5,
-        publishedAt: "",
-        author: "Mc Samuel",
+        publishedAt: "1/11/2024",
+        author: "Sir Mc Samuel",
         isFeatured: true,
         authorAvatarUrl: "https://gitlab.com/uploads/-/system/user/avatar/26929659/avatar.png",
     },
@@ -100,7 +100,7 @@ const agencyBlogs: Blog[] = [
         summary: "Most trade show booths blend into the background. Here's what separates the ones that stop foot traffic from the ones people walk past.",
         category: "design",
         readTimeMins: 4,
-        publishedAt: "",
+        publishedAt: "6/12/2024",
         author: "Clarkson Bro"
     },
 ]
@@ -115,7 +115,7 @@ export default function BlogsPage() {
                 <div className="bg-primary0">
                     {/* <hr className="border-black dark:border-off-white1B" /> */}
                     <div className="container flex space-x-4 items-center">
-                        <img src={blog.authorAvatarUrl ?? "/images/site/logoicon.png"} alt={ blog.author + "avatar"} className="h-8 w-8 object-cover bg-primary0  saturate-0" />
+                        <img src={blog.authorAvatarUrl ?? "/images/site/logoicon.png"} alt={blog.author + "avatar"} className="h-8 w-8 object-cover bg-primary0  saturate-0" />
                         <p className="uppercase font-mono text-off-white">{blog.author}</p>
                     </div>
                 </div>
@@ -125,7 +125,17 @@ export default function BlogsPage() {
 
 
                 <h4 className='font-headlines text-headline-small uppercase my-2 font-bold'>{blog.title}</h4>
-                <p className="pb-1">{blog.category ? <Pill>{blog.category}</Pill> : ""}</p>
+                
+                <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
+                    <div className='flex'>
+                        <p className="pb-1">{blog.category ? <Pill>{blog.category}</Pill> : ""}</p>
+                    </div>
+                    <div className='flex'>
+                        <p className="text-offWhite ">
+                            {new Date(blog.publishedAt).toDateString()}
+                        </p>
+                    </div>
+                </span>
                 <p className='mb-4 font-body text-body-large'>{blog.summary}
                 </p>
 
@@ -133,7 +143,7 @@ export default function BlogsPage() {
             <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                 <div className='flex'>
                     <div className='pl-2 flex text-primary1B border-b border-b-primary sm:border-b-primary1B font-headlines font-medium text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
-                        <span>Read Full Blog</span>
+                        <span>Read Article</span>
                         <span>
                             <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
                         </span>

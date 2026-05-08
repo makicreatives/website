@@ -123,8 +123,8 @@ export default function GuidesPage() {
                         <p className="pb-1">{guide.category ? <Pill>{guide.category}</Pill> : ""}</p>
                     </div>
                     <div className='flex'>
-                        <p className="text-offWhite ">
-                            {new Date(guide.publishedAt).toDateString()}
+                        <p className="text-offWhite font-medium">
+                            {new Date(guide.publishedAt).getFullYear()}
                         </p>
                     </div>
                 </span>

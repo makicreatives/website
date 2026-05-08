@@ -24,7 +24,7 @@ const agencyGuides: Guide[] = [
         summary: "A clear brief is the difference between one revision and ten. Here's exactly what to include before you hand anything over to a designer.",
         category: "studio",
         tags: ['design', 'business', 'team'],
-        publishedAt: '11/12/2024',
+        publishedAt: '12/11/2024',
         isFeatured: true,
         readTimeMins: 5,
     },
@@ -35,7 +35,7 @@ const agencyGuides: Guide[] = [
         summary: "Most businesses think a logo is a brand. It's not. Here's what a proper brand identity covers and why each piece matters.",
         category: "branding",
         tags: ['branding', 'identity', 'logo'],
-        publishedAt: '19/4/2026',
+        publishedAt: '4/19/2026',
         isFeatured: false,
         readTimeMins: 4
     },
@@ -46,7 +46,7 @@ const agencyGuides: Guide[] = [
         summary: "Traffic without conversions is just noise. Here's how design decisions — not just copy — affect whether visitors become customers.",
         category: "business",
         tags: [],
-        publishedAt: '21/8/2025',
+        publishedAt: '8/21/2025',
         isFeatured: false,
         readTimeMins: 2
     },
@@ -57,7 +57,7 @@ const agencyGuides: Guide[] = [
         summary: "You don't need a massive design budget to look credible. Here's where to invest first and what you can leave for later.",
         category: "studio",
         tags: [],
-        publishedAt: '12/6/2025',
+        publishedAt: '6/12/2025',
         isFeatured: false,
         readTimeMins: 5
     },
@@ -68,7 +68,7 @@ const agencyGuides: Guide[] = [
         summary: "A great idea in a bad deck still loses. Here's how to structure and design a pitch that keeps the room's attention and makes your case clearly.",
         category: "business",
         tags: [],
-        publishedAt: '11/10/2024',
+        publishedAt: '10/11/2024',
         isFeatured: false,
         readTimeMins: 4
     },
@@ -90,7 +90,7 @@ const agencyGuides: Guide[] = [
         summary: "Most lead magnets get downloaded once and forgotten. Here's how to design one that positions you as the expert and keeps the right people coming back.",
         category: "studio",
         tags: ['marketing', 'design'],
-        publishedAt: '16/10/2024',
+        publishedAt: '10/16/2024',
         isFeatured: true,
         readTimeMins: 4
     },
@@ -101,7 +101,7 @@ const agencyGuides: Guide[] = [
         summary: "Chasing trends on social burns time and confuses your audience. Here's why a consistent visual system beats a viral post every time.",
         category: "design",
         tags: [],
-        publishedAt: '24/2/2026',
+        publishedAt: '2/24/2026',
         isFeatured: false,
         readTimeMins: 5
     },
@@ -118,7 +118,16 @@ export default function GuidesPage() {
                 </div>
 
                 <h4 className='font-headlines text-headline-small uppercase my-2 font-bold'>{guide.title}</h4>
-                <p className="pb-1">{guide.category ? <Pill>{guide.category}</Pill> : ""}</p>
+                <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
+                    <div className='flex'>
+                        <p className="pb-1">{guide.category ? <Pill>{guide.category}</Pill> : ""}</p>
+                    </div>
+                    <div className='flex'>
+                        <p className="text-offWhite ">
+                            {new Date(guide.publishedAt).toDateString()}
+                        </p>
+                    </div>
+                </span>
                 <p className='mb-4 font-body text-body-large'>{guide.summary}
                 </p>
 
@@ -188,7 +197,7 @@ export default function GuidesPage() {
                         </h2>
                     </div>
                     <hr className="border-black dark:border-off-white1B" />
-                    <div id="servicesContent2" className="grid grid-cols-1 md:grid-cols-2 mb-8 md:mb-14">
+                    <div id="featured-guides" className="grid grid-cols-1 md:grid-cols-2 mb-8 md:mb-14">
 
                         {
                             agencyGuides.map((guide, index) => {
@@ -220,7 +229,7 @@ export default function GuidesPage() {
                         </h2>
                     </div>
                     <hr className="border-black dark:border-off-white1B" />
-                    <div id="servicesContent1" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div id="all-guides" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                         {
                             agencyGuides.map((guide, index) => getGuideCard(guide, index))

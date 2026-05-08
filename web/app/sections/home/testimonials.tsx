@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
             role: 'CEO',
             company: 'Bloom HR',
             quote: "The website redesign brought in three qualified leads in the first month. Clean, fast, and actually converts. Exactly what we asked for.",
-            avatarUrl: '/images/testimonials/ayasha.png',
+            avatarUrl: 'https://images.pexels.com/photos/30533337/pexels-photo-30533337.jpeg',
             rating: 5
         },
         {

@@ -13,37 +13,37 @@ export default function OurWorkSection() {
     const agencyServices: AgencyService[] = [
     {
         title: "Brand Identity Design",
-        imageUrl: "https://google.com/favicon.ico", // "/images/services/brand-identity.png",
+        imageUrl: "/images/site/logo-icon.png", // "/images/services/brand-identity.png",
         linkUrl: "/services/design#brand-identity",
         tags: ["Branding", "Logo", "Visual Identity"]
     },
     {
         title: "Website Design",
-        imageUrl: "https://google.com/favicon.ico", // "/images/services/web-design.png",
+        imageUrl: "/images/site/logo-icon.png", // "/images/services/web-design.png",
         linkUrl: "/services/production#web",
         tags: ["Web", "UI/UX", "Conversion"]
     },
     {
         title: "Pitch Deck Design",
-        imageUrl: "https://google.com/favicon.ico", //"/images/services/pitch-deck.png",
+        imageUrl: "/images/site/logo-icon.png", //"/images/services/pitch-deck.png",
         linkUrl: "/services/design#pitch-decks",
         tags: ["Presentations", "Investor", "Sales"]
     },
     {
         title: "Trade Show & Event Booth",
-        imageUrl:  "https://google.com/favicon.ico",// "/images/services/trade-show.png",
+        imageUrl:  "/images/site/logo-icon.png",// "/images/services/trade-show.png",
         linkUrl: "/services/design#trade-show",
         tags: ["Print", "Events", "Signage"]
     },
     {
         title: "Social Media Assets",
-        imageUrl: "https://google.com/favicon.ico", // "/images/services/social-media.png",
+        imageUrl: "/images/site/logo-icon.png", // "/images/services/social-media.png",
         linkUrl: "/services/marketing#social-media",
         tags: ["Marketing", "Content", "Digital"]
     },
     {
         title: "Ebooks & Report Design",
-        imageUrl: "https://google.com/favicon.ico", // "/images/services/ebooks-reports.png",
+        imageUrl: "/images/site/logo-icon.png", // "/images/services/ebooks-reports.png",
         linkUrl: "/services/marketing#ebooks-reports",
         tags: ["Content", "Lead Generation", "B2B"]
     },

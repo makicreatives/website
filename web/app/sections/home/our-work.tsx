@@ -20,7 +20,7 @@ export default function OurWorkSection() {
     {
         title: "Website Design",
         imageUrl: "https://google.com/favicon.ico", // "/images/services/web-design.png",
-        linkUrl: "/services/digital#web",
+        linkUrl: "/services/production#web",
         tags: ["Web", "UI/UX", "Conversion"]
     },
     {

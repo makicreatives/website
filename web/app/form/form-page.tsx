@@ -1,10 +1,12 @@
 'use client'
-import { MegaMenu, Footer } from "@/app/components";
+import { MegaMenu, Footer, Faq} from "@/app/components";
+
+// import FAQSection from "../about/sections/faq";
+import { faqs } from "@/app/about/sections/faq";
 
 // import circleIcon from '@/app/icons/ui/circle.svg'
 // import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import React from 'react';
-import FAQSection from "../about/sections/faq";
 
 import { useSearchParams } from 'next/navigation'
 
@@ -90,7 +92,8 @@ export default function FormPage() {
           <hr className="border-black dark:border-off-white1B" />
           <div id="emptyDiv" className="h-12 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
 
-          <FAQSection></FAQSection>
+          {/* <FAQSection></FAQSection> */}
+          <Faq faqs={faqs}></Faq>
 
         </div>
       </section>

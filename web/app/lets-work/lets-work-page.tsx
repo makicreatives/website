@@ -1,5 +1,9 @@
 'use client'
-import { MegaMenu, Footer } from "@/app/components";
+import { MegaMenu, Footer, Faq } from "@/app/components";
+// import FAQSection from "../about/sections/faq";
+import { faqs } from "@/app/about/sections/faq";
+
+
 // import Image from 'next/image';
 import Link from "next/link";
 import { Button } from "@carbon/react";
@@ -11,7 +15,7 @@ import { Button } from "@carbon/react";
 // import starIcon from '@/app/icons/ui/star.svg'
 import React from 'react';
 import { WorkCard, WorkCardProps } from "../components/WorkCard";
-import FAQSection from "../about/sections/faq";
+
 
 
 // Multiple versions of this page will be statically generated
@@ -174,7 +178,8 @@ export default function LetsWorkPage() {
           <hr className="border-black dark:border-off-white1B" />
           <div id="emptyDiv" className="h-14 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
 
-          <FAQSection></FAQSection>
+          {/* <FAQSection></FAQSection> */}
+          <Faq faqs={faqs}></Faq>
 
 
         </div>

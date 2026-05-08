@@ -76,7 +76,7 @@ export default function OurWorkSection() {
                 {
                     agencyServices.map((service, index) => {
                         return <Link key={"serviceCardId" + index} href={service.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all'>
-                            <div className={'border-black border-2 border-b-16  dark:border-off-white p-8 '}>
+                            <div className={'h-full border-black border-2 border-b-16  dark:border-off-white p-8 '}>
                                 <div className='mb-2'>
                                     <img src={service.imageUrl} className='w-full h-64 object-cover' alt={service.title + " service card"} />
                                 </div>

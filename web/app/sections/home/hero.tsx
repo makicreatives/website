@@ -10,11 +10,20 @@ export default function HeroSection() {
                     <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                         <div className=" text-off-white1B">
                             {/* <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they doTrusted by brands who love what they do</p> */}
-                            <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you
-                                confidence with your customers</h2>
-                            <p className="mb-4 hidden">
-                                Connect more with your customers
-                            </p>
+                            {/* <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[50vw]"> */}
+
+                            <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mx-auto lg:w-[45vw]">
+
+                                <p className="mb-2">
+                                    Design that earns trust before you say a word
+                                </p>
+                                <p className="text-lg font-headlines leading-tight  font-medium p-1 px-2 w-[80%]">
+
+                                    Look so good, they never question you.
+                                    {/* — A Design studio for designs that give you confidence with your customers. */}
+                                </p>
+
+                            </h2>
                             <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
                                 <Link href={'/portfolio'}>
                                     <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">See our work

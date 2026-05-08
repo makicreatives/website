@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ProductionPage from './production-page';
 
 export const metadata: Metadata = {
-    title: 'Services',
+    title: 'Production Services',
 };
 
 export default function Page() {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import MarketingPage from './marketing-page';
 
 export const metadata: Metadata = {
-    title: 'Services',
+    title: 'Marketing Services',
 };
 
 export default function Page() {

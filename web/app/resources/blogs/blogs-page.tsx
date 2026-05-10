@@ -3,12 +3,12 @@ import { MegaMenu, Faq, Footer, Pill } from "@/app/components";
 // import { WorkCardProps } from "@/app/components/WorkCard";
 import Link from "next/link";
 
-type Blog = {
+export type Blog = {
     title: string,
     slug: string,
     imageUrl: string,
     summary: string,
-    category: "design" | "branding" | "marketing" | "business" | "studio",
+    category: "design" | "branding" | "marketing" | "business" | "studio" | "social-good",
     readTimeMins: number,
     publishedAt: string,
     author: string,

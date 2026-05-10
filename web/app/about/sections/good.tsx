@@ -90,7 +90,6 @@ export default function GoodSection() {
                     <img src={blog.imageUrl} alt={blog.title + " banner"} className="object-cover h-64 w-full" />
                 </div>
 
-
                 <h4 className='font-headlines text-headline-small uppercase my-2 font-bold'>{blog.title}</h4>
 
                 <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
@@ -131,7 +130,7 @@ export default function GoodSection() {
 
 
     return <>
-        <main className="py-8">
+        <main className="pt-8">
             <div className={"flex justify-center py-12  bg-black"}>
                 <div className="flex flex-wrap justify-center items-center px-8 pb-4 ">
                     <span className="relative h-28 w-24 ">
@@ -153,7 +152,7 @@ export default function GoodSection() {
         </section>
         <hr className="border-black dark:border-off-white1B" />
         <section id="all" className="pb-8 md:pb-14">
-            <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B">
+            <div className=" bg-primary0 text-off-white1B">
                 <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
                     <p className="italic mb-2 text-accent1-300">Design for good!</p>

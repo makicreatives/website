@@ -155,7 +155,7 @@ export default function GoodSection() {
             <div className=" bg-primary0 text-off-white1B">
                 <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
-                    <p className="italic mb-2 text-accent1-300">Design for good!</p>
+                    
                     <p className="text-lg font-headlines leading-snug  font-medium">
                         <p className="hidden md:inline">
                             Design shapes behaviour. We take that seriously — <br className="hidden md:block" />
@@ -163,6 +163,7 @@ export default function GoodSection() {
                         </p>
                         {/* Fill in the form and we&apos;ll get back to you within 24 hours. */}
                     </p>
+                    <p className=" mt-2 text-accent1-300">Design for good!</p>
 
                 </h2>
             </div>

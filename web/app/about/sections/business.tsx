@@ -1,17 +1,13 @@
 'use client'
 
-// import FAQSection from "./faq"
 import { Faq } from "@/app/components";
 import { faqs } from "@/app/about/sections/faq";
 
 import Image from 'next/image';
 
-import goalsIcon from '@/app/icons/ui/groupPresentation.svg'
+import promiseIcon from '@/app/icons/ui/location-star.svg'
 import missionIcon from '@/app/icons/ui/globe.svg'
-import offerIcon from '@/app/icons/ui/web.svg'
 import visionIcon from '@/app/icons/ui/accessibilityColor.svg'
-
-// import Link from 'next/link';
 
 type AgencyFeature = {
     title: string,
@@ -24,50 +20,35 @@ type AgencyFeature = {
 
 const agencyFeatures: AgencyFeature[] = [
     {
-        title: 'Look the part',
-        subtitle: 'First impressions are made before you speak.',
-        description: 'Brand identity, stationery, print and merch — everything that makes your business instantly recognizable.',
+        title: 'Vision',
+        subtitle: 'Where we\'re headed',
+        description: 'To be the go-to design studio for B2B businesses that want to look credible, communicate clearly, and grow with confidence.',
         linkUrl: '/services/design',
         imageUrl: '/images/site/seo-abstract.png',
         iconUrl: visionIcon,
     },
     {
-        title: 'Show up everywhere',
-        subtitle: 'Consistent. On-brand. Hard to ignore.',
-        description: 'Social media assets, email templates, digital ads, and marketing graphics — built for every platform your customers are on.',
+        title: 'Mission',
+        subtitle: 'Why we show up every day',
+        description: 'To make design work harder for your business. Not just to look good — but speak  clearly to your customers, earn their trust, and move them to act.',
         linkUrl: '/services/design',
         imageUrl: '/images/site/uiux-design-abstract.png',
         iconUrl: missionIcon,
     },
     {
-        title: 'Win the room',
-        subtitle: 'Walk in ready. Leave with the deal.',
-        description: 'Pitch decks, presentations, trade show booths, and sales sheets — designed to make your case before you say a word.',
+        title: 'Promise',
+        subtitle: 'What you can count on',
+        description: 'A smooth process. A designer who understands your business. And work that serves your customer — not only your mood board.',
         linkUrl: '/services/design',
         imageUrl: '/images/site/landing-pages-abstract.png',
-        iconUrl: goalsIcon,
+        iconUrl: promiseIcon,
     },
-    {
-        title: 'Grow online',
-        subtitle: 'Your website should work while you sleep.',
-        description: 'Web design, landing pages, and SEO-friendly builds that turn the right visitors into paying customers.',
-        linkUrl: '/services/digital',
-        imageUrl: '/images/site/extra-services-abstract.png',
-        iconUrl: offerIcon,
-    },
-    // {
-    //     title: 'Share what you know',
-    //     subtitle: 'Turn your expertise into content people trust.',
-    //     description: 'Ebooks, reports, infographics, and lead magnets — designed to attract the right clients and keep them coming back.',
-    //     linkUrl: '/services/marketing',
-    //     imageUrl: '/images/site/web-design-abstract.png',
-    //     iconUrl: bookIcon,
-    // },
+
 ]
 export default function BusinessSection() {
     return <>
         <main className="p-8">
-            {/* Our Vision */}
+            {/* Vision */}
 
         </main>
         <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/10"}>

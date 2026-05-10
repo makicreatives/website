@@ -51,7 +51,7 @@ export default function BusinessSection() {
             {/* Vision */}
 
         </main>
-        <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/10"}>
+        <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-primary1B/10"}>
             <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8">
 
                 <p className="">One studio. Every design service  —<br /> your business needs.</p>

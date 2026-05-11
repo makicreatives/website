@@ -83,7 +83,7 @@ for. That's what we're building toward.
         <main className="min-h-screen flex flex-col md:flex-row">
             <section id="midPanel" className="flex-1 flex flex-col">
 
-                <div id="projectContent" className={"flex-1 grid grid-cols-1 md:grid-cols-2 "}>
+                <div id="projectContent" className={"flex-1 grid grid-cols-1 xl:grid-cols-2 "}>
                     <div className='flex flex-col justify-between p-8 border-b-2 border-black dark:border-off-white'>
                         <h3 id='projectName' className='font-headlines text-headline-large uppercase mb-8'>{ourStoryData?.name}</h3>
                         <div id='projectDescription' className=''>
@@ -93,7 +93,7 @@ for. That's what we're building toward.
                             </span>
                         </div>
                     </div>
-                    <div className='md:border-l-2 border-b-2 border-black dark:border-off-white md:p-8 order-first md:order-none'>
+                    <div className='xl:border-l-2 border-b-2 border-black dark:border-off-white md:p-8 order-first md:order-none'>
                         <img className='object-cover mx-auto p-2 h-80' src={ourStoryData?.images.mainImage} alt="main project image" />
 
                     </div>
@@ -104,23 +104,23 @@ for. That's what we're building toward.
                 <div className="p-6 bg-primary08 md:hidden border-b-2 border-black dark:border-off-white">
 
                 </div>
-                <div id='challengesContent' className='grid grid-col-span-1 md:grid-cols-3 border-b-2 border-black dark:border-off-white '>
-                    <div className='md:p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white' >
+                <div id='challengesContent' className='grid grid-col-span-1 xl:grid-cols-3 border-b-2 border-black dark:border-off-white '>
+                    <div className='md:p-8 border-b-2 md:border-b-0 xl:border-r-2 border-black dark:border-off-white' >
                         <img src={ourStoryData?.images.challengesFacedImages[0]} alt="challenges faced" className=' object-cover' />
                     </div>
-                    <div className='p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white'>
+                    <div className='p-8 border-b-2 md:border-b-0 xl:border-r-2 border-black dark:border-off-white'>
                         <h4 className='font-headlines font-semibold text-headline-small uppercase mb-2'>What We Learned Early</h4>
                         <p className='mb-4 font-body  font-light space-y-4'>{toParagraphs(ourStoryData?.challengesFaced)}</p>
                     </div>
                     <div></div>
                 </div>
-                <div id='solutionsContent' className='grid grid-cols-1 md:grid-cols-3 border-b-2 border-black dark:border-off-white'>
-                    <div className='p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white'>
+                <div id='solutionsContent' className='grid grid-cols-1 xl:grid-cols-3 border-b-2 border-black dark:border-off-white'>
+                    <div className='p-8 border-b-2 md:border-b-0 xl:border-r-2 border-black dark:border-off-white'>
                         <h4 className='font-headlines font-semibold text-headline-small uppercase mb-2'>Where We Are Now</h4>
                         <p className='mb-4 font-body font-light space-y-4'>{toParagraphs(ourStoryData?.solutionsProvided)}</p>
                         <br />
                         <Link href={'/lets-work'} >
-                            <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
+                            <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Book a <i className="font-display lowercase text-secondary-200">15&#8202;min</i>&nbsp; call</span>
                             </Button>
                         </Link>
                     </div>

@@ -1,23 +1,56 @@
 'use client'
 
 export default function StorySection() {
+
+    const whereItStarted: string = `
+Most B2B businesses we spoke to had the same problem. 
+Good products, solid services, real value; but design that 
+wasn't doing the work. Brands that didn't inspire confidence. 
+Websites that didn't convert. Marketing assets that sat in a 
+folder unused.
+
+That gap is what started Maki Creative Studio. It wasn't only for the 
+love for design; but a belief that B2B businesses deserve 
+design that really moves the needle. Design that earns trust 
+before you say a word.`;
+
+
+    const whatWeLearned: string = `
+Starting a studio is humbling. The craft takes time. 
+The business takes longer. There were projects that pushed 
+us, processes we had to rebuild, and standards we had to 
+hold even when it was easier not to.
+
+What came out of that is a studio that doesn't cut corners — 
+because we know what corners cost. Every project we take on 
+is treated like it matters. Because for your business, it does.
+`;
+
+    const whereWeAre: string = `
+Maki Creative Studio works with B2B businesses that take 
+their brand seriously. From brand identity to digital products, 
+trade show booths to pitch decks — we make design work harder 
+for the businesses we partner with.
+
+Not only to look good. But to speak clearly to your customers, 
+earn their trust, and move them to act. That's what we're here 
+for. That's what we're building toward.
+`;
+
     const ourStoryData = {
-        "name": "Passion, Perseverance & grit in pursuit (The One) ",
-        "description": "Maki Creative Studio isn't just a name - it's a promise. A promise to deliver designs that don't just look pretty, but solve real problems to connect you with your customers . \n\nFounded by M. Shoko, our team brings together a perfect blend of creativity, technical know-how, and pragmatism.",
-        "link": "https://mcsamuelshoko.github.io/readme/",
-        "type":"product branding",
-        "tags": ["branding","product_branding","logo","ui"],
-        "challengesFaced": "Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus. Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus.",
-        "solutionsProvided": "Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus. Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus.",
+        "name": "Built to make design work harder for your business.",
+        "description": whereItStarted,
+        "challengesFaced": whatWeLearned,
+        "solutionsProvided": whereWeAre,
         "images": {
-            
-            "mainImage": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
-            "wideImage":"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "projectImages": [""],            
-            "challengesFacedImages":["https://images.unsplash.com/photo-1494625927555-6ec4433b1571?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-            "solutionsImages":["https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+
+            "mainImage": "/images/site/logo-rounded.png",
+            "wideImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "projectImages": [""],
+            "challengesFacedImages": ["https://images.unsplash.com/photo-1494625927555-6ec4433b1571?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+            "solutionsImages": ["https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
             "resultImages": ["https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
-            
+
         }
     };
 
@@ -33,7 +66,7 @@ export default function StorySection() {
                     <div className='flex flex-col justify-between p-8 border-b-2 border-black dark:border-off-white'>
                         <h3 id='projectName' className='font-headlines text-headline-large uppercase mb-8'>{ourStoryData?.name}</h3>
                         <div id='projectDescription' className=''>
-                            <h4 className='font-headlines text-headline-small uppercase mb-2'>Brief Description</h4>
+                            <h4 className='font-headlines text-headline-small uppercase mb-2'>Where It Started</h4>
                             <p className='mb-4 font-body '>{ourStoryData.description}</p>
                             <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                                 {/* <div className='flex'>
@@ -56,7 +89,7 @@ export default function StorySection() {
                         </div>
                     </div>
                     <div className='md:border-l-2 border-b-2 border-black dark:border-off-white md:p-8'>
-                        <img className='object-cover' src={ourStoryData?.images.mainImage} alt="main project image" />
+                        <img className='object-cover mx-auto h-80' src={ourStoryData?.images.mainImage} alt="main project image" />
 
                     </div>
                 </div>
@@ -68,14 +101,14 @@ export default function StorySection() {
                         <img src={ourStoryData?.images.challengesFacedImages[0]} alt="challenges faced" className=' object-cover' />
                     </div>
                     <div className='p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white'>
-                        <h4 className='font-headlines text-headline-small uppercase mb-2'>Challenges Faced</h4>
+                        <h4 className='font-headlines text-headline-small uppercase mb-2'>What We Learned Early</h4>
                         <p className='mb-4 font-body '>{ourStoryData?.challengesFaced}</p>
                     </div>
                     <div></div>
                 </div>
                 <div id='solutionsContent' className='grid grid-cols-1 md:grid-cols-3 border-b-2 border-black dark:border-off-white'>
                     <div className='p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white'>
-                        <h4 className='font-headlines text-headline-small uppercase mb-2'>Solutions Provided</h4>
+                        <h4 className='font-headlines text-headline-small uppercase mb-2'>Where We Are Now</h4>
                         <p className='mb-4 font-body '>{ourStoryData?.solutionsProvided}</p>
                     </div>
                     <div className='md:col-span-2 md:p-8'>

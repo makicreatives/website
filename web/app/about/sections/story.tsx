@@ -1,41 +1,47 @@
 'use client'
 
+import { Button } from "@carbon/react";
+// import Image from 'next/image';
+import Link from "next/link";
+
 export default function StorySection() {
 
-    const whereItStarted: string = `
+    const whereItStarted: string[] = [`
 Most B2B businesses we spoke to had the same problem. 
 Good products, solid services, real value; but design that 
 wasn't doing the work. Brands that didn't inspire confidence. 
 Websites that didn't convert. Marketing assets that sat in a 
-folder unused.
+folder unused.`,
 
-That gap is what started Maki Creative Studio. It wasn't only for the 
+        `That gap is what started Maki Creative Studio. It wasn't only for the 
 love for design; but a belief that B2B businesses deserve 
 design that really moves the needle. Design that earns trust 
-before you say a word.`;
+before you say a word.`];
 
 
-    const whatWeLearned: string = `
+    const whatWeLearned: string[] = [`
 Starting a studio is humbling. The craft takes time. 
 The business takes longer. There were projects that pushed 
 us, processes we had to rebuild, and standards we had to 
-hold even when it was easier not to.
+hold even when it was easier not to.`,
 
-What came out of that is a studio that doesn't cut corners — 
+        `What came out of that is a studio that doesn't cut corners — 
 because we know what corners cost. Every project we take on 
 is treated like it matters. Because for your business, it does.
-`;
+`];
 
-    const whereWeAre: string = `
+    const whereWeAre: string[] = [`
 Maki Creative Studio works with B2B businesses that take 
 their brand seriously. From brand identity to digital products, 
 trade show booths to pitch decks — we make design work harder 
-for the businesses we partner with.
+for the businesses we partner with.`,
 
-Not only to look good. But to speak clearly to your customers, 
+        `Not only to look good. But to speak clearly to your customers, 
 earn their trust, and move them to act. That's what we're here 
 for. That's what we're building toward.
-`;
+`];
+
+    const toParagraphs = function (story: string[]): JSX.Element[] { return story.map((str, i) => <span className="block" key={'statSP' + i}>{str} </span>) }
 
     const ourStoryData = {
         "name": "Built to make design work harder for your business.",
@@ -66,30 +72,14 @@ for. That's what we're building toward.
                     <div className='flex flex-col justify-between p-8 border-b-2 border-black dark:border-off-white'>
                         <h3 id='projectName' className='font-headlines text-headline-large uppercase mb-8'>{ourStoryData?.name}</h3>
                         <div id='projectDescription' className=''>
-                            <h4 className='font-headlines text-headline-small uppercase mb-2'>Where It Started</h4>
-                            <p className='mb-4 font-body '>{ourStoryData.description}</p>
+                            <h4 className='font-headlines font-semibold text-headline-small uppercase mb-2'>Where It Started</h4>
+                            <p className='mb-4 font-body  font-light space-y-4'>{toParagraphs(ourStoryData.description)}</p>
                             <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
-                                {/* <div className='flex'>
-                                    <Link href={'ourStoryData?.link' } target='_blank' className='pl-2 flex text-secondary-regal border-b-2 border-b-secondary-regal sm:border-b-secondary font-headlines text-headline-small uppercase  hover:text-white hover:bg-secondary hover:shadow-sm hover:duration-150'>
-                                        <span>Visit Project</span>
-                                        <span>
-                                            <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>
-                                        </span>
-                                    </Link>
-                                </div>
-                                <div className='flex'>
-                                    <Link href={'/lets-work'} className='pl-2 flex text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
-                                        <span>Start Your Project</span>
-                                        <span>
-                                            <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
-                                        </span>
-                                    </Link>
-                                </div> */}
                             </span>
                         </div>
                     </div>
                     <div className='md:border-l-2 border-b-2 border-black dark:border-off-white md:p-8'>
-                        <img className='object-cover mx-auto h-80' src={ourStoryData?.images.mainImage} alt="main project image" />
+                        <img className='object-cover mx-auto p-1 h-80' src={ourStoryData?.images.mainImage} alt="main project image" />
 
                     </div>
                 </div>
@@ -101,29 +91,34 @@ for. That's what we're building toward.
                         <img src={ourStoryData?.images.challengesFacedImages[0]} alt="challenges faced" className=' object-cover' />
                     </div>
                     <div className='p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white'>
-                        <h4 className='font-headlines text-headline-small uppercase mb-2'>What We Learned Early</h4>
-                        <p className='mb-4 font-body '>{ourStoryData?.challengesFaced}</p>
+                        <h4 className='font-headlines font-semibold text-headline-small uppercase mb-2'>What We Learned Early</h4>
+                        <p className='mb-4 font-body  font-light space-y-4'>{toParagraphs(ourStoryData?.challengesFaced)}</p>
                     </div>
                     <div></div>
                 </div>
                 <div id='solutionsContent' className='grid grid-cols-1 md:grid-cols-3 border-b-2 border-black dark:border-off-white'>
                     <div className='p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white'>
-                        <h4 className='font-headlines text-headline-small uppercase mb-2'>Where We Are Now</h4>
-                        <p className='mb-4 font-body '>{ourStoryData?.solutionsProvided}</p>
+                        <h4 className='font-headlines font-semibold text-headline-small uppercase mb-2'>Where We Are Now</h4>
+                        <p className='mb-4 font-body font-light space-y-4'>{toParagraphs(ourStoryData?.solutionsProvided)}</p>
+                        <br />
+                        <Link href={'/lets-work'} >
+                            <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
+                            </Button>
+                        </Link>
                     </div>
                     <div className='md:col-span-2 md:p-8'>
                         <img src={ourStoryData?.images.solutionsImages[0]} alt="solutions provided" className='h-[50vh] w-full object-cover' />
                     </div>
                 </div>
                 <div id='resultsContent' className='md:p-8 '>
-                    <h4 className='font-headlines text-headline-large flex uppercase place-content-center h-14  md:hidden border-y bg-black dark:bg-off-white text-white dark:text-black overflow-x-clip'>
+                    {/* <h4 className='font-headlines text-headline-large flex uppercase place-content-center h-14  md:hidden border-y bg-black dark:bg-off-white text-white dark:text-black overflow-x-clip'>
                         <ul className='flex space-x-2 justify-center items-center animate-infinite-scroll'>
                             {'resultsLi()'}
                         </ul>
                         <ul className='flex space-x-2 justify-center items-center animate-infinite-scroll'>
                             {'resultsLi()'}
                         </ul>
-                    </h4>
+                    </h4> */}
                     <img src={ourStoryData?.images.resultImages[0]} alt="results images" className='h-[50vh] w-full object-cover' />
                 </div>
             </section>

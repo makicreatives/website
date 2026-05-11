@@ -1,8 +1,24 @@
 'use client'
 
 import { Button } from "@carbon/react";
-// import Image from 'next/image';
+import Image from 'next/image';
 import Link from "next/link";
+
+import starIcon from '@/app/icons/ui/star.svg'
+
+export const toParagraphs = function (story: string[]): JSX.Element[] { return story.map((str, i) => <span className="block" key={'statSP' + i}>{str} </span>) };
+
+
+const resultsLi = (): React.JSX.Element[] => {
+
+    const item = <li className='flex space-x-4 px-4'><span className=''>Have&nbsp;a&nbsp;wonderful&nbsp;day</span><Image src={starIcon} alt="star icon" className="h-4 invert dark:no-invert-0 m-auto "></Image></li>;
+    const items: React.JSX.Element[] = [];
+    for (let i = 0; i < 7; i++) {
+        items.push(item)
+    }
+    return items;
+}
+
 
 export default function StorySection() {
 
@@ -41,7 +57,6 @@ earn their trust, and move them to act. That's what we're here
 for. That's what we're building toward.
 `];
 
-    const toParagraphs = function (story: string[]): JSX.Element[] { return story.map((str, i) => <span className="block" key={'statSP' + i}>{str} </span>) }
 
     const ourStoryData = {
         "name": "Built to make design work harder for your business.",
@@ -78,13 +93,16 @@ for. That's what we're building toward.
                             </span>
                         </div>
                     </div>
-                    <div className='md:border-l-2 border-b-2 border-black dark:border-off-white md:p-8'>
-                        <img className='object-cover mx-auto p-1 h-80' src={ourStoryData?.images.mainImage} alt="main project image" />
+                    <div className='md:border-l-2 border-b-2 border-black dark:border-off-white md:p-8 order-first md:order-none'>
+                        <img className='object-cover mx-auto p-2 h-80' src={ourStoryData?.images.mainImage} alt="main project image" />
 
                     </div>
                 </div>
                 <div id='imagesContent' className='md:p-8 border-b-2 border-black dark:border-off-white'>
                     <img src={ourStoryData?.images.wideImage} alt="wide image showcase" className='h-[50vh] w-full object-cover' />
+                </div>
+                <div className="p-6 bg-primary08 md:hidden border-b-2 border-black dark:border-off-white">
+
                 </div>
                 <div id='challengesContent' className='grid grid-col-span-1 md:grid-cols-3 border-b-2 border-black dark:border-off-white '>
                     <div className='md:p-8 border-b-2 md:border-b-0 md:border-r-2 border-black dark:border-off-white' >
@@ -106,19 +124,19 @@ for. That's what we're building toward.
                             </Button>
                         </Link>
                     </div>
-                    <div className='md:col-span-2 md:p-8'>
+                    <div className='md:col-span-2 md:p-8 order-first md:order-none'>
                         <img src={ourStoryData?.images.solutionsImages[0]} alt="solutions provided" className='h-[50vh] w-full object-cover' />
                     </div>
                 </div>
                 <div id='resultsContent' className='md:p-8 '>
-                    {/* <h4 className='font-headlines text-headline-large flex uppercase place-content-center h-14  md:hidden border-y bg-black dark:bg-off-white text-white dark:text-black overflow-x-clip'>
+                    <h4 className='font-headlines text-headline-large flex uppercase place-content-center h-14  md:hidden border-y bg-black dark:bg-off-white text-white dark:text-black overflow-x-clip'>
                         <ul className='flex space-x-2 justify-center items-center animate-infinite-scroll'>
-                            {'resultsLi()'}
+                            {resultsLi()}
                         </ul>
                         <ul className='flex space-x-2 justify-center items-center animate-infinite-scroll'>
-                            {'resultsLi()'}
+                            {resultsLi()}
                         </ul>
-                    </h4> */}
+                    </h4>
                     <img src={ourStoryData?.images.resultImages[0]} alt="results images" className='h-[50vh] w-full object-cover' />
                 </div>
             </section>

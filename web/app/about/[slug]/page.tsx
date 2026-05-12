@@ -20,9 +20,6 @@ import { notFound } from "next/navigation";
 
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-    title: 'About',
-};
 
 
 const contentTabs = [ //VerticalTab[] = [
@@ -65,6 +62,27 @@ export async function generateStaticParams() {
     slug: tab.title.trim().replaceAll(/ /g, '-').toLowerCase(),
   }))
 }
+
+// Dynamically generate metadata for each static path
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  
+  if (slug == null) { return notFound() };
+
+  // get proper title if not null
+  const currentTab = contentTabs.filter((tab) => tab.title.trim().replaceAll(/ /g, '-').toLowerCase() === slug)[0];
+
+
+
+  return {
+    title: "About : " + currentTab.title,
+    // description: post.excerpt,
+    // openGraph: {
+    //   images: [post.coverImage],
+    // },
+  }
+}
+
 
 
 // Multiple versions of this page will be statically generated

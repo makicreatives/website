@@ -18,6 +18,13 @@ import PrivacySection from "@/app/about/sections/privacy";
 import AffiliateSection from "@/app/about/sections/affiliates";
 import { notFound } from "next/navigation";
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About',
+};
+
+
 const contentTabs = [ //VerticalTab[] = [
   {
     title: "Our Story",

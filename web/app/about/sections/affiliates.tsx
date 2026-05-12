@@ -5,82 +5,150 @@ import Image from 'next/image';
 
 
 import retainerIcon from '@/app/icons/ui/turnaround.svg'
-import byBriefIcon from '@/app/icons/ui/partnership.svg'
+// import byBriefIcon from '@/app/icons/ui/partnership.svg'
+import starIcon from '@/app/icons/ui/star.svg'
+
 import { Pill } from "@/app/components";
 
 
-type PricingTier = {
-    id: string,
-    title: string,
-    startingFrom?: boolean,
-    price: number,
-    currency: string,
-    period: string,
-    tagline: string,
-    description: string,
-    turnaround: string,
-    cta: string,
-    ctaUrl: string,
-    imageUrl: string,
-    iconUrl: string,
-    isRecommended: boolean,
-    perks: string[],
+type StudioTool = {
+    id: string
+    title: string
+    tagline: string
+    description: string
+    cta?: string,
+    category: "design" | "productivity" | "web" | "communication" | "finance" | "marketing" | "system"
+    url: string
+    imageUrl: string
+    iconUrl: string
+    isAffiliate: boolean      // true = you have a referral/affiliate link
+    isPartner?: boolean,
+    affiliateUrl?: string     // only populated if isAffiliate is true
+    badge?: "Used Daily" | "Client Facing" | "Recommended"
+}
 
-};
+const studioTools: StudioTool[] = [
 
-const pricingTiers: PricingTier[] = [
+    //******************************************/
+    //  P A R T N E R S
+    //******************************************/
+
     {
-        id: "retainer",
-        title: "Monthly Retainer",
-        price: 2500,
-        currency: "USD",
-        period: "per month",
-        tagline: "For businesses that always have something to design.",
-        description: "One active request at a time. Submit as many requests as you need — we work through them one by one, fast and focused. Pause or cancel anytime.",
-        turnaround: "2-3 business days per request",
-        cta: "Get Started",
-        ctaUrl: "/lets-work/retainer",
+        id: "mevinsystems",
+        title: "Mevin Software Systems",
+        tagline: "Software Development & Engineering agency.",
+        description: "They engineer and develop our backend systems and handling other softwares for running our agency, and for the website as well.",
+        cta: "Visit Partner",
         iconUrl: retainerIcon,
         imageUrl: "https://images.pexels.com/photos/17363205/pexels-photo-17363205.jpeg",
-        isRecommended: true,
-        perks: [
-            "Unlimited design requests",
-            "One active request at a time",
-            "2-3 business day turnaround",
-            "Unlimited revisions",
-            "Pause or cancel anytime",
-            "Direct designer access",
-            "Source files included",
-            "Dedicated project board"
-        ]
+        isPartner: true,
+        category: "system",
+        url: "https://www.mevinsystems.online/",
+        isAffiliate: false
+    },
+
+    //******************************************/
+    //  T O O L S
+    //******************************************/
+
+    {
+        id: "figma",
+        title: "Figma",
+        tagline: "Where all the design happens.",
+        description: "Our primary design tool for everything — brand identity, web design, UI/UX, pitch decks, and social assets. If we made it, it started in Figma.",
+        category: "design",
+        url: "https://figma.com",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+        iconUrl: "/icons/tools/figma.svg",
+        isAffiliate: false,
+        badge: "Used Daily"
     },
     {
-        id: "by-brief",
-        title: "By Brief",
-        startingFrom: true,
-        price: 1500,
-        currency: "USD",
-        period: "per project",
-        tagline: "For businesses with one clear project in mind.",
-        description: "Tell us what you need. We scope it, price it, and deliver it. One project, start to finish, with a clear timeline and no surprises.",
-        turnaround: "5-7 business days depending on scope",
-        cta: "Send Your Brief",
-        ctaUrl: "/lets-work",
-        iconUrl: byBriefIcon,
-        imageUrl: "https://images.pexels.com/photos/17079290/pexels-photo-17079290.jpeg",
-        isRecommended: false,
-        perks: [
-            "Fixed project scope",
-            "Custom quote based on brief",
-            "5-7 business day turnaround",
-            "3 revision rounds included",
-            "Source files included",
-            "Direct designer access",
-            "Print and digital ready files",
-        ]
+        id: "adobe-creative-cloud",
+        title: "Adobe Creative Cloud",
+        tagline: "Print, illustration, and everything in between.",
+        description: "Illustrator for vector work and print files. Photoshop for image editing. InDesign for ebooks, reports, and multi-page layouts. The industry standard for a reason.",
+        category: "design",
+        url: "https://adobe.com/creativecloud",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/adobe.svg",
+        isAffiliate: false,
+        badge: "Used Daily"
     },
-    
-];
+    {
+        id: "notion",
+        title: "Notion",
+        tagline: "How we stay organised.",
+        description: "Project management, client briefs, content planning, and internal docs — all in one place. Notion keeps the studio running without the chaos.",
+        category: "productivity",
+        url: "https://notion.so",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/notion.svg",
+        isAffiliate: false,
+        badge: "Used Daily"
+    },
+    {
+        id: "formbricks",
+        title: "Formbricks",
+        tagline: "How clients brief us.",
+        description: "The form tool behind our client intake and brief process. Clean, flexible, and easy to embed — clients fill it in, we get everything we need to start.",
+        category: "productivity",
+        url: "https://formbricks.com",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/formbricks.svg",
+        isAffiliate: false,
+        badge: "Client Facing"
+    },
+    {
+        id: "linear",
+        title: "Linear",
+        tagline: "How we track project progress.",
+        description: "Fast, clean issue and project tracking. We use Linear to manage design requests, revisions, and delivery — especially for retainer clients.",
+        category: "productivity",
+        url: "https://linear.app",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/linear.svg",
+        isAffiliate: false,
+        badge: "Used Daily"
+    },
+    {
+        id: "framer",
+        title: "Framer",
+        tagline: "For websites that need to move.",
+        description: "When a project calls for a site with motion, interactions, and polish straight out of the box — Framer is where we build it.",
+        category: "web",
+        url: "https://framer.com",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/framer.svg",
+        isAffiliate: false,
+        badge: "Recommended"
+    },
+    {
+        id: "loom",
+        title: "Loom",
+        tagline: "How we present work to clients.",
+        description: "Instead of long email threads, we send short Loom walkthroughs. Clients see the work in context, understand the decisions, and give better feedback.",
+        category: "communication",
+        url: "https://loom.com",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/loom.svg",
+        isAffiliate: false,
+        badge: "Client Facing"
+    },
+    {
+        id: "unsplash",
+        title: "Unsplash",
+        tagline: "Stock photography that doesn't look stock.",
+        description: "Our go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
+        category: "design",
+        url: "https://unsplash.com",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: "/icons/tools/unsplash.svg",
+        isAffiliate: false,
+        badge: "Recommended"
+    },
+]
+
 
 export default function AffiliateSection() {
     return <>
@@ -90,61 +158,61 @@ export default function AffiliateSection() {
         <section>
             <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8">
 
-                <p className="">One studio. Every design service  —<br /> your business needs.</p>
+                <p className="">Tools & Partners.</p>
                 <p className="text-lg font-headlines leading-tight  font-medium pt-2 ps-8">
                     {/* We partner with businesses to create design systems that scale. <br /> */}
-                    Design, digital, and marketing — all under one roof.
+                    The tools behind the work — and the partnerships we&apos;re building as we grow.
                 </p>
 
             </h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 container mx-auto p-1 pb-8 md:p-8 ">
-            <div className="">
+            <div className="flex justify-evenly flex-wrap gap-4 space-y-4 lg:grid-cols-2 xl:grid-cols-3  mx-auto p-1 pb-8 ">
+
+                {
+                    studioTools.map((tier, index) => {
+                        return <Link key={"featureCardId" + index} href={tier.url} target="_blank" className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full w-96'>
+                            <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
+                                {tier.isAffiliate ? <span className=" flex items-center bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">+ </b>&nbsp;Our Partner</span> : ""}
+                                <div className='mb-2 h-64'>
+                                    <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${tier.imageUrl})` }}>
+                                        <Image src={starIcon} width={320} className='h-24 opacity-50 invert' alt={tier.title + " service card"} />
+                                    </div>
+                                </div>
+                                <div className='p-8 flex flex-col'>
+                                    <div className='mb-1 font-bold font-headlines text-headline-large uppercase  flex-wrap justify-between items-center'>
+                                        <span className="block mb-4">{tier.title}</span>
+
+                                        <div className="flex  align-center flex-wrap">
+                                            <Pill><span className="capitalize">{tier.category}</span></Pill>
+                                            {tier.isPartner ? <span className=" inline-flex items-center bg-primary p-1 px-2 text-off-white font-technical "><b className="font-bold animate-[ping_2s_infinite] ease-in">+ </b>&nbsp;Partner </span> : ""}
+                                        </div>
+                                    </div>
+                                    <h2 className="h2 font-technical space-y-8 my-4">
+                                        <span className="p-1 flex text-lg uppercase font-medium ">
+                                            {tier.tagline}
+                                        </span>
+                                    </h2>
+                                    <p className=" leading-relaxed text-xl mb-4 md:mb-8 ">
+                                        {tier.description}
+                                    </p>
+
+                                    <div className='flex'>
+                                        <Link href={tier.url} className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
+                                            <span>{tier.cta ?? "Get Started"}</span>
+                                            <span>
+                                                <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>
+                                            </span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>;
+                    })
+
+                }
 
             </div>
-
-            {
-                pricingTiers.map((tier, index) => {
-                    return <Link key={"featureCardId" + index} href={tier.ctaUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
-                        <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
-                            {tier.isRecommended ? <span className=" flex items-center rounded-2xxl bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">*</b>&nbsp;Most Popular</span> : ""}
-                            <div className='mb-2 h-80'>
-                                <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${tier.imageUrl})` }}>
-                                    <Image src={tier.iconUrl} width={320} className='h-24 opacity-50' alt={tier.title + " service card"} />
-                                </div>
-                            </div>
-                            <div className='p-8 flex flex-col'>
-                                <p className='mb-1 font-bold font-headlines text-headline-large uppercase flex flex-wrap justify-between items-center'>
-                                    <span>{tier.title}</span> <Pill><span> {tier.startingFrom ? "From " : ""} US$ {tier.price.toLocaleString().toString()}</span></Pill>
-                                </p>
-                                <p className=" leading-relaxed text-xl mb-4 md:mb-8 ">
-                                    {tier.description}
-                                </p>
-                                <h2 className="h2 font-technical space-y-8 my-4">
-                                    <span className="p-1 flex text-lg uppercase font-medium ">
-                                        <ul className="">
-                                            {tier.perks.map((perk, i) => {
-                                                return <li className="li" key={[tier.id, i].join("-")}>— {perk}</li>
-                                            })}
-                                        </ul>
-                                    </span>
-                                </h2>
-                                <div className='flex'>
-                                    <Link href={tier.ctaUrl} className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
-                                        <span>{tier.cta}</span>
-                                        <span>
-                                            <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
-                                        </span>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>;
-                })
-            }
-
-        </div>
-        <hr className="border-black dark:border-off-white1B" />
-    </section >
+            <hr className="border-black dark:border-off-white1B" />
+        </section >
     </>
 }
 

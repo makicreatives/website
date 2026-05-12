@@ -9,6 +9,7 @@ import outlineIcon from '@/app/icons/tools/outline.svg'
 import figmaIcon from '@/app/icons/tools/figma.svg'
 import affinityIcon from '@/app/icons/tools/affinity.svg'
 import capIcon from '@/app/icons/tools/cap.svg'
+import pexelsIcon from '@/app/icons/tools/pexels.svg'
 import unsplashIcon from '@/app/icons/tools/unsplash.svg'
 import formbricksIcon from '@/app/icons/tools/formbricks.svg'
 import fizzyIcon from '@/app/icons/tools/fizzy.svg'
@@ -150,6 +151,18 @@ const studioTools: StudioTool[] = [
         url: "https://unsplash.com",
         imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
         iconUrl: unsplashIcon,
+        isAffiliate: false,
+        badge: "Recommended"
+    },
+        {
+        id: "pexels",
+        title: "pexels",
+        tagline: "Stock photography that also doesn't look stock.",
+        description: "Our another go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
+        category: "design",
+        url: "https://pexels.com",
+        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        iconUrl: pexelsIcon,
         isAffiliate: false,
         badge: "Recommended"
     },

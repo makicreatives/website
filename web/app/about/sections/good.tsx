@@ -14,7 +14,7 @@ const socialGoodArticles: GoodBlog[] = [
     {
         title: "Why We Don't Design for Gambling and Sports Betting Brands",
         slug: "",
-        imageUrl: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&auto=format&fit=crop",
+        imageUrl: "https://images.pexels.com/photos/6208447/pexels-photo-6208447.jpeg",
         summary: "Gambling design is built to keep people in — longer sessions, faster decisions, less friction to spend. We find it more beneficial to put those skills somewhere else.",
         category: "social-good",
         readTimeMins: 4,
@@ -27,7 +27,7 @@ const socialGoodArticles: GoodBlog[] = [
     {
         title: "The Hidden Cost of Designing Products That Exploit Compulsive Behaviour",
         slug: "",
-        imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
+        imageUrl: "https://images.pexels.com/photos/4206115/pexels-photo-4206115.jpeg",
         summary: "Some industries are built on dependency — not loyalty. There's a difference, and design plays a bigger role in that distinction than most people admit.",
         category: "social-good",
         readTimeMins: 5,
@@ -40,7 +40,7 @@ const socialGoodArticles: GoodBlog[] = [
     {
         title: "Why We Choose Clients Who Build Things That Last",
         slug: "",
-        imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop",
+        imageUrl: "https://images.pexels.com/photos/8280940/pexels-photo-8280940.jpeg",
         summary: "Not every brief is worth taking. We work with businesses building something real — and we turn down work that we wouldn't be proud to put in our portfolio.",
         category: "social-good",
         readTimeMins: 3,
@@ -53,7 +53,7 @@ const socialGoodArticles: GoodBlog[] = [
     {
         title: "Design Has Side Effects — And We(People) are Responsible for Them",
         slug: "",
-        imageUrl: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&auto=format&fit=crop",
+        imageUrl: "https://images.pexels.com/photos/6704247/pexels-photo-6704247.jpeg",
         summary: "Every design decision influences how people think, feel, and behave. That influence doesn't stop at the screen — and neither does our responsibility as designers.",
         category: "social-good",
         readTimeMins: 6,
@@ -66,7 +66,7 @@ const socialGoodArticles: GoodBlog[] = [
     {
         title: "What 'Do Good Design' Actually Means for a B2B Studio",
         slug: "",
-        imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop",
+        imageUrl: "https://images.pexels.com/photos/6871894/pexels-photo-6871894.jpeg",
         summary: "It's not about saving the world with every logo. It's about making deliberate choices — about who you work with, what you build, and what you quietly walk away from.",
         category: "social-good",
         readTimeMins: 5,

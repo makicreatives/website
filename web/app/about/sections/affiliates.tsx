@@ -65,7 +65,7 @@ const studioTools: StudioTool[] = [
         description: "Our primary design tool for everything — brand identity, web design, UI/UX, pitch decks, and social assets. If we made it, it started in Figma.",
         category: "design",
         url: "https://figma.com",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: figmaIcon,
         isAffiliate: false,
         badge: "Used Daily"
@@ -77,7 +77,7 @@ const studioTools: StudioTool[] = [
         description: "Vector for vector work and print files. Pixel for image editing. Layout for ebooks, reports, and multi-page layouts. A new industry standard emerges.",
         category: "design",
         url: "https://www.affinity.studio/",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: affinityIcon,
         isAffiliate: false,
         badge: "Used Daily"
@@ -89,7 +89,7 @@ const studioTools: StudioTool[] = [
         description: "Our team's knowledge base, client briefs, content planning, and internal docs — all in one place. Outline keeps the studio running without the chaos.",
         category: "productivity",
         url: "https://www.getoutline.com/",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: outlineIcon,
         isAffiliate: false,
         badge: "Used Daily"
@@ -101,7 +101,7 @@ const studioTools: StudioTool[] = [
         description: "The form tool behind our client intake and brief process. Clean, flexible, and easy to embed — clients fill it in, we get everything we need to start.",
         category: "productivity",
         url: "https://formbricks.com",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: formbricksIcon,
         isAffiliate: false,
         badge: "Client Facing"
@@ -113,7 +113,7 @@ const studioTools: StudioTool[] = [
         description: "Fast, clean issue and project tracking. We use Fizzy to manage design requests, revisions, and delivery — especially for retainer clients.",
         category: "productivity",
         url: "https://www.fizzy.do/",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: fizzyIcon,
         isAffiliate: false,
         badge: "Used Daily"
@@ -125,7 +125,7 @@ const studioTools: StudioTool[] = [
     //     description: "When a project calls for a site with motion, interactions, and polish straight out of the box — Framer is where we build it.",
     //     category: "web",
     //     url: "https://framer.com",
-    //     imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
     //     iconUrl: "/icons/tools/framer.svg",
     //     isAffiliate: false,
     //     badge: "Recommended"
@@ -137,7 +137,7 @@ const studioTools: StudioTool[] = [
         description: "Instead of long email threads, we send short Cap walkthroughs. Clients see the work in context, understand the decisions, and give better feedback.",
         category: "communication",
         url: "https://cap.so/",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: capIcon,
         isAffiliate: false,
         badge: "Client Facing"
@@ -149,7 +149,7 @@ const studioTools: StudioTool[] = [
         description: "Our go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
         category: "design",
         url: "https://unsplash.com",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: unsplashIcon,
         isAffiliate: false,
         badge: "Recommended"
@@ -161,7 +161,7 @@ const studioTools: StudioTool[] = [
         description: "Our another go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
         category: "design",
         url: "https://pexels.com",
-        imageUrl: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
         iconUrl: pexelsIcon,
         isAffiliate: false,
         badge: "Recommended"

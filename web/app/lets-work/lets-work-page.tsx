@@ -146,7 +146,7 @@ export default function LetsWorkPage() {
                   data-heyform-height-type="px"
                   data-heyform-height="500"
                   data-heyform-auto-resize-height="true"
-                  data-heyform-transparent-background="false"
+                  data-heyform-transparent-background="true"
                 >
 
                 </div>
@@ -176,7 +176,7 @@ export default function LetsWorkPage() {
               <h2 className="font-display text-display-medium mb-4">Not sure what you need? <br />No worries! <br /></h2>
               <h3 className="font-headlines text-headline-medium mb-8">Tell us and we can figure it out together.</h3>
               <Link href={'/contact'} >
-                <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none ">Send an email
+                <Button className="text-white uppercase  bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none ">Contact us
                 </Button>
               </Link>
             </div>

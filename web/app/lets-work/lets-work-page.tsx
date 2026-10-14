@@ -136,14 +136,21 @@ export default function LetsWorkPage() {
             </div>
             <hr className="border-black dark:border-off-white1B" />
             <div className=" bg-off-white1B container mx-auto md:p-8 ">
-              <div className="relative h-[80dvh] overflow-auto md:rounded-2xl" >
-                <iframe
-                  title="contact-form"
-                  src="https://formbricks.mevinsystems.cloud/s/cmkxtbyeg0006pk01bnlfie15"
-                  // frameBorder="0"
-                  className="absolute left-0 top-0 w-full h-full border-0"
+              <div className="relative min-h-[80dvh] overflow-auto md:rounded-2xl" >
+                <div
+                  data-heyform-id="3tHudMfJ"
+                  data-heyform-type="standard"
+                  data-heyform-custom-url="https://heyform.mevinsystems.cloud/form/3tHudMfJ"
+                  data-heyform-width-type="%"
+                  data-heyform-width="100"
+                  data-heyform-height-type="px"
+                  data-heyform-height="500"
+                  data-heyform-auto-resize-height="true"
+                  data-heyform-transparent-background="false"
                 >
-                </iframe>
+
+                </div>
+                <script defer src="https://www.unpkg.com/@heyform-inc/embed@latest/dist/index.umd.js"></script>
               </div>
 
             </div>

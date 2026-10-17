@@ -1,0 +1,9 @@
+export { Footer } from './Footer';
+export { Header } from './Header';
+export { ProjectCard } from './ProjectCard'
+export { VerticalTabs } from './VerticalTabs';
+export { WorkCard } from './WorkCard';
+export { MegaMenu } from './MegaMenu';
+export { Button } from './Button';
+export { Faq } from './Faq';
+export { Pill } from './Pill';

@@ -1,11 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import HomePage from './home-page';
 
+const metadata = {
+	title: "B2B Design Agency | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={metadata.title}>
+	<!-- <Welcome /> -->
+	<HomePage/>;
 </Layout>
+
+
+<!-- import type { Metadata } from 'next';
+import HomePage from './home-page';
+
+export const metadata: Metadata = {
+  title: 'B2B Design Agency | Maki Creative Studio',
+};
+
+export default function Page() {
+  return <HomePage/>;
+} -->

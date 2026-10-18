@@ -9,6 +9,10 @@
     "dist"
   ],
   "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"],
+      "@src/*": ["./src/*"],
+    },
     "types": [
       "./worker-configuration.d.ts",
       "node"

@@ -1,10 +1,10 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import devicesAppsIcon from '@/app/icons/ui/devices-apps.svg'
-import webIcon from '@/app/icons/ui/web.svg'
-import searchAdvIcon from '@/app/icons/ui/search-advanced.svg'
-import docSentimentIcon from '@/app/icons/ui/doc-sentiment.svg'
-import Link from 'next/link';
+import devicesAppsIcon from '@/src/icons/ui/devices-apps.svg'
+import webIcon from '@/src/icons/ui/web.svg'
+import searchAdvIcon from '@/src/icons/ui/search-advanced.svg'
+import docSentimentIcon from '@/src/icons/ui/doc-sentiment.svg'
+// import Link from 'next/link';
 
 type AgencyFeature = {
     title: string,
@@ -22,7 +22,7 @@ const productionFeatures: AgencyFeature[] = [
         description: "Fast, clean, conversion-focused websites built to turn the right visitors into leads and customers.",
         linkUrl: "/services/digital#web",
         imageUrl: "/images/features/website.png",
-        iconUrl: webIcon,
+        iconUrl: webIcon.src,
     },
     {
         title: "Interfaces people enjoy.",
@@ -30,7 +30,7 @@ const productionFeatures: AgencyFeature[] = [
         description: "Product UI and UX design built around how your users actually think and move. Simple, smooth, and built to retain.",
         linkUrl: "/services/digital#product",
         imageUrl: "/images/features/uiux.png",
-        iconUrl: devicesAppsIcon,
+        iconUrl: devicesAppsIcon.src,
     },
     {
         title: "One page. One job.",
@@ -38,7 +38,7 @@ const productionFeatures: AgencyFeature[] = [
         description: "Focused, distraction-free landing pages that explain your offer clearly and move visitors toward one action.",
         linkUrl: "/services/digital#landing-pages",
         imageUrl: "/images/features/landing-pages.png",
-        iconUrl: docSentimentIcon,
+        iconUrl: docSentimentIcon.src,
     },
     {
         title: "Found before the competition.",
@@ -46,7 +46,7 @@ const productionFeatures: AgencyFeature[] = [
         description: "We design your site with search in mind. Clean structure, fast load, right signals — so the right people find you without paying for every click.",
         linkUrl: "/services/digital#seo",
         imageUrl: "/images/features/seo.png",
-        iconUrl: searchAdvIcon,
+        iconUrl: searchAdvIcon.src,
     },
 ]
 
@@ -65,11 +65,11 @@ export default function FeaturesSection() {
 
             {
                 productionFeatures.map((feature, index) => {
-                    return <Link key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                    return <a key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             <div className='mb-2 h-80'>
                                 <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${feature.imageUrl})` }}>
-                                    <Image src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
+                                    <img src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
                                 </div>
                             </div>
                             <div className='p-8'>
@@ -86,7 +86,7 @@ export default function FeaturesSection() {
                                 </p>
                             </div>
                         </div>
-                    </Link>;
+                    </a>;
                 })
             }
 

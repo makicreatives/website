@@ -1,12 +1,12 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import userIcon from '@/app/icons/ui/partnership.svg'
-import timeIcon from '@/app/icons/ui/turnaround.svg'
-import refreshIcon from '@/app/icons/ui/updateComplete.svg'
-import folderIcon from '@/app/icons/ui/folderMoveTo.svg'
-import documentIcon from '@/app/icons/ui/doc-sentiment.svg'
-import pauseIcon from '@/app/icons/ui/pauseFeature.svg'
-import Link from 'next/link';
+import userIcon from '@/src/icons/ui/partnership.svg'
+import timeIcon from '@/src/icons/ui/turnaround.svg'
+import refreshIcon from '@/src/icons/ui/updateComplete.svg'
+import folderIcon from '@/src/icons/ui/folderMoveTo.svg'
+import documentIcon from '@/src/icons/ui/doc-sentiment.svg'
+import pauseIcon from '@/src/icons/ui/pauseFeature.svg'
+// import Link from 'next/link';
 
 type AgencyFeature = {
     title: string,
@@ -24,7 +24,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "You work directly with the same designer from brief to delivery. Your brand stays consistent and nothing gets lost in translation.",
         linkUrl: "/services",
         imageUrl: "/images/features/one-designer.png",
-        iconUrl: userIcon,
+        iconUrl: userIcon.src,
     },
     {
         title: "Fast turnaround. Every time.",
@@ -32,7 +32,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Design that moves at the pace your business needs. No waiting weeks for a first draft or chasing for updates.",
         linkUrl: "/services",
         imageUrl: "/images/features/fast-turnaround.png",
-        iconUrl: timeIcon,
+        iconUrl: timeIcon.src,
     },
     {
         title: "Unlimited revisions.",
@@ -40,7 +40,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Retainer clients get unlimited revisions. Project clients get three rounds. Either way we don't sign off until you're happy with the work.",
         linkUrl: "/services",
         imageUrl: "/images/features/revisions.png",
-        iconUrl: refreshIcon,
+        iconUrl: refreshIcon.src,
     },
     {
         title: "Source files. Always.",
@@ -48,7 +48,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Every project ships with full source files — Figma, Illustrator, whatever the job calls for. You own everything we make.",
         linkUrl: "/services",
         imageUrl: "/images/features/source-files.png",
-        iconUrl: folderIcon,
+        iconUrl: folderIcon.src,
     },
     {
         title: "Print and digital ready.",
@@ -56,7 +56,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Every asset delivered print-ready and screen-ready. No back and forth with your printer or developer over wrong file formats.",
         linkUrl: "/services",
         imageUrl: "/images/features/file-formats.png",
-        iconUrl: documentIcon,
+        iconUrl: documentIcon.src,
     },
     {
         title: "Pause anytime.",
@@ -64,7 +64,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Retainer clients can pause or cancel with a week's notice. Design should flex with your business — not the other way around.",
         linkUrl: "/services",
         imageUrl: "/images/features/pause.png",
-        iconUrl: pauseIcon,
+        iconUrl: pauseIcon.src,
     },
 ];
 
@@ -82,11 +82,11 @@ export default function FeaturesSection() {
 
             {
                 agencyFeatures.map((feature, index) => {
-                    return <Link key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                    return <a key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             <div className='mb-2 h-80'>
                                 <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${feature.imageUrl})` }}>
-                                    <Image src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
+                                    <img src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
                                 </div>
                             </div>
                             <div className='p-8'>
@@ -103,7 +103,7 @@ export default function FeaturesSection() {
                                 </p>
                             </div>
                         </div>
-                    </Link>;
+                    </a>;
                 })
             }
 

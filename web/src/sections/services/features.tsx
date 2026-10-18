@@ -1,12 +1,12 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import brandIcon from '@/app/icons/ui/badge.svg'
-import partnershipIcon from '@/app/icons/ui/partnership.svg'
-import printIcon from '@/app/icons/ui/presentation.svg'
-import webIcon from '@/app/icons/ui/web.svg'
-import marketingIcon from '@/app/icons/ui/ibm-consulting-advantage-assistance.svg'
-import docSentimentIcon from '@/app/icons/ui/doc-sentiment.svg'
-import Link from 'next/link';
+import brandIcon from '@/src/icons/ui/badge.svg'
+import partnershipIcon from '@/src/icons/ui/partnership.svg'
+import printIcon from '@/src/icons/ui/presentation.svg'
+import webIcon from '@/src/icons/ui/web.svg'
+import marketingIcon from '@/src/icons/ui/ibm-consulting-advantage-assistance.svg'
+import docSentimentIcon from '@/src/icons/ui/doc-sentiment.svg'
+// import Link from 'next/link';
 
 type AgencyFeature = {
     title: string,
@@ -24,7 +24,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Before anything else, your brand needs to be solid. Logo, colors, fonts, tone — we build the foundation everything else sits on.",
         linkUrl: "/services/design#brand-identity",
         imageUrl: "/images/features/brand-first.png",
-        iconUrl: brandIcon,
+        iconUrl: brandIcon.src,
     },
     {
         title: "Design that travels",
@@ -32,7 +32,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "From business cards to trade show booths, every asset we make stays on-brand no matter where it shows up.",
         linkUrl: "/services/design",
         imageUrl: "/images/features/design-travels.png",
-        iconUrl: printIcon,
+        iconUrl: printIcon.src,
     },
     {
         title: "Digital that performs",
@@ -40,7 +40,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Websites and landing pages designed with your customer's next step in mind. Every layout decision has a reason.",
         linkUrl: "/services/digital",
         imageUrl: "/images/features/digital-performs.png",
-        iconUrl: webIcon,
+        iconUrl: webIcon.src,
     },
     {
         title: "Marketing that sticks",
@@ -48,7 +48,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Social graphics, email templates, lead magnets — designed to fit how your team works and built to stay consistent.",
         linkUrl: "/services/marketing",
         imageUrl: "/images/features/marketing-sticks.png",
-        iconUrl: marketingIcon,
+        iconUrl: marketingIcon.src,
     },
     {
         title: "Content that builds trust",
@@ -56,7 +56,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Ebooks, reports, pitch decks — designed to position you as the authority in your space before the meeting even starts.",
         linkUrl: "/services/design#ebooks-reports",
         imageUrl: "/images/features/content-trust.png",
-        iconUrl: docSentimentIcon,
+        iconUrl: docSentimentIcon.src,
     },
     {
         title: "One point of contact",
@@ -64,7 +64,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "You work directly with the designer from brief to delivery. Faster decisions, sharper output, nothing gets lost in translation.",
         linkUrl: "/services",
         imageUrl: "/images/features/one-contact.png",
-        iconUrl: partnershipIcon,
+        iconUrl: partnershipIcon.src,
     },
 ]
 export default function FeaturesSection() {
@@ -82,11 +82,11 @@ export default function FeaturesSection() {
 
             {
                 agencyFeatures.map((feature, index) => {
-                    return <Link key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                    return <a key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             <div className='mb-2 h-80'>
                                 <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${feature.imageUrl})` }}>
-                                    <Image src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
+                                    <img src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
                                 </div>
                             </div>
                             <div className='p-8'>
@@ -103,7 +103,7 @@ export default function FeaturesSection() {
                                 </p>
                             </div>
                         </div>
-                    </Link>;
+                    </a>;
                 })
             }
 

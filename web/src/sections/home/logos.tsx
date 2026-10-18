@@ -11,7 +11,7 @@ export default function LogosSection() {
                 </div>
                 {/* <!-- End Title --> */}
 
-                <div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24 dark:invert">
+                <div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
 
 
                     <svg className="w-16 h-auto md:w-20 lg:w-24 mx-auto sm:mx-0 " width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg">

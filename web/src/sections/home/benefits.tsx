@@ -86,7 +86,7 @@ export default function BenefitsSection() {
         <div className={"flex justify-center py-12  bg-black"}>
             <div className="flex flex-wrap justify-center items-center px-8 pb-4 ">
                 <span className="relative h-28 w-24 ">
-                    <img src={"/images/site/paul-rand.png"} alt={"paul rand portrait"} className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px] " />
+                    <img src={"/images/site/paul-rand.png"} alt={"paul rand portrait"} className="bg-gray-300 bg-opacity-40 h-full object-cover rounded-[180px] " />
                 </span>
                 <div className=" p-8 text-off-white">
                     <span className=" font-normal font-body leading-tight">&ldquo;<b>Design is the silent ambassador of your brand.</b>&rdquo;

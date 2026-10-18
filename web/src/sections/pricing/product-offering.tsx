@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from 'next/image';
+// import Link from "next/link";
+// import Image from 'next/image';
 
 
-import retainerIcon from '@/app/icons/ui/turnaround.svg'
-import byBriefIcon from '@/app/icons/ui/partnership.svg'
-import { Pill } from "@/app/components";
+import retainerIcon from '@/src/icons/ui/turnaround.svg'
+import byBriefIcon from '@/src/icons/ui/partnership.svg'
+import { Pill } from "@/src/components";
 
 export default function ProductOfferingSection() {
     type PricingTier = {
@@ -38,7 +38,7 @@ export default function ProductOfferingSection() {
             turnaround: "2-3 business days per request",
             cta: "Get Started",
             ctaUrl: "/lets-work/retainer",
-            iconUrl: retainerIcon,
+            iconUrl: retainerIcon.src,
             imageUrl:"https://images.pexels.com/photos/17363205/pexels-photo-17363205.jpeg",
             isRecommended: true,
             perks: [
@@ -64,7 +64,7 @@ export default function ProductOfferingSection() {
             turnaround: "5-7 business days depending on scope",
             cta: "Send Your Brief",
             ctaUrl: "/lets-work",
-            iconUrl: byBriefIcon,            
+            iconUrl: byBriefIcon.src,            
             imageUrl: "https://images.pexels.com/photos/17079290/pexels-photo-17079290.jpeg",
             isRecommended: false,
             perks: [
@@ -96,12 +96,12 @@ export default function ProductOfferingSection() {
 
             {
                 pricingTiers.map((tier, index) => {
-                    return <Link key={"featureCardId" + index} href={tier.ctaUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                    return <a key={"featureCardId" + index} href={tier.ctaUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             {tier.isRecommended ? <span className=" flex items-center rounded-2xxl bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">*</b>&nbsp;Most Popular</span> : ""}
                             <div className='mb-2 h-80'>
                                 <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${tier.imageUrl})` }}>
-                                    <Image src={tier.iconUrl} width={320} className='h-24 opacity-50' alt={tier.title + " service card"} />
+                                    <img src={tier.iconUrl} width={320} className='h-24 opacity-50' alt={tier.title + " service card"} />
                                 </div>
                             </div>
                             <div className='p-8 flex flex-col'>
@@ -121,16 +121,16 @@ export default function ProductOfferingSection() {
                                     </span>
                                 </h2>
                                 <div className='flex'>
-                                    <Link href={tier.ctaUrl} className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
+                                    <a href={tier.ctaUrl} className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
                                         <span>{tier.cta}</span>
                                         <span>
                                             <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
                                         </span>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </Link>;
+                    </a>;
                 })
             }
 

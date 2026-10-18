@@ -1,5 +1,5 @@
-import { Pill } from "@/app/components"
-import Link from "next/link";
+import { Pill } from "@/src/components"
+// import Link from "next/link";
 
 export interface AgencyService {
     title: string,
@@ -75,7 +75,7 @@ export default function OurWorkSection() {
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
                 {
                     agencyServices.map((service, index) => {
-                        return <Link key={"serviceCardId" + index} href={service.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all'>
+                        return <a key={"serviceCardId" + index} href={service.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all'>
                             <div className={'h-full border-black border-2 border-b-16  dark:border-off-white p-8 '}>
                                 <div className='mb-2'>
                                     <img src={service.imageUrl} className='w-full h-64 object-cover' alt={service.title + " service card"} />
@@ -89,7 +89,7 @@ export default function OurWorkSection() {
                                     })}
                                 </div>
                             </div>
-                        </Link>;
+                        </a>;
                     })
                 }
             </div>

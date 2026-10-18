@@ -1,10 +1,10 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import devicesAppsIcon from '@/app/icons/ui/devices-apps.svg'
-import emailIcon from '@/app/icons/ui/email-new.svg'
-import taskAddIcon from '@/app/icons/ui/task-add.svg'
-import marketingIcon from '@/app/icons/ui/location-star.svg'
-import Link from 'next/link';
+import devicesAppsIcon from '@/src/icons/ui/devices-apps.svg'
+import emailIcon from '@/src/icons/ui/email-new.svg'
+import taskAddIcon from '@/src/icons/ui/task-add.svg'
+import marketingIcon from '@/src/icons/ui/location-star.svg'
+// import Link from 'next/link';
 
 type AgencyFeature = {
     title: string,
@@ -22,7 +22,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Social posts, covers, story templates, ad creatives — all on-brand and ready to post without a redesign every time.",
         linkUrl: "/services/marketing#social-media",
         imageUrl: "/images/features/social-media.png",
-        iconUrl: devicesAppsIcon,
+        iconUrl: devicesAppsIcon.src,
     },
     {
         title: "Emails worth opening.",
@@ -30,7 +30,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Email designs that render correctly in every inbox, match your brand, and make it easy for readers to take the next step.",
         linkUrl: "/services/marketing#email-templates",
         imageUrl: "/images/features/email.png",
-        iconUrl: emailIcon,
+        iconUrl: emailIcon.src,
     },
     {
         title: "Pull the right clients in.",
@@ -38,7 +38,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "A well-designed free resource does the selling before you do. We design lead magnets that attract the right people and convert.",
         linkUrl: "/services/marketing#lead-magnets",
         imageUrl: "/images/features/lead-magnets.png",
-        iconUrl: taskAddIcon,
+        iconUrl: taskAddIcon.src,
     },
     {
         title: "Everything looking sharp.",
@@ -46,7 +46,7 @@ const agencyFeatures: AgencyFeature[] = [
         description: "Brochures, banners, one-pagers, digital ads — every piece of collateral your team needs to go to market looking professional.",
         linkUrl: "/services/marketing#marketing-assets",
         imageUrl: "/images/features/marketing-assets.png",
-        iconUrl: marketingIcon,
+        iconUrl: marketingIcon.src,
     },
 ]
 
@@ -65,11 +65,11 @@ export default function FeaturesSection() {
 
             {
                 agencyFeatures.map((feature, index) => {
-                    return <Link key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                    return <a key={"featureCardId" + index} href={feature.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             <div className='mb-2 h-80'>
                                 <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${feature.imageUrl})` }}>
-                                    <Image src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
+                                    <img src={feature.iconUrl} width={320} className='h-24 opacity-50' alt={feature.title + " service card"} />
                                 </div>
                             </div>
                             <div className='p-8'>
@@ -86,7 +86,7 @@ export default function FeaturesSection() {
                                 </p>
                             </div>
                         </div>
-                    </Link>;
+                    </a>;
                 })
             }
 

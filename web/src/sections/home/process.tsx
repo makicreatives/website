@@ -21,7 +21,7 @@ export default function ProcessSection() {
                 <div className="border-r border-r-black dark:border-r-off-white">
                     <div className="p-8 h-8"></div>
                     <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] hover:from-[#D4AF37]/30 hover:via-[#C8A2FF]/40 hover:to-black/80"}>
-                        <img src={"/images/site/telephone.png"} alt={"telephone image"} className="bg-gray-3300 bg-opacity-40 mix-blend-luminosity object-cover"/>
+                        <img src={"/images/site/telephone.png"} alt={"telephone image"} className="bg-gray-3300 bg-opacity-40 mix-blend-luminosity object-cover" />
                     </div>
                     <div className="p-8">
                         <p className="text-2xl font-technical uppercase font-bold mb-6">1. Discovery Call </p>
@@ -34,7 +34,7 @@ export default function ProcessSection() {
                 <div className="border-r border-r-black dark:border-r-off-white">
                     <div className="p-8 h-8"></div>
                     <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] hover:from-[#D4AF37]/30 hover:via-[#C8A2FF]/40 hover:to-black/80"}>
-                        <img src={"/images/site/arrow.png"} alt={"arrow image"} className="bg-gray-300 bg-opacity-40 mix-blend-luminosity object-cover"/>
+                        <img src={"/images/site/arrow.png"} alt={"arrow image"}  className="bg-gray-300 bg-opacity-40 mix-blend-luminosity object-cover" />
                     </div>
                     <div className="p-8">
                         <p className="text-2xl font-technical uppercase font-bold mb-6">2. Strategy & Planning </p>
@@ -45,7 +45,7 @@ export default function ProcessSection() {
                 <div className="border-r border-r-black dark:border-r-off-white">
                     <div className="p-8 h-8"></div>
                     <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] hover:from-[#D4AF37]/30 hover:via-[#C8A2FF]/40 hover:to-black/80"}>
-                        <img src={"/images/site/cards.png"} alt={"cutout cards image"} className="bg-gray-300 bg-opacity-40  mix-blend-luminosity object-cover"/>
+                        <img src={"/images/site/cards.png"} alt={"cutout cards image"} className="bg-gray-300 bg-opacity-40  mix-blend-luminosity object-cover" />
                     </div>
                     <div className="p-8">
                         <p className="text-2xl font-technical uppercase font-bold mb-6">3. Design & Revisions </p>
@@ -56,7 +56,7 @@ export default function ProcessSection() {
                 <div className="border-r border-r-black dark:border-r-off-white">
                     <div className="p-8 h-8"></div>
                     <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] hover:from-[#D4AF37]/30 hover:via-[#C8A2FF]/40 hover:to-black/80"}>
-                        <img src={"/images/site/handshake.png"} alt={"handshake neon sign"} className="bg-gray-300 bg-opacity-0 mix-blend-luminosity object-cover"/>
+                        <img src={"/images/site/handshake.png"} alt={"handshake neon sign"} className="bg-gray-300 bg-opacity-0 mix-blend-luminosity object-cover" />
                     </div>
                     <div className="p-8">
                         <p className="text-2xl font-technical uppercase font-bold mb-6">4. Launch & Support </p>

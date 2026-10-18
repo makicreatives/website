@@ -1,5 +1,5 @@
-import { Button } from "@/app/components";
-import Link from "next/link";
+import { Button } from "@/src/components";
+// import Link from "next/link";
 // import Image from 'next/image';
 
 export default function HeroSection() {
@@ -23,14 +23,14 @@ export default function HeroSection() {
 
                             </h2>
                             <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
-                                {/* <Link href={'/portfolio'}>
+                                {/* <a href={'/portfolio'}>
                                     <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">See our work
                                     </Button>
-                                </Link> */}
-                                <Link href={'/lets-work'} >
+                                </a> */}
+                                <a href={'/lets-work'} >
                                     <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
                                     </Button>
-                                </Link>
+                                </a>
                             </div>
                             <p className="text-body-medium">
                                 <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;New client slots open monthly
@@ -71,14 +71,14 @@ export default function HeroSection() {
                                         Connect more with your customers
                                     </p>
                                     <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
-                                        <Link href={'/services/design'}>
+                                        <a href={'/services/design'}>
                                             <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">View Catalogue
                                             </Button>
-                                        </Link>
-                                        {/* <Link href={'/lets-work'} >
+                                        </a>
+                                        {/* <a href={'/lets-work'} >
                                             <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
                                             </Button>
-                                        </Link> */}
+                                        </a> */}
                                     </div>
                                     <p className="text-body-medium">
                                         <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Where B2B brands come to look the part
@@ -122,14 +122,14 @@ export default function HeroSection() {
                                         Connect more with your customers
                                     </p>
                                     <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
-                                        <Link href={'/services/production'}>
+                                        <a href={'/services/production'}>
                                                         <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">View Catalogue
                                                         </Button>
-                                                    </Link>
-                                        {/* <Link href={'/lets-work'} >
+                                                    </a>
+                                        {/* <a href={'/lets-work'} >
                                             <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
                                             </Button>
-                                        </Link> */}
+                                        </a> */}
                                     </div>
                                     <p className="text-body-medium">
                                         <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;We make B2B brands look like they mean business.
@@ -170,14 +170,14 @@ export default function HeroSection() {
 
                                     </h2>
                                     <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
-                                        <Link href={'/services/marketing'}>
+                                        <a href={'/services/marketing'}>
                                                 <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">View Catalogue
                                                 </Button>
-                                            </Link>
-                                        {/* <Link href={'/lets-work'} >
+                                            </a>
+                                        {/* <a href={'/lets-work'} >
                                             <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase"><span>Start with a <i className="font-display capitalize text-secondary-200">free</i>&nbsp; brief</span>
                                             </Button>
-                                        </Link> */}
+                                        </a> */}
                                     </div>
                                     <p className="text-body-medium">
                                         <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Built for brands that take design seriously

@@ -1,5 +1,5 @@
-import { Button, Pill } from "@/app/components";
-import Link from "next/link";
+import { Button, Pill } from "@/src/components";
+// import Link from "next/link";
 
 export default function WhyUsSection() {
     return <section id="quick-cta">
@@ -26,11 +26,11 @@ export default function WhyUsSection() {
                     <Pill>Built&nbsp;to&nbsp;scale.</Pill> Your design system grows with your business. From early stage to enterprise, we adapt to your needs. */}
                 </p>
                 <div className="pb-8">
-                    <Link href={'/lets-work'} >
+                    <a href={'/lets-work'} >
                         <Button className="text-white hover:border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-8 py-2.5 focus:outline-none uppercase">
                             Get a quote
                         </Button>
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className="">

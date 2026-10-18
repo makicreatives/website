@@ -1,0 +1,15 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import BlogsPage from './blogs-page';
+
+const metadata = {
+	title: "Blogs | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<BlogsPage  client:load />
+</Layout>

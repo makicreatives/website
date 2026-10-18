@@ -1,14 +1,14 @@
 'use client'
-import { MegaMenu, Footer } from "@/app/components";
-import { Button, Form, TextArea, TextInput } from "@carbon/react";
+import { MegaMenu, Footer } from "@/src/components";
+// import { Button, Form, TextArea, TextInput } from "@carbon/react";
 import Image from 'next/image';
 import Link from "next/link";
 
-// import circleIcon from '@/app/icons/ui/circle.svg'
-// import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
-import locationIcon from '@/app/icons/ui/location.svg'
-import phoneIcon from '@/app/icons/ui/phone.svg'
-import mailIcon from '@/app/icons/ui/mail.svg'
+// import circleIcon from '@/src/icons/ui/circle.svg'
+// import dTriangleIcon from '@/src/icons/ui/down-triangle.svg'
+import locationIcon from '@/src/icons/ui/location.svg'
+import phoneIcon from '@/src/icons/ui/phone.svg'
+import mailIcon from '@/src/icons/ui/mail.svg'
 import React from 'react';
 
 

@@ -1,0 +1,14 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import FormPage from './form-page';
+const metadata = {
+	title: "Fill in form | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<FormPage  client:load />
+</Layout>

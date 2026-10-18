@@ -1,7 +1,7 @@
-import { Faq, Footer, MegaMenu } from "@/app/components";
-import { faqs } from "@/app/about/sections/faq";
-import { LogosSection, TestimonialsSection, CTASection } from "@/app/sections/home";
-import { FeaturesSection, HeroSection, WhyUsSection, PortfolioSection, StatsSection } from "@/app/sections/services";
+import { Faq, Footer, MegaMenu } from "@/src/components";
+import { faqs } from "@/src/pages/about/sections/faq";
+import { LogosSection, TestimonialsSection, CTASection } from "@/src/sections/home";
+import { FeaturesSection, HeroSection, WhyUsSection, PortfolioSection, StatsSection } from "@/src/sections/services";
 
 
 

@@ -1,0 +1,14 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import PricingPage from './pricing-page';
+const metadata = {
+	title: "Pricing | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<PricingPage  client:load />
+</Layout>

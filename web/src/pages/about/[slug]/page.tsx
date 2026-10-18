@@ -1,21 +1,21 @@
-import { MegaMenu, Footer } from "@/app/components";
+import { MegaMenu, Footer } from "@/src/components";
 import Image from 'next/image';
 import Link from "next/link";
 
-// import circleIcon from '@/app/icons/ui/circle.svg'
-// import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
-// import locationIcon from '@/app/icons/ui/location.svg'
-// import phoneIcon from '@/app/icons/ui/phone.svg'
-import openTabIcon from '@/app/icons/ui/openTab.svg'
+// import circleIcon from '@/src/icons/ui/circle.svg'
+// import dTriangleIcon from '@/src/icons/ui/down-triangle.svg'
+// import locationIcon from '@/src/icons/ui/location.svg'
+// import phoneIcon from '@/src/icons/ui/phone.svg'
+import openTabIcon from '@/src/icons/ui/openTab.svg'
 import React from 'react';
 
-import BusinessSection from "@/app/about/sections/business";
-import StorySection from "@/app/about/sections/story";
-import GoodSection from "@/app/about/sections/good";
-import TeamSection from "@/app/about/sections/team";
-import TermsSection from "@/app/about/sections/terms";
-import PrivacySection from "@/app/about/sections/privacy";
-import AffiliateSection from "@/app/about/sections/affiliates";
+import BusinessSection from "@/src/pages/about/sections/business";
+import StorySection from "@/src/pages/about/sections/story";
+import GoodSection from "@/src/pages/about/sections/good";
+import TeamSection from "@/src/pages/about/sections/team";
+import TermsSection from "@/src/pages/about/sections/terms";
+import PrivacySection from "@/src/pages/about/sections/privacy";
+import AffiliateSection from "@/src/pages/about/sections/affiliates";
 import { notFound } from "next/navigation";
 
 import type { Metadata } from 'next';

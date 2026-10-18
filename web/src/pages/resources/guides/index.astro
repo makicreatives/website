@@ -1,0 +1,15 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import GuidesPage from './guides-page';
+
+const metadata = {
+	title: "Guides | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<GuidesPage  client:load />
+</Layout>

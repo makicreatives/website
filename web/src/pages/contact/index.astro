@@ -1,0 +1,14 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import ContactPage from './contact-page';
+const metadata = {
+	title: "Contact Us | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<ContactPage  client:load />
+</Layout>

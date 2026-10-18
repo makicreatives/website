@@ -1,0 +1,14 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import LetsWorkPage from './lets-work-page';
+const metadata = {
+	title: "Let's Work on a Project | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<LetsWorkPage  client:load />
+</Layout>

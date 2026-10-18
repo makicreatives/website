@@ -1,0 +1,15 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import ResourcesPage from './resources-page';
+
+const metadata = {
+	title: "Resources | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<ResourcesPage  client:load />
+</Layout>

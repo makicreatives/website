@@ -1,0 +1,14 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import PortfolioPage from './portfolio-page';
+const metadata = {
+	title: "Our Work Portfolio | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<PortfolioPage  client:load />
+</Layout>

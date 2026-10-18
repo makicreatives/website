@@ -3,8 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // import styles from './MegaMenu.css';
-import Link from 'next/link';
-import { Button } from '@/app/components/';
+// import Link from 'next/link';
+import { Button } from '@/src/components/';
 
 export interface MegaMenuProps {
   hTopColor?: string;
@@ -260,10 +260,10 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
 
   return <nav className="bg-primary0 text-white dark:text-off-white border-default">
     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-      <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
         <img src={"/images/site/logoicon.png"} className="h-12 inline-flex" alt="Maki Creative Studio Logo" />
         <span className="self-center text-xl font-semibold whitespace-nowrap text-heading">Maki Creative Studio</span>
-      </Link>
+      </a>
       <button data-collapse-toggle="mega-menu-full" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-100 hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
         <svg className='w-6 h-6' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"> {/* <!-- Icon from Carbon by IBM - undefined --> */} <path fill="currentColor" d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z" /></svg>
@@ -272,7 +272,7 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
         <ul className="flex flex-col mt-4 align-middle font-bold md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase place-content-center">
 
           <li className='place-content-center'>
-            <Link href={'/'} className={[linkStyling, (activeLink === 'home' ? activeLinkStyling : '')].join(' ')}>Home</Link>
+            <a href={'/'} className={[linkStyling, (activeLink === 'home' ? activeLinkStyling : '')].join(' ')}>Home</a>
           </li>
 
           <li className="place-content-center">
@@ -282,27 +282,27 @@ export function MegaMenu({ activeLink, hTopColor = 'bg-primary1B', hBottomColor 
             </button>
           </li>
           <li className="place-content-center">
-            <Link href={'/portfolio'} className={[linkStyling, (activeLink === 'portfolio' ? activeLinkStyling : '')].join(' ')}>Portfolio</Link>
+            <a href={'/portfolio'} className={[linkStyling, (activeLink === 'portfolio' ? activeLinkStyling : '')].join(' ')}>Portfolio</a>
           </li>
           <li className="place-content-center">
-            <Link href={'/pricing'} className={[linkStyling, (activeLink === 'pricing' ? activeLinkStyling : '')].join(' ')}>Pricing</Link>
+            <a href={'/pricing'} className={[linkStyling, (activeLink === 'pricing' ? activeLinkStyling : '')].join(' ')}>Pricing</a>
           </li>
           <li className="place-content-center hidden lg:block">
-            <Link href={'/resources'} className={[linkStyling, (activeLink === 'resources' ? activeLinkStyling : '')].join(' ')}>Resources</Link>
+            <a href={'/resources'} className={[linkStyling, (activeLink === 'resources' ? activeLinkStyling : '')].join(' ')}>Resources</a>
           </li>
           <li className="">
             {/* BOOK A DEMO */}
-            <Link href={'/lets-work'} >
+            <a href={'/lets-work'} >
               <Button className="text-white border-textDark  bg-primary1B box-border border border-transparent hover:bg-primary hover:cursor-pointer  focus:ring-4 focus:ring-primary1B shadow-xs font-bold leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none uppercase">Book a call
               </Button>
-            </Link>
+            </a>
           </li>
           <li className="">
             {/* Sign in */}
-            <Link href={'https://invoiceninja.mevinsystems.cloud/client/login/YwPqm81yu4xSqXdU9em1qJCxfuJKS1GM'} >
+            <a href={'https://invoiceninja.mevinsystems.cloud/client/login/YwPqm81yu4xSqXdU9em1qJCxfuJKS1GM'} >
               <Button className="text-white   bg-secondary hover:bg-secondary-950 hover:cursor-pointer focus:ring-4 focus:ring-secondary-700 shadow-xs font-bold leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none uppercase">Sign In
               </Button>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
@@ -419,7 +419,7 @@ export function MegaMenuCard({ type = "regular",headId, link, id, title, descrip
   switch (type) {
     case "head":
       return <li>
-        <Link href={`${cleanLink(link)}/${id}`} className={styling.card}>
+        <a href={`${cleanLink(link)}/${id}`} className={styling.card}>
           <div className={styling.title}>
             <span>{title}</span>
             <span>
@@ -427,12 +427,12 @@ export function MegaMenuCard({ type = "regular",headId, link, id, title, descrip
             </span>
           </div>
           <span className="text-sm text-body">{description}</span>
-        </Link>
+        </a>
       </li>;
 
     case "regular":
       return <li>
-        <Link href={`${cleanLink(link)}/${cleanLink(headId)}/#${id}`} className={styling.card} >
+        <a href={`${cleanLink(link)}/${cleanLink(headId)}/#${id}`} className={styling.card} >
           <div className={styling.title}>
             <span>{title}</span>
             <span>
@@ -440,7 +440,7 @@ export function MegaMenuCard({ type = "regular",headId, link, id, title, descrip
             </span>
           </div>
           <span className="text-sm text-body">{description}</span>
-        </Link>
+        </a>
       </li>;
   }
 }
@@ -459,7 +459,7 @@ export interface MobileMenuCardProps {
 
 export function MobileMenuCard({ link, title, styling, page, activeLink,cta = false }: Readonly<MobileMenuCardProps>) {
   return <li className='border-b'>
-    <Link href={link} className={styling.card}>
+    <a href={link} className={styling.card}>
       <div className={styling.title}>
         <span className={["", (activeLink === page ? "text-primary1B-500 font-bold" : '')].join(' ')}>
           {title}
@@ -469,6 +469,6 @@ export function MobileMenuCard({ link, title, styling, page, activeLink,cta = fa
           <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
         </span>
       </div>
-    </Link>
+    </a>
   </li>
 }

@@ -11,46 +11,46 @@ export interface AgencyService {
 export default function OurWorkSection() {
 
     const agencyServices: AgencyService[] = [
-    {
-        title: "Brand Identity Design",
-        imageUrl: "/images/site/logo-icon.png", // "/images/services/brand-identity.png",
-        linkUrl: "/services/design#brand-identity",
-        tags: ["Branding", "Logo", "Visual Identity"]
-    },
-    {
-        title: "Website Design",
-        imageUrl: "/images/site/logo-icon.png", // "/images/services/web-design.png",
-        linkUrl: "/services/production#web",
-        tags: ["Web", "UI/UX", "Conversion"]
-    },
-    {
-        title: "Pitch Deck Design",
-        imageUrl: "/images/site/logo-icon.png", //"/images/services/pitch-deck.png",
-        linkUrl: "/services/design#pitch-decks",
-        tags: ["Presentations", "Investor", "Sales"]
-    },
-    {
-        title: "Trade Show & Event Booth",
-        imageUrl:  "/images/site/logo-icon.png",// "/images/services/trade-show.png",
-        linkUrl: "/services/design#trade-show",
-        tags: ["Print", "Events", "Signage"]
-    },
-    {
-        title: "Social Media Assets",
-        imageUrl: "/images/site/logo-icon.png", // "/images/services/social-media.png",
-        linkUrl: "/services/marketing#social-media",
-        tags: ["Marketing", "Content", "Digital"]
-    },
-    {
-        title: "Ebooks & Report Design",
-        imageUrl: "/images/site/logo-icon.png", // "/images/services/ebooks-reports.png",
-        linkUrl: "/services/marketing#ebooks-reports",
-        tags: ["Content", "Lead Generation", "B2B"]
-    },
-]
+        {
+            title: "Brand Identity Design",
+            imageUrl: "/images/site/logo-icon.png", // "/images/services/brand-identity.png",
+            linkUrl: "/services/design#brand-identity",
+            tags: ["Branding", "Logo", "Visual Identity"]
+        },
+        {
+            title: "Website Design",
+            imageUrl: "/images/site/logo-icon.png", // "/images/services/web-design.png",
+            linkUrl: "/services/production#web",
+            tags: ["Web", "UI/UX", "Conversion"]
+        },
+        {
+            title: "Pitch Deck Design",
+            imageUrl: "/images/site/turnaround-abstract.png", //"/images/services/pitch-deck.png",
+            linkUrl: "/services/design#pitch-decks",
+            tags: ["Presentations", "Investor", "Sales"]
+        },
+        {
+            title: "Trade Show & Event Booth",
+            imageUrl: "/images/site/logo-icon.png",// "/images/services/trade-show.png",
+            linkUrl: "/services/design#trade-show",
+            tags: ["Print", "Events", "Signage"]
+        },
+        {
+            title: "Social Media Assets",
+            imageUrl: "/images/site/turnaround-abstract.png", // "/images/services/social-media.png",
+            linkUrl: "/services/marketing#social-media",
+            tags: ["Marketing", "Content", "Digital"]
+        },
+        {
+            title: "Ebooks & Report Design",
+            imageUrl: "/images/site/logo-icon.png", // "/images/services/ebooks-reports.png",
+            linkUrl: "/services/marketing#ebooks-reports",
+            tags: ["Content", "Lead Generation", "B2B"]
+        },
+    ]
     return <section id="our-work">
 
-        <div className="p-8 container">
+        <div className="p-8  container mx-auto">
             <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 ">
 
                 <p className="">Work that drives results</p>
@@ -71,22 +71,24 @@ export default function OurWorkSection() {
 
         </div>
 
-        <div className="p-8  ">
+        <div className="p-8  container mx-auto ">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
                 {
                     agencyServices.map((service, index) => {
-                        return <a key={"serviceCardId" + index} href={service.linkUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all'>
-                            <div className={'h-full border-black border-2 border-b-16  dark:border-off-white p-8 '}>
+                        return <a key={"serviceCardId" + index} href={service.linkUrl} className=' hover:text-white dark:hover:text-primary0 bg-offWhite dark:bg-primary0 hover:bg-primary0 dark:hover:bg-white hover:shadow-md hover:shadow-primary0-400 transition-all'>
+                            <div className={'h-full border-black border-2 border-b-16  dark:border-offWhite '}>
                                 <div className='mb-2'>
                                     <img src={service.imageUrl} className='w-full h-64 object-cover' alt={service.title + " service card"} />
                                 </div>
-                                <p className='mb-1 font-medium font-headlines text-headline-large uppercase'>
-                                    {service.title}
-                                </p>
-                                <div className=" mb-2 flex flex-wrap gap-0.5 space-x-4 space-y-2 text-xl font-technical uppercase font-medium  text-offWhite">
-                                    {service.tags.map((tag, index) => {
-                                        return <Pill  key={"serviceTagId-" + index}>{tag}</Pill>
-                                    })}
+                                <div className="p-8 ">
+                                    <p className='mb-1 font-medium font-headlines text-headline-large uppercase'>
+                                        {service.title}
+                                    </p>
+                                    <div className=" mb-2 flex flex-wrap gap-0.5 space-x-4 space-y-2 text-xl font-technical uppercase font-medium  text-offWhite dark:text-primary0">
+                                        {service.tags.map((tag, index) => {
+                                            return <Pill key={"serviceTagId-" + index}>{tag}</Pill>
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </a>;

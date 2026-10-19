@@ -1,0 +1,34 @@
+---
+import type { GetStaticPaths } from "astro";
+
+import Layout from '@/src/layouts/Layout.astro';
+import Page, { contentTabs } from './_page';
+const metadata = {
+	title: "About Us | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+
+export const getStaticPaths = (() => {
+
+    return contentTabs.map((tab)=>{
+
+		const slug: string = tab.title.trim().replaceAll(/ /g, '-').toLowerCase();
+
+        return  {
+            params: {slug},
+            props: { slug }
+        }
+    });
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.props
+
+
+
+---
+
+<Layout title={metadata.title}>
+	<Page urlSlug={slug} client:load />
+</Layout>

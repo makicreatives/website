@@ -1,14 +1,19 @@
 ---
 import Layout from '@/src/layouts/Layout.astro';
-import FormPage from './form-page';
+import FormPage from './_form-page';
 const metadata = {
 	title: "Fill in form | Maki Creative Studio",
 	description: "",
 	ogImage: ""
 }
 
+const searchParams = Astro.url.searchParams;
+console.debug(
+	":::[LOG]::: Query params: ",
+	searchParams
+)
 ---
 
 <Layout title={metadata.title}>
-	<FormPage  client:load />
+	<FormPage  client:load qParams={searchParams.get('q') ?? ""} />
 </Layout>

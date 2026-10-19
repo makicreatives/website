@@ -1,0 +1,15 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import MarketingPage from './_marketing-page';
+
+const metadata = {
+	title: "Marketing Design Services | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<MarketingPage  client:load />
+</Layout>

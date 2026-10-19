@@ -1,0 +1,33 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import Page from './_page';
+import softwareProjects from '@/src/data/projects/software.json';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths = (() => {
+
+    const posts = softwareProjects;
+
+    return posts.map((post) => {
+        const slug: string = post.name.trim().replaceAll(/ /g, '-').toLowerCase();
+
+        return  {
+            params: {slug},
+            props: { slug }
+        }
+    });
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.props
+
+const metadata = {
+	title: "Web Development Portfolio | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<Page  client:load urlSlug={slug} />
+</Layout>

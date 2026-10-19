@@ -1,6 +1,7 @@
 ---
 import Layout from '@/src/layouts/Layout.astro';
-import ServicesPage from './services-page';
+import RetainerPage from './_retainer-page';
+
 const metadata = {
 	title: "Business Services | Maki Creative Studio",
 	description: "",
@@ -10,6 +11,5 @@ const metadata = {
 ---
 
 <Layout title={metadata.title}>
-	<!-- <Welcome /> -->
-	<ServicesPage  client:load />
+	<RetainerPage  client:load />
 </Layout>

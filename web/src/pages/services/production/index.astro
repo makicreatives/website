@@ -1,0 +1,15 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import ProductionPage from './_production-page';
+
+const metadata = {
+	title: "Production Design Services | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<ProductionPage  client:load />
+</Layout>

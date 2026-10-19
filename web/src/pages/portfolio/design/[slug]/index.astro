@@ -1,0 +1,36 @@
+---
+import Layout from '@/src/layouts/Layout.astro';
+import Page from './_page.tsx';
+import type { GetStaticPaths } from 'astro';
+import designProjects from '@/src/data/projects/design.json'
+
+export const getStaticPaths = (() => {
+
+	const posts = designProjects;
+
+    return posts.map((post) => {
+        const slug: string  = post.name.trim().replaceAll(/ /g, '-').toLowerCase();
+
+        return  {
+            params: {slug},
+            props: { slug }
+        }
+    });
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.props
+
+
+
+
+const metadata = {
+	title: "Business Services | Maki Creative Studio",
+	description: "",
+	ogImage: ""
+}
+
+---
+
+<Layout title={metadata.title}>
+	<Page  client:load urlSlug={slug} />
+</Layout>

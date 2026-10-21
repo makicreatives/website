@@ -43,7 +43,7 @@ const studioTools: StudioTool[] = [
     {
         id: "mevinsystems",
         title: "Mevin Software Systems",
-        tagline: "Software Development & Engineering agency.",
+        tagline: "Software Development & Engineering agency",
         description: "They engineer and develop our backend systems and handling other softwares for running our agency, and for the website as well.",
         cta: "Visit Partner",
         iconUrl: mssIcon.src,
@@ -54,118 +54,131 @@ const studioTools: StudioTool[] = [
         isAffiliate: false
     },
 
+    {
+        id: "mss-cloud",
+        title: "MSS Cloud",
+        tagline: "Managed Software & Cloud Hosting for Businesses",
+        description: "They set up, host and maintain the exact software our business, we use their services to handle our business software IT.",
+        cta: "Visit Partner",
+        iconUrl: mssIcon.src,
+        imageUrl: "https://images.pexels.com/photos/17363205/pexels-photo-17363205.jpeg",
+        isPartner: true,
+        category: "system",
+        url: "https://www.mevinsystems.cloud/",
+        isAffiliate: false
+    },
     //******************************************/
     //  T O O L S
     //******************************************/
 
-    {
-        id: "figma",
-        title: "Figma",
-        tagline: "Where all the design happens.",
-        description: "Our primary design tool for everything — brand identity, web design, UI/UX, pitch decks, and social assets. If we made it, it started in Figma.",
-        category: "design",
-        url: "https://figma.com",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: figmaIcon.src,
-        isAffiliate: false,
-        badge: "Used Daily"
-    },
-    {
-        id: "affinity-studio",
-        title: "Affinity Studio",
-        tagline: "Print, illustration, and everything in between.",
-        description: "Vector for vector work and print files. Pixel for image editing. Layout for ebooks, reports, and multi-page layouts. A new industry standard emerges.",
-        category: "design",
-        url: "https://www.affinity.studio/",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: affinityIcon.src,
-        isAffiliate: false,
-        badge: "Used Daily"
-    },
-    {
-        id: "outline",
-        title: "Outline",
-        tagline: "How we stay organised.",
-        description: "Our team's knowledge base, client briefs, content planning, and internal docs — all in one place. Outline keeps the studio running without the chaos.",
-        category: "productivity",
-        url: "https://www.getoutline.com/",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: outlineIcon.src,
-        isAffiliate: false,
-        badge: "Used Daily"
-    },
-    {
-        id: "formbricks",
-        title: "Formbricks",
-        tagline: "How clients brief us.",
-        description: "The form tool behind our client intake and brief process. Clean, flexible, and easy to embed — clients fill it in, we get everything we need to start.",
-        category: "productivity",
-        url: "https://formbricks.com",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: formbricksIcon.src,
-        isAffiliate: false,
-        badge: "Client Facing"
-    },
-    {
-        id: "fizzy",
-        title: "Fizzy",
-        tagline: "How we track project progress.",
-        description: "Fast, clean issue and project tracking. We use Fizzy to manage design requests, revisions, and delivery — especially for retainer clients.",
-        category: "productivity",
-        url: "https://www.fizzy.do/",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: fizzyIcon.src,
-        isAffiliate: false,
-        badge: "Used Daily"
-    },
     // {
-    //     id: "framer",
-    //     title: "Framer",
-    //     tagline: "For websites that need to move.",
-    //     description: "When a project calls for a site with motion, interactions, and polish straight out of the box — Framer is where we build it.",
-    //     category: "web",
-    //     url: "https://framer.com",
+    //     id: "figma",
+    //     title: "Figma",
+    //     tagline: "Where all the design happens.",
+    //     description: "Our primary design tool for everything — brand identity, web design, UI/UX, pitch decks, and social assets. If we made it, it started in Figma.",
+    //     category: "design",
+    //     url: "https://figma.com",
     //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-    //     iconUrl: "/icons/tools/framer.svg",
+    //     iconUrl: figmaIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Used Daily"
+    // },
+    // {
+    //     id: "affinity-studio",
+    //     title: "Affinity Studio",
+    //     tagline: "Print, illustration, and everything in between.",
+    //     description: "Vector for vector work and print files. Pixel for image editing. Layout for ebooks, reports, and multi-page layouts. A new industry standard emerges.",
+    //     category: "design",
+    //     url: "https://www.affinity.studio/",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: affinityIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Used Daily"
+    // },
+    // {
+    //     id: "outline",
+    //     title: "Outline",
+    //     tagline: "How we stay organised.",
+    //     description: "Our team's knowledge base, client briefs, content planning, and internal docs — all in one place. Outline keeps the studio running without the chaos.",
+    //     category: "productivity",
+    //     url: "https://www.getoutline.com/",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: outlineIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Used Daily"
+    // },
+    // {
+    //     id: "formbricks",
+    //     title: "Formbricks",
+    //     tagline: "How clients brief us.",
+    //     description: "The form tool behind our client intake and brief process. Clean, flexible, and easy to embed — clients fill it in, we get everything we need to start.",
+    //     category: "productivity",
+    //     url: "https://formbricks.com",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: formbricksIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Client Facing"
+    // },
+    // {
+    //     id: "fizzy",
+    //     title: "Fizzy",
+    //     tagline: "How we track project progress.",
+    //     description: "Fast, clean issue and project tracking. We use Fizzy to manage design requests, revisions, and delivery — especially for retainer clients.",
+    //     category: "productivity",
+    //     url: "https://www.fizzy.do/",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: fizzyIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Used Daily"
+    // },
+    // // {
+    // //     id: "framer",
+    // //     title: "Framer",
+    // //     tagline: "For websites that need to move.",
+    // //     description: "When a project calls for a site with motion, interactions, and polish straight out of the box — Framer is where we build it.",
+    // //     category: "web",
+    // //     url: "https://framer.com",
+    // //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    // //     iconUrl: "/icons/tools/framer.svg",
+    // //     isAffiliate: false,
+    // //     badge: "Recommended"
+    // // },
+    // {
+    //     id: "cap",
+    //     title: "Cap",
+    //     tagline: "How we present work to clients.",
+    //     description: "Instead of long email threads, we send short Cap walkthroughs. Clients see the work in context, understand the decisions, and give better feedback.",
+    //     category: "communication",
+    //     url: "https://cap.so/",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: capIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Client Facing"
+    // },
+    // {
+    //     id: "unsplash",
+    //     title: "Unsplash",
+    //     tagline: "Stock photography that doesn't look stock.",
+    //     description: "Our go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
+    //     category: "design",
+    //     url: "https://unsplash.com",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: unsplashIcon.src,
     //     isAffiliate: false,
     //     badge: "Recommended"
     // },
-    {
-        id: "cap",
-        title: "Cap",
-        tagline: "How we present work to clients.",
-        description: "Instead of long email threads, we send short Cap walkthroughs. Clients see the work in context, understand the decisions, and give better feedback.",
-        category: "communication",
-        url: "https://cap.so/",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: capIcon.src,
-        isAffiliate: false,
-        badge: "Client Facing"
-    },
-    {
-        id: "unsplash",
-        title: "Unsplash",
-        tagline: "Stock photography that doesn't look stock.",
-        description: "Our go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
-        category: "design",
-        url: "https://unsplash.com",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: unsplashIcon.src,
-        isAffiliate: false,
-        badge: "Recommended"
-    },
-        {
-        id: "pexels",
-        title: "pexels",
-        tagline: "Stock photography that also doesn't look stock.",
-        description: "Our another go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
-        category: "design",
-        url: "https://pexels.com",
-        imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
-        iconUrl: pexelsIcon.src,
-        isAffiliate: false,
-        badge: "Recommended"
-    },
+    //     {
+    //     id: "pexels",
+    //     title: "pexels",
+    //     tagline: "Stock photography that also doesn't look stock.",
+    //     description: "Our another go-to for high quality photography when client shoots aren't available. Clean, professional, and free to use commercially.",
+    //     category: "design",
+    //     url: "https://pexels.com",
+    //     imageUrl: "https://images.pexels.com/photos/5478468/pexels-photo-5478468.jpeg",
+    //     iconUrl: pexelsIcon.src,
+    //     isAffiliate: false,
+    //     badge: "Recommended"
+    // },
 ]
 
 
@@ -188,7 +201,7 @@ export default function AffiliateSection() {
 
                 {
                     studioTools.map((tier, index) => {
-                        return <a key={"featureCardId" + index} href={tier.url} target="_blank" className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full w-96'>
+                        return <a key={"featureCardId" + index} href={tier.url} target="_blank" className=' hover:text-white bg-offWhite  dark:bg-primary0 hover:bg-primary0 dark:hover:bg-primary-950/50 hover:shadow-md hover:shadow-primary0-400 transition-all h-full w-96'>
                             <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                                 {tier.isAffiliate ? <span className=" flex items-center bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">+ </b>&nbsp;Our Partner</span> : ""}
                                 <div className='mb-2 h-64'>
@@ -215,7 +228,7 @@ export default function AffiliateSection() {
                                     </p>
 
                                     <div className='flex'>
-                                        <a href={tier.url} className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
+                                        <a href={tier.url} target='_blank' className='flex  pl-2 text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
                                             <span>{tier.cta ?? "Get Started"}</span>
                                             <span>
                                                 <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>

@@ -46,7 +46,7 @@ export default function TeamSection() {
             <div className=" container mx-auto flex flex-wrap justify-around pb-8 ">
                 {
                     agencyTeam.map((teamMember, index) => {
-                        return <div key={"statId-" + index} className="max-w-80 bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">
+                        return <div key={"statId-" + index} className="max-w-80 bg-offWhite dark:border dark:border-primary-500/10 shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">
                             <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
                                 <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
                                     {teamMember.role}

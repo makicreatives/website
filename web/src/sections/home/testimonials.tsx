@@ -63,9 +63,9 @@ export default function TestimonialsSection() {
         },
     ]
 
-    return <section id="testimonials" className={"pt-12"}>
+    return <section id="testimonials" className={"pt-12 border-b mb-12"}>
 
-        <h2 className="h2 font-display font-medium  text-display-medium md:text-display-large p-8  mb-4 md:mb-8 mt-12 space-y-8">
+        <h2 className="h2 font-display font-medium  text-display-medium md:text-display-large p-8 container mb-4 md:mb-8 mt-12 mx-auto space-y-8">
             <span className="p-1 px-2 mb-2 flex text-xl font-headlines font-medium  text-offWhite bg-primary0">
                 Don&apos;t take our word for it.
             </span>
@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
         <div className="p-8 container mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {
                 agencyTestimonials.map((testimonial, index) => {
-                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">
+                    return <div key={"statId-" + index} className="bg-offWhite dark:bg-primary0 shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 dark:hover:bg-primary-950/50 transition-all dark:border dark:border-offWhite1B/50">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
                             <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
                                 {testimonial.role}
@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
             </a>
         </div>
         <div className="bg-primary0 pb-12 overflow-clip">
-            <div className="flex flex-nowrap  invert animate-infinite-scroll">
+            <div className="flex flex-nowrap  invert dark:invert-0 animate-infinite-scroll">
                 <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase  mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
                 <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
                 <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>

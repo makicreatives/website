@@ -52,12 +52,12 @@ export default function StatsSection() {
 
             </h2>
         </div>
-        <div className="p-8 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+        <div className="p-8 container mx-auto grid gap-2 md:grid-cols-2 lg:grid-cols-3">
             {
                 agencyStatistics.map((stat, index) => {
-                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow-sm hover:shadow-primary-400 hover:bg-primary-50 transition-all">
+                    return <div key={"statId-" + index} className="bg-offWhite dark:bg-primary0 dark:border dark:border-off-White1B/50 shadow-sm mb-2 hover:shadow-sm hover:shadow-primary-400 hover:bg-primary-50 dark:hover:bg-primary-950/50 transition-all">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl mb-4 md:mb-8 space-y-8">
-                            <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
+                            <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0 dark:bg-offWhite dark:text-primary0">
                                 {stat.title}
                             </span>
                             <p className="leading-tight px-4 text-primary">

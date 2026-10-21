@@ -8,7 +8,7 @@ export default function CTASection() {
             </a>
         </div>
         <div className="bg-primary0 pb-12 overflow-clip">
-            <div className="flex flex-nowrap  invert animate-infinite-scroll-reverse relative -left-[100%] ">
+            <div className="flex flex-nowrap  invert dark:invert-0 animate-infinite-scroll-reverse relative -left-[100%] ">
                 <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase  mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
                 <h1 className="h2 opacity-50 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>
                 <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki&nbsp;Creative&nbsp;Studio</h1>

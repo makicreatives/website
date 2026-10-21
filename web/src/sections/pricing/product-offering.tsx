@@ -30,6 +30,7 @@ export default function ProductOfferingSection() {
         {
             id: "retainer",
             title: "Monthly Retainer",
+            startingFrom: true,
             price: 2500,
             currency: "USD",
             period: "per month",
@@ -71,7 +72,7 @@ export default function ProductOfferingSection() {
                 "Fixed project scope",
                 "Custom quote based on brief",
                 "5-7 business day turnaround",
-                "3 revision rounds included",
+                "Revision rounds included",
                 "Source files included",
                 "Direct designer access",
                 "Print and digital ready files",
@@ -80,7 +81,7 @@ export default function ProductOfferingSection() {
     ];
 
     return <section id="product-offering">
-        <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8">
+        <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8 container mx-auto">
 
             <p className="">One studio. Every design service  —<br /> your business needs.</p>
             <p className="text-lg font-headlines leading-tight  font-medium pt-2 ps-8">
@@ -96,7 +97,7 @@ export default function ProductOfferingSection() {
 
             {
                 pricingTiers.map((tier, index) => {
-                    return <a key={"featureCardId" + index} href={tier.ctaUrl} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
+                    return <a key={"featureCardId" + index} href={tier.ctaUrl} className=' hover:text-white bg-offWhite dark:bg-primary0 hover:bg-primary0 dark:hover:bg-primary-950/50 hover:shadow-md hover:shadow-primary0-400 transition-all h-full'>
                         <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                             {tier.isRecommended ? <span className=" flex items-center rounded-2xxl bg-primary p-2 px-4 text-off-white font-technical absolute z-10 left-[10x]"><b className="font-bold 2text-xl animate-[ping_2s_infinite] ease-in">*</b>&nbsp;Most Popular</span> : ""}
                             <div className='mb-2 h-80'>
@@ -106,7 +107,7 @@ export default function ProductOfferingSection() {
                             </div>
                             <div className='p-8 flex flex-col'>
                                 <p className='mb-1 font-bold font-headlines text-headline-large uppercase flex flex-wrap justify-between items-center'>
-                                    <span>{tier.title}</span> <Pill><span> {tier.startingFrom ? "From " : ""} US$ {tier.price.toLocaleString().toString()}</span></Pill>
+                                    <span>{tier.title}</span> <br /> <Pill><span> {tier.startingFrom ? "From " : ""} US$ {tier.price.toLocaleString().toString()}</span></Pill>
                                 </p>
                                 <p className=" leading-relaxed text-xl mb-4 md:mb-8 ">
                                     {tier.description}

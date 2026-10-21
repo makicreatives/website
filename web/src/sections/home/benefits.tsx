@@ -8,71 +8,81 @@ import futureDesignsIcon from '@/src/icons/ui/future-designs.svg'
 // import Link from 'next/link';
 
 type AgencyBenefit = {
-title: string,
-description: string,
-imageUrl: string,
-iconUrl: string,
+    title: string,
+    label: string,
+    description: string,
+    imageUrl: string,
+    iconUrl: string,
 }
 const agencyBenefits: AgencyBenefit[] = [
     {
         title: 'Flexible Collaboration',
-        description: "Work with us from anywhere, anytime. Our remote setup means we're always just a message away.",
+        label: 'Zero Friction',
+        description: "Work with us from anywhere, anytime. Our remote setup means you're always one message away from a reply.",
         imageUrl: '/images/site/collaboration-abstract.png',
         iconUrl: shareKnowledgeIcon.src,
     },
     {
         title: 'Partnership Approach',
-        description: 'We grow together. Get a dedicated design partner who understands your business goals and vision.',
+        label: 'Dedicated Partner',
+        description: 'A dedicated design partner who learns your business goals and builds toward them with you.',
         imageUrl: '/images/site/partnership-abstract.png',
         iconUrl: partnershipIcon.src,
     },
     {
         title: 'Quick Turnaround',
-        description: 'We understand your speed. Get your designs when you need them, not weeks later.',
+        label: 'Speed Guarantee',
+        description: 'Get designs when you need them, not weeks later. Speed is built into our process.',
         imageUrl: '/images/site/turnaround-abstract.png',
         iconUrl: turnaroundIcon.src,
     },
     {
         title: 'Future Proof designs',
+        label: 'Built to Scale',
         description: 'Scalable solutions that grow with your business. No need to start from scratch as you expand.',
         imageUrl: '/images/site/future-designs-abstract.png',
         iconUrl: futureDesignsIcon.src,
     }
-] ;
+];
 
 export default function BenefitsSection() {
     return <section id="benefits" className={""}>
-        <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200/30 via-accent3/30 to-primary1B/10 to-90% backdrop-blur-3xl">
+        <div className="p-8 container mx-auto pb-16 bg-radial-[at_25%_25%] from-sky-200/30 via-accent3/30 to-primary1B/10 to-90% backdrop-blur-3xl">
             <h2 className="h2 font-display font-medium  text-display-medium md:text-display-large mb-4 md:mb-8 mt-12 space-y-8">
-                    <span className="p-1 px-2 mb-2 flex text-xl font-headlines font-medium  text-offWhite bg-primary0">
-                        Should you have us,— for your design partner ?
-                    </span>
-                    <p className="leading-tight">
-                        Here&apos;s what you&apos;ll get
+                <span className="p-1 px-2 mb-2 flex text-xl font-headlines font-medium  text-offWhite bg-primary0">
+                    Why Teams Choose Us as Their Design Partner
+                </span>
+                <p className="leading-tight">
+                    Here&apos;s what you&apos;ll get
 
-                    </p>
+                </p>
             </h2>
-            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
                 {
                     agencyBenefits.map((benefit, index) => {
-                    return <div key={"statId-" + index} className="bg-offWhite shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 transition-all">   
-                        <div className="relative h-80 w-full">
-                            <div className="bg-gray-300 bg-cover flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${benefit.imageUrl})`}}>
-                                <img src={benefit.iconUrl} width={320} alt={benefit.title + ' icon'} className={'h-24 opacity-80'} />
-                            </div> 
+                        return <div key={"statId-" + index} className="bg-offWhite dark:bg-primary0 shadow-sm mb-2 hover:shadow hover:shadow-primary-400 hover:bg-primary-50 dark:hover:bg-primary-950/50 transition-all">
+                            <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
+                                <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite dark:text-primary0 bg-primary0 dark:bg-white">
+                                    {benefit.label} <span className='animate-pulse 1s_infinite'>*</span>
+                                </span>
+                            </h2>
+                            <div className="relative h-80 w-full">
+                                <div className="bg-gray-300 bg-cover flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${benefit.imageUrl})` }}>
+                                    <img src={benefit.iconUrl} width={320} alt={benefit.title + ' icon'} className={'h-24 opacity-80'} />
+                                </div>
+                            </div>
+                            <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
+                                <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite dark:text-primary0 bg-primary0 dark:bg-white">
+                                    {benefit.title}
+                                </span>
+                            </h2>
+                            <p className=" leading-relaxed p-4 text-xl mb-4 md:mb-8 ">
+                                {benefit.description}
+                            </p>
                         </div>
-                        <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8">
-                            <span className="p-1 px-2 mb-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
-                                {benefit.title}
-                            </span>
-                        </h2>                                             
-                        <p className=" leading-relaxed p-4 text-xl mb-4 md:mb-8 ">
-                            {benefit.description}
-                        </p>
-                    </div>
-                })
-            }
+                    })
+                }
             </div>
         </div>
 

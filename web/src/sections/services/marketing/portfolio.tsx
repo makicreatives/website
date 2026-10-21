@@ -97,9 +97,9 @@ export default function PortfolioSection() {
         <div className="p-8 container mx-auto grid gap-2 md:grid-cols-2 lg:grid-cols-3">
             {
                 portfolioProjects.map((project, index) => {
-                    return <a key={"statId-" + index} href={project.linkUrl} className="bg-offWhite bg-cover shadow-sm mb-2 hover:shadow-lg  hover:bg-primary-50 transition-all" style={{ backgroundImage: `url(${project.bgImageUrl})` }}>
+                    return <a key={"statId-" + index} href={project.linkUrl} className="bg-offWhite bg-cover shadow-sm mb-2 hover:shadow-lg text-offWhite dark:text-primary0 hover:text-primary1B-400 dark:hover:text-primary1-700 hover:bg-primary-50 transition-all" style={{ backgroundImage: `url(${project.bgImageUrl})` }}>
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-7xl space-y-8" >
-                            <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium  text-offWhite bg-primary0">
+                            <span className="p-1 px-2 flex text-xl font-technical uppercase font-medium   bg-primary0 dark:bg-primary-50">
                                 {project.title}
                             </span>
                         </h2>

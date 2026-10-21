@@ -52,7 +52,7 @@ export default function BusinessSection() {
 
         </main>
         <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-primary1B/10"}>
-            <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8">
+            <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl mt-12 mb-4 md:mb-8 p-8 container mx-auto">
 
                 <p className="">One studio. Every design service  —<br /> your business needs.</p>
                 <p className="text-lg font-headlines leading-tight  font-medium pt-2 ps-8">
@@ -65,7 +65,7 @@ export default function BusinessSection() {
 
                 {
                     agencyFeatures.map((feature, index) => {
-                        return <div key={"featureCardId" + index} className=' hover:text-white bg-offWhite hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all h-full  min-w-80 m-2'>
+                        return <div key={"featureCardId" + index} className='  hover:text-white dark:hover:text-primary0 bg-offWhite dark:bg-primary0 hover:bg-primary0 dark:hover:bg-offWhite hover:shadow-md hover:shadow-primary0-400 transition-all h-full  min-w-80 m-2'>
                             <div className={'border-black border-2 border-b-16  dark:border-off-white h-full'}>
                                 <div className='mb-2 h-80'>
                                     <div className="bg-gray-300 bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full" style={{ backgroundImage: `url(${feature.imageUrl})` }}>

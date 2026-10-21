@@ -110,7 +110,7 @@ export default function BlogsPage() {
 
     const slugToUrl = (slug: string) => "/resources/blogs/" + slug;
     const getBlogCard = function (blog: Blog, index: number): React.JSX.Element {
-        return <a href={slugToUrl(blog.slug)} key={"featuredBlog" + index} id={blog.slug} className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white  hover:text-white bg-offWhite1B hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all duration-300 h-full"}>
+        return <a href={slugToUrl(blog.slug)} key={"featuredBlog" + index} id={blog.slug} className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white  hover:text-white bg-offWhite1B dark:bg-primary0 hover:bg-primary0 dark:hover:bg-primary-950/50 hover:shadow-md hover:shadow-primary0-400 dark:hover:shadow-primary-900 transition-all duration-300 h-full"}>
             <div className='space-y-1'>
                 <div className="bg-primary0">
                     {/* <hr className="border-black dark:border-off-white1B" /> */}

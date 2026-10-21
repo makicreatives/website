@@ -112,7 +112,7 @@ const agencyGuides: Guide[] = [
 export default function GuidesPage() {
     const slugToUrl = (slug: string) => "/resources/guides/" + slug;
     const getGuideCard = function (guide: Guide, index: number): React.JSX.Element {
-        return <a href={slugToUrl(guide.slug)} key={"featuredGuide" + index} id={guide.slug} className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white  hover:text-white bg-offWhite1B hover:bg-primary0 hover:shadow-md hover:shadow-primary0-400 transition-all duration-300 h-full"}>
+        return <a href={slugToUrl(guide.slug)} key={"featuredGuide" + index} id={guide.slug} className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white  hover:text-white bg-offWhite1B dark:bg-primary0 hover:bg-primary0 dark:hover:bg-primary-950/50 hover:shadow-md hover:shadow-primary0-400 dark:hover:shadow-primary-900 transition-all duration-300 h-full"}>
             <div className='space-y-1'>
                 <div className='relative bg-gray-300'>
                     <img src={guide.imageUrl} alt={guide.title + " banner"} className="object-cover h-64 w-full" />
@@ -184,7 +184,7 @@ export default function GuidesPage() {
                 <hr className="border-black dark:border-off-white1B" />
 
                 <section id="trending">
-                    <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B">
+                    <div className="mr-6 md:mr-14 bg-primary0 text-off-white1B container mx-auto">
                         <h2 className="h2 font-display font-medium  text-display-medium md:text-5xl p-4 md:p-8 ">
 
                             <p className="italic mb-2">Most useful <span className="text-display-small bg-primary1B font-mono"> <Pill>right&nbsp;now</Pill> </span> </p>

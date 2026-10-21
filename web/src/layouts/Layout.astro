@@ -50,12 +50,12 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
 
 
 		<title>{ title }</title>
-		
+
 		<!-- UMAMI ANALYTICS -->
 		<!-- UMAMI: No banner needed, load safely right away -->
 		<script is:inline defer src="https://umami.mevinsystems.cloud/script.js" data-website-id="086e9569-3545-4481-ba5e-73439ea58026"></script>
 	</head>
-	<body	 class={'antialiased bg-white dark:bg-gray3 text-primary0 dark:text-off-white overflow-x-hidden'}>
+	<body	 class={'antialiased bg-white dark:bg-primary0 text-primary0 dark:text-off-white overflow-x-hidden'}>
 		<slot />
 
 		{process.env.NODE_ENV === 'production' && (
@@ -93,7 +93,7 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
 			acceptLabel="Accept All"
 			declineLabel="Reject All"
 
-			privacyHref="/privacy" />
+			privacyHref="/about/privacy-policy" />
 
 	</body>
 </html>

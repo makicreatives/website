@@ -81,7 +81,7 @@ export default function ContactPage() {
           </div>
           <div id="ctaContent" className="flex justify-center p-8 ">
             <div className="hidden">
-              {/* <h3 className="uppercase font-headlines font-bold text-headline-large text-secondary-regal mb-8">Have a project in mind? <br />Share the basics</h3>
+              {/* <h3 className="uppercase font-headlines font-bold text-headline-large text-secondaryRegal mb-8">Have a project in mind? <br />Share the basics</h3>
               <Form className="font-headlines">
                 <TextInput id={"name"} name="name" labelText={'Your Name'} className=""></TextInput>
                 <TextInput id={"email"} name="email" labelText={'Email Address'}></TextInput>

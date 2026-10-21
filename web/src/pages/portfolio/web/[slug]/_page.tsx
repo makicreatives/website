@@ -135,7 +135,7 @@ export default async function Page({ urlSlug, }: Readonly<PageProps>) {
                             <p className='mb-4 font-body text-body-medium'>{projectData[0]?.description}</p>
                             <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                                 <div className='flex'>
-                                    <a href={projectData[0]?.link ?? ''} target='_blank' className='pl-2 flex text-secondary-regal border-b-2 border-b-secondary-regal sm:border-b-secondary font-headlines text-headline-small uppercase  hover:text-white hover:bg-secondary hover:shadow-sm hover:duration-150'>
+                                    <a href={projectData[0]?.link ?? ''} target='_blank' className='pl-2 flex text-secondaryRegal border-b-2 border-b-secondaryRegal sm:border-b-secondary font-headlines text-headline-small uppercase  hover:text-white hover:bg-secondary hover:shadow-sm hover:duration-150'>
                                         <span>Visit Project</span>
                                         <span>
                                             <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>

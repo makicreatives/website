@@ -18,7 +18,7 @@ export function WorkCard({ imageUrl, title, description, startLink, exploreLink,
   return <div id="brandIdentity" className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white"+ (hasBorder ? "" : " border-0")}>
     <div className=''>
       <div className='relative h-64 w-full bg-gray-300'>
-        <img src={imageUrl} alt={title + " banner"} className="object-cover" />
+        <img src={imageUrl} alt={title + " banner"} className="object-cover w-full h-full" />
       </div>
 
       <h4 className='font-headlines text-headline-small uppercase my-2 font-bold'>{title}</h4>

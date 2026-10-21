@@ -21,7 +21,7 @@ export function VerticalTabs({ tabs, activeTabTitle = '' }: Readonly<VerticalTab
   // get the index of the active tab
   const activeTabIndex = tabs.findIndex(tab => tab.title.trim().replace(/ /g, "_").toLowerCase() === activeTabTitle);
 
-  const sidePanel = (title: string, i: number): React.JSX.Element => <button onClick={() => handleClick(i)} id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white hover:bg-off-white hover:cursor-pointer hover:p-1 duration-200 hover:invert dark:hover:invert-0 dark:hover:text-primary1B hover:duration-150">
+  const sidePanel = (title: string, i: number): React.JSX.Element => <button onClick={() => handleClick(i)} id="leftBar" key={"vTab-"+title+i} className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white hover:bg-off-white hover:cursor-pointer hover:p-1 duration-200 hover:invert dark:hover:invert-0 dark:hover:text-primary1B hover:duration-150">
     <div className="md:h-16 w-4 md:w-16 md:w-auto  md:border-b-0 border-black dark:border-off-white place-content-center ">
     </div>
     <div className="flex-1 flex place-content-center w-full">
@@ -40,7 +40,7 @@ export function VerticalTabs({ tabs, activeTabTitle = '' }: Readonly<VerticalTab
     </div>
   </button>;
 
-  const midPanel = (content: React.JSX.Element, title: string, index: number): React.JSX.Element => <section id="midPanel" className="flex-1 flex flex-col md:border-r-2  border-black dark:border-off-white">
+  const midPanel = (content: React.JSX.Element, title: string, index: number): React.JSX.Element => <section id="midPanel" key={"vTab-"+title+index} className="flex-1 flex flex-col md:border-r-2  border-black dark:border-off-white">
     <div className="flex place-content-center h-14 md:h-16 border-b-2 border-black dark:border-off-white">
       <div className=" w-full flex-1 inline-flex flex-nowrap overflow-hidden bg-black text-off-white1B ">
         <div className="flex flex-1 items-center justify-center md:justify-start font-display text-display-small md:text-display-medium text-nowrap capitalize ">

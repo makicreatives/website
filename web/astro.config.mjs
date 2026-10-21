@@ -16,13 +16,15 @@ export default defineConfig({
   output: 'static',
   site: 'https://www.makistudio.online',
 
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    },
+  // adapter: cloudflare({
+  //   platformProxy: {
+  //     enabled: true
+  //   },
+  //   // Ensure the adapter is optimized for Cloudflare Pages layout
+  //   mode: 'advanced', 
 
-    imageService: "cloudflare"
-  }),
+  //   imageService: "cloudflare",
+  // }),
 
   vite: {
     plugins: [tailwindcss()]

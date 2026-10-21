@@ -18,7 +18,7 @@ export interface FooterProps {
   fBottomColor?: string;
 }
 
-export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondary-regal' }: FooterProps) {
+export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondaryRegal' }: Readonly<FooterProps>) {
   const linkStyling: string = ' hover:text-secondary hover:duration-150 ';
   const iconLinkStyling: string = 'hover:bg-secondary hover:p-1 hover:duration-200 hover:rounded-sm';
 
